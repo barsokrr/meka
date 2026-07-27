@@ -1,0 +1,12 @@
+# Railway/Nixpacks: build icin devDependencies zorunlu (typescript, tailwind, eslint)
+[phases.setup]
+nixPkgs = ["nodejs_20", "openssl"]
+
+[phases.install]
+cmds = ["npm ci --include=dev"]
+
+[phases.build]
+cmds = ["npm run build:deploy"]
+
+[start]
+cmd = "npm run start:railway"
