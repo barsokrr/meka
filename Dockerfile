@@ -16,14 +16,16 @@ FROM base AS runner
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV HOSTNAME=0.0.0.0
-RUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 nextjs
+ENV PORT=3000
 COPY --from=builder /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/prisma ./prisma
-COPY --from=deps /app/node_modules/.prisma ./node_modules/.prisma
-COPY --from=deps /app/node_modules/@prisma ./node_modules/@prisma
+COPY --from=deps /app/package.json ./package.json
+COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
+COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
 COPY --from=deps /app/node_modules/prisma ./node_modules/prisma
-USER nextjs
+COPY docker-entrypoint.sh ./docker-entrypoint.sh
+RUN chmod +x docker-entrypoint.sh
 EXPOSE 3000
-CMD ["sh", "-c", "npx prisma db push && node server.js"]
+CMD ["./docker-entrypoint.sh"]
