@@ -40,6 +40,9 @@ export function calculateShipping(subtotal: number, settings: { shippingFee: num
 }
 
 export function getWhatsAppLink(phone: string, message?: string): string {
-  const text = message ? `?text=${encodeURIComponent(message)}` : "";
-  return `https://wa.me/${phone.replace(/\D/g, "")}${text}`;
+  const digits = phone.replace(/\D/g, "");
+  if (!message?.trim()) {
+    return `https://wa.me/${digits}`;
+  }
+  return `https://api.whatsapp.com/send?phone=${digits}&text=${encodeURIComponent(message.trim())}`;
 }
