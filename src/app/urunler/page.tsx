@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   description: `${BRAND.name} küratörlü ev dekorasyonu koleksiyonu — seçilmiş mobilya, aydınlatma, tekstil ve objeler.`,
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function ProductsPage() {
   const products = await prisma.product.findMany({
     where: { active: true },

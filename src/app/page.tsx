@@ -16,6 +16,8 @@ import {
 } from "@/lib/home-content";
 import { BRAND } from "@/types";
 
+export const dynamic = "force-dynamic";
+
 export default async function HomePage() {
   const products = await prisma.product.findMany({
     where: { active: true },
