@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .tracking-luxury {
+    letter-spacing: 0.18em;
+  }
+
+  .border-border {
+    border-color: #d5cfc4;
+  }
+
+  .bg-page {
+    background-color: #f7f5f0;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(107, 110, 78, 0.08), transparent),
+      linear-gradient(180deg, #f7f5f0 0%, #f2efe8 40%, #ebe7df 100%);
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-page text-charcoal font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-serif font-light tracking-tight;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-10;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-charcoal px-8 py-3.5 text-xs font-medium uppercase tracking-luxury text-white transition duration-300 hover:bg-charcoal/90;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center border border-charcoal bg-transparent px-8 py-3.5 text-xs font-medium uppercase tracking-luxury text-charcoal transition duration-300 hover:bg-charcoal hover:text-white;
+  }
+
+  .btn-link {
+    @apply inline-flex items-center gap-2 text-xs font-medium uppercase tracking-luxury text-charcoal transition duration-300 hover:opacity-60;
+  }
+
+  .input-field {
+    @apply w-full border border-border bg-white/80 px-4 py-3 text-sm outline-none transition focus:border-charcoal;
+  }
+
+  .section-title {
+    @apply font-serif text-3xl font-light tracking-tight md:text-4xl lg:text-[2.75rem];
+  }
+
+  .section-label {
+    @apply text-xs font-medium uppercase tracking-luxury text-muted;
+  }
+
+  .nav-link {
+    @apply text-xs font-medium uppercase tracking-luxury text-charcoal transition hover:opacity-60;
+  }
+
+  .reveal {
+    @apply animate-soft-rise;
+  }
+}

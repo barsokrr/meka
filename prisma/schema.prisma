@@ -1,0 +1,121 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum ProductCategory {
+  MOBILYA
+  AYDINLATMA
+  TEKSTIL
+  OBJE
+  SET
+}
+
+enum StockStatus {
+  IN_STOCK
+  MADE_TO_ORDER
+  OUT_OF_STOCK
+}
+
+enum OrderStatus {
+  NEW
+  CONFIRMED
+  PREPARING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
+
+model Admin {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String   @default("Admin")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Product {
+  id               String          @id @default(cuid())
+  name             String
+  slug             String          @unique
+  shortDescription String
+  description      String
+  price            Float
+  comparePrice     Float?
+  category         ProductCategory
+  material         String
+  dimensions       String
+  colors           String          @default("[]")
+  stockStatus      StockStatus
+  deliveryTime     String
+  images           String          @default("[]")
+  featured         Boolean         @default(false)
+  active           Boolean         @default(true)
+  sortOrder        Int             @default(0)
+  projectNote      String?
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+  orderItems       OrderItem[]
+}
+
+model Order {
+  id           String      @id @default(cuid())
+  orderNumber  String      @unique
+  customerName String
+  phone        String
+  email        String
+  city         String
+  district     String
+  address      String
+  note         String?
+  subtotal     Float
+  shippingFee  Float
+  total        Float
+  status       OrderStatus @default(NEW)
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  items        OrderItem[]
+}
+
+model OrderItem {
+  id        String  @id @default(cuid())
+  orderId   String
+  productId String?
+  name      String
+  price     Float
+  quantity  Int
+  order     Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product   Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+}
+
+model SiteSettings {
+  id                  String @id @default("default")
+  shippingFee         Float  @default(150)
+  freeShippingMinimum Float  @default(5000)
+  phone               String @default("+90 532 000 00 00")
+  email               String @default("info@barisoker.com")
+  whatsapp            String @default("905320000000")
+  instagram           String @default("barisoker.studio")
+  city                String @default("İstanbul")
+  shippingNote        String @default("5.000 ₺ ve üzeri siparişlerde kargo ücretsizdir.")
+}
+
+model ContactMessage {
+  id         String   @id @default(cuid())
+  name       String
+  email      String
+  phone      String?
+  subject    String
+  message    String
+  spaceType  String?
+  areaBand   String?
+  budgetBand String?
+  source     String?
+  read       Boolean  @default(false)
+  createdAt  DateTime @default(now())
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0f6e56" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta
+      name="description"
+      content="TMMOB İçmimarlar Odası formülüyle iç mimarlık proje asgari ücret hesaplama"
+    />
+    <link rel="icon" href="assets/icon.png" />
+    <link rel="apple-touch-icon" href="assets/icon.png" />
+    <title>İç Mimar Proje Bedeli — 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
+
+    <div id="gate" class="gate" hidden>
+      <div class="gate__card">
+        <p class="gate__title">Kişisel erişim</p>
+        <p class="gate__hint">
+          Bu araç yalnızca sizin bağlantınızla açılır.
+          Yer imlerinize kaydettiğiniz linki kullanın.
+        </p>
+        <label for="gateKey">Erişim anahtarı</label>
+        <input id="gateKey" type="password" autocomplete="current-password" placeholder="Anahtar" />
+        <p id="gateError" class="gate__error" hidden>Anahtar hatalı.</p>
+        <button type="button" id="gateBtn" class="gate__btn">Aç</button>
+      </div>
+    </div>
+
+    <div id="appRoot" hidden>
+    <main class="shell">
+      <div class="layout">
+        <form class="panel" id="form" autocomplete="off" onsubmit="return false;">
+          <div class="field">
+            <label for="projectName">Proje adı</label>
+            <input
+              id="projectName"
+              type="text"
+              placeholder="Örn. Kadıköy 3+1 yenileme"
+              maxlength="80"
+            />
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="yya">Metrekare (m²)</label>
+              <input
+                id="yya"
+                type="number"
+                min="1"
+                step="0.01"
+                placeholder="120"
+                inputmode="decimal"
+              />
+            </div>
+            <div class="field">
+              <label for="kdv">KDV</label>
+              <select id="kdv">
+                <option value="0.20" selected>%20</option>
+                <option value="0.10">%10</option>
+                <option value="0">Yok (0%)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="spaceType">Mekân tipi</label>
+            <select id="spaceType"></select>
+          </div>
+
+          <div class="field" id="classWrap" hidden>
+            <label for="classKod">Yapı sınıfı (manuel)</label>
+            <select id="classKod"></select>
+          </div>
+
+          <div class="services-head">
+            <h2>Ne yapılacak?</h2>
+            <div class="chips">
+              <button type="button" class="chip" id="btnAll">Tümü</button>
+              <button type="button" class="chip" id="btnDraw">Çizim paketi</button>
+              <button type="button" class="chip" id="btnNone">Temizle</button>
+            </div>
+          </div>
+          <div class="services" id="services" role="group" aria-label="Hizmet seçenekleri"></div>
+        </form>
+
+        <aside class="result panel result-panel" id="results">
+          <p class="result-kicker" id="projectTitleOut">Proje</p>
+          <p class="result-label">Asgari proje bedeli (KDV hariç)</p>
+          <p class="result-value" id="pau">—</p>
+          <p class="result-sub">
+            KDV dahil: <strong id="pauKdv">—</strong>
+          </p>
+
+          <div class="metrics">
+            <div>
+              <span>m² başına (hariç)</span>
+              <strong id="perM2">—</strong>
+            </div>
+            <div>
+              <span>m² başına (dahil)</span>
+              <strong id="perM2Kdv">—</strong>
+            </div>
+          </div>
+
+          <p class="meta" id="metaLine"></p>
+          <p class="status" id="status" hidden></p>
+
+          <h3 class="break-title">Hizmet kırılımı</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Hizmet</th>
+                  <th>Oran</th>
+                  <th>Seçili</th>
+                  <th>Tutar</th>
+                </tr>
+              </thead>
+              <tbody id="breakdownBody"></tbody>
+            </table>
+          </div>
+
+          <p class="fine">
+            PAÜ = Alan × Birim maliyet × PİD × Hizmet oranı × 1,4.
+            Bu tutar asgari tahmindir; piyasa teklifi üzerinde olabilir.
+          </p>
+
+          <div class="lead-cta" id="leadCta" hidden>
+            <p class="lead-cta__title">Bu tahminle devam edelim</p>
+            <p class="lead-cta__text">
+              Asgari bedel yalnızca başlangıç noktasıdır. Kapsamı ve süreci netleştirmek için
+              kısa bir görüşme talep edin.
+            </p>
+            <div class="lead-cta__actions">
+              <a class="lead-cta__primary" id="leadContact" href="/iletisim?kaynak=proje-bedeli">
+                Teklif / görüşme iste
+              </a>
+              <a class="lead-cta__secondary" id="leadWhatsapp" href="#" target="_blank" rel="noopener noreferrer" hidden>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <span>Kişisel kullanım · Yerel hesaplayıcı</span>
+      <button type="button" id="lockBtn" class="linkish">Kilitle</button>
+    </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
