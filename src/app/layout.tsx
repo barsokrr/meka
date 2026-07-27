@@ -5,7 +5,13 @@ import { ToastProvider } from "@/components/ui/Toast";
 import { OrganizationJsonLd } from "@/components/seo/OrganizationJsonLd";
 import { BRAND } from "@/types";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://barisoker.com";
+function getSiteUrl() {
+  const raw = process.env.NEXT_PUBLIC_SITE_URL || "https://barisoker.com";
+  if (raw.startsWith("http://") || raw.startsWith("https://")) return raw;
+  return `https://${raw}`;
+}
+
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
