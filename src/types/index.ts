@@ -84,4 +84,7 @@ export const BRAND = {
   adminEmail: "admin@barisoker.com",
   fromEmail: "noreply@barisoker.com",
   instagram: "barisoker.studio",
+  /** Floating button & genel iletişim WhatsApp metni */
+  whatsappMessage:
+    "Merhaba, danışmanlık, projelendirme ve ürünler hakkında bilgi almak istiyorum.",
 };

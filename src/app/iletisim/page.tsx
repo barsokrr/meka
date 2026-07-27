@@ -95,7 +95,7 @@ function ContactForm() {
       ? {
           label: "WhatsApp",
           content: "WhatsApp ile yazın",
-          href: getWhatsAppLink(whatsapp, "Merhaba, danışmanlık hakkında bilgi almak istiyorum."),
+          href: getWhatsAppLink(whatsapp, BRAND.whatsappMessage),
           external: true,
         }
       : null,
