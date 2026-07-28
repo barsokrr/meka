@@ -434,6 +434,14 @@ const products = [
 ];
 
 async function main() {
+  if (process.env.SEED_IF_EMPTY === "1") {
+    const existingProducts = await prisma.product.count();
+    if (existingProducts > 0) {
+      console.log(`Seed atlandı: ${existingProducts} ürün mevcut.`);
+      return;
+    }
+  }
+
   await prisma.orderItem.deleteMany();
   await prisma.order.deleteMany();
   await prisma.product.deleteMany();
