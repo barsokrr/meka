@@ -1,6 +1,5 @@
 import type { ProductDTO } from "@/types";
 import { BRAND } from "@/types";
-import { SHOW_CUSTOMER_PRICES } from "@/lib/site-config";
 
 export function ProductJsonLd({ product }: { product: ProductDTO }) {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://barisoker.com";
@@ -15,20 +14,6 @@ export function ProductJsonLd({ product }: { product: ProductDTO }) {
       "@type": "Brand",
       name: BRAND.name,
     },
-    ...(SHOW_CUSTOMER_PRICES
-      ? {
-          offers: {
-            "@type": "Offer",
-            url: `${siteUrl}/urunler/${product.slug}`,
-            priceCurrency: "EUR",
-            price: product.price,
-            availability:
-              product.stockStatus === "OUT_OF_STOCK"
-                ? "https://schema.org/OutOfStock"
-                : "https://schema.org/InStock",
-          },
-        }
-      : {}),
   };
 
   return (

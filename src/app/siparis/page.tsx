@@ -7,31 +7,17 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useCartStore } from "@/store/cart";
 import { orderSchema, type OrderInput } from "@/lib/validations";
-import { formatPrice, calculateShipping } from "@/lib/utils";
-import { SHOW_CUSTOMER_PRICES } from "@/lib/site-config";
 import { CITY_NAMES, getDistricts } from "@/data/turkey-cities";
 import { BRAND } from "@/types";
 import { getPublicPhone } from "@/lib/contact-channels";
 
-type ShippingConfig = {
-  shippingFee: number;
-  freeShippingMinimum: number;
-  shippingNote: string;
-};
-
 export default function CheckoutPage() {
   const router = useRouter();
-  const { items, getSubtotal, clearCart, syncPrices } = useCartStore();
+  const { items, clearCart } = useCartStore();
   const [mounted, setMounted] = useState(false);
-  const cartProductIds = items.map((i) => i.productId).join(",");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
-  const [shipping, setShipping] = useState<ShippingConfig>({
-    shippingFee: 150,
-    freeShippingMinimum: 5000,
-    shippingNote: "5.000 ₺ ve üzeri siparişlerde kargo ücretsizdir.",
-  });
   const phone = getPublicPhone();
   const contactEmail = process.env.NEXT_PUBLIC_EMAIL || BRAND.email;
 
@@ -49,48 +35,6 @@ export default function CheckoutPage() {
   const city = watch("city");
 
   useEffect(() => setMounted(true), []);
-
-  useEffect(() => {
-    fetch("/api/shipping")
-      .then((r) => r.json())
-      .then((data: ShippingConfig) => {
-        if (typeof data.shippingFee === "number") setShipping(data);
-      })
-      .catch(() => undefined);
-  }, []);
-
-  useEffect(() => {
-    if (!mounted || !cartProductIds) return;
-
-    const ids = cartProductIds.split(",");
-    fetch("/api/products/prices", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ids }),
-    })
-      .then((r) => r.json())
-      .then(
-        (data: {
-          products?: {
-            id: string;
-            price: number;
-            name: string;
-            stockStatus: "IN_STOCK" | "MADE_TO_ORDER" | "OUT_OF_STOCK";
-          }[];
-        }) => {
-          if (!data.products?.length) return;
-          syncPrices(
-            data.products.map((p) => ({
-              productId: p.id,
-              price: p.price,
-              name: p.name,
-              stockStatus: p.stockStatus,
-            }))
-          );
-        }
-      )
-      .catch(() => undefined);
-  }, [mounted, cartProductIds, syncPrices]);
 
   useEffect(() => {
     if (city && city !== selectedCity) {
@@ -113,10 +57,6 @@ export default function CheckoutPage() {
       </div>
     );
   }
-
-  const subtotal = getSubtotal();
-  const shippingFee = calculateShipping(subtotal, shipping);
-  const total = subtotal + shippingFee;
 
   const onSubmit = async (data: OrderInput) => {
     setSubmitting(true);
@@ -264,39 +204,14 @@ export default function CheckoutPage() {
           <h2 className="font-serif text-xl">Talep özeti</h2>
           <ul className="mt-4 space-y-2 text-sm">
             {items.map((item) => (
-              <li key={item.productId} className="flex justify-between gap-2">
-                <span className="text-charcoal/80">
-                  {item.name} x{item.quantity}
-                </span>
-                {SHOW_CUSTOMER_PRICES && (
-                  <span>{formatPrice(item.price * item.quantity)}</span>
-                )}
+              <li key={item.productId} className="text-charcoal/80">
+                {item.name} x{item.quantity}
               </li>
             ))}
           </ul>
-          {SHOW_CUSTOMER_PRICES ? (
-            <>
-              <div className="mt-4 space-y-2 border-t border-border pt-4 text-sm">
-                <div className="flex justify-between">
-                  <span>Ara toplam</span>
-                  <span>{formatPrice(subtotal)}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Kargo (tahmini)</span>
-                  <span>{shippingFee === 0 ? "Ücretsiz" : formatPrice(shippingFee)}</span>
-                </div>
-                <div className="flex justify-between font-medium">
-                  <span>Toplam (tahmini)</span>
-                  <span>{formatPrice(total)}</span>
-                </div>
-              </div>
-              <p className="mt-4 text-xs leading-relaxed text-muted">{shipping.shippingNote}</p>
-            </>
-          ) : (
-            <p className="mt-4 border-t border-border pt-4 text-xs leading-relaxed text-muted">
-              Fiyat ve kargo bilgisi talebiniz alındıktan sonra sizinle paylaşılır.
-            </p>
-          )}
+          <p className="mt-4 border-t border-border pt-4 text-xs leading-relaxed text-muted">
+            Fiyat ve kargo bilgisi talebiniz alındıktan sonra sizinle paylaşılır.
+          </p>
         </div>
       </form>
     </div>
