@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useCartStore } from "@/store/cart";
 import { orderSchema, type OrderInput } from "@/lib/validations";
 import { formatPrice, calculateShipping } from "@/lib/utils";
+import { SHOW_CUSTOMER_PRICES } from "@/lib/site-config";
 import { CITY_NAMES, getDistricts } from "@/data/turkey-cities";
 import { BRAND } from "@/types";
 import { getPublicPhone } from "@/lib/contact-channels";
@@ -267,25 +268,35 @@ export default function CheckoutPage() {
                 <span className="text-charcoal/80">
                   {item.name} x{item.quantity}
                 </span>
-                <span>{formatPrice(item.price * item.quantity)}</span>
+                {SHOW_CUSTOMER_PRICES && (
+                  <span>{formatPrice(item.price * item.quantity)}</span>
+                )}
               </li>
             ))}
           </ul>
-          <div className="mt-4 space-y-2 border-t border-border pt-4 text-sm">
-            <div className="flex justify-between">
-              <span>Ara toplam</span>
-              <span>{formatPrice(subtotal)}</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Kargo (tahmini)</span>
-              <span>{shippingFee === 0 ? "Ücretsiz" : formatPrice(shippingFee)}</span>
-            </div>
-            <div className="flex justify-between font-medium">
-              <span>Toplam (tahmini)</span>
-              <span>{formatPrice(total)}</span>
-            </div>
-          </div>
-          <p className="mt-4 text-xs leading-relaxed text-muted">{shipping.shippingNote}</p>
+          {SHOW_CUSTOMER_PRICES ? (
+            <>
+              <div className="mt-4 space-y-2 border-t border-border pt-4 text-sm">
+                <div className="flex justify-between">
+                  <span>Ara toplam</span>
+                  <span>{formatPrice(subtotal)}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Kargo (tahmini)</span>
+                  <span>{shippingFee === 0 ? "Ücretsiz" : formatPrice(shippingFee)}</span>
+                </div>
+                <div className="flex justify-between font-medium">
+                  <span>Toplam (tahmini)</span>
+                  <span>{formatPrice(total)}</span>
+                </div>
+              </div>
+              <p className="mt-4 text-xs leading-relaxed text-muted">{shipping.shippingNote}</p>
+            </>
+          ) : (
+            <p className="mt-4 border-t border-border pt-4 text-xs leading-relaxed text-muted">
+              Fiyat ve kargo bilgisi talebiniz alındıktan sonra sizinle paylaşılır.
+            </p>
+          )}
         </div>
       </form>
     </div>

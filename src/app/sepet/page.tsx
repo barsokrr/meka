@@ -99,7 +99,7 @@ export default function CartPage() {
                   </a>
                 </>
               )}
-              . Kargo ücreti sipariş adımında hesaplanır.
+              . Fiyat ve kargo bilgisi talebiniz alındıktan sonra paylaşılır.
             </p>
           </div>
           <Link href="/siparis" className="btn-primary mt-6 w-full text-center">
