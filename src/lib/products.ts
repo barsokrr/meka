@@ -9,8 +9,6 @@ export function serializeProduct(product: Product): ProductDTO {
     slug: product.slug,
     shortDescription: product.shortDescription,
     description: product.description,
-    price: product.price,
-    comparePrice: product.comparePrice,
     category: product.category,
     material: product.material,
     dimensions: product.dimensions,

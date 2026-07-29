@@ -33,8 +33,6 @@ export interface ProductDTO {
   slug: string;
   shortDescription: string;
   description: string;
-  price: number;
-  comparePrice: number | null;
   category: ProductCategory;
   material: string;
   dimensions: string;
@@ -52,7 +50,6 @@ export interface CartItem {
   productId: string;
   slug: string;
   name: string;
-  price: number;
   image: string;
   quantity: number;
   stockStatus: StockStatus;

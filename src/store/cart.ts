@@ -10,11 +10,10 @@ interface CartStore {
   addItem: (item: Omit<CartItem, "quantity"> & { quantity?: number }) => void;
   removeItem: (productId: string) => void;
   updateQuantity: (productId: string, quantity: number) => void;
-  syncPrices: (
-    updates: { productId: string; price: number; name?: string; stockStatus?: StockStatus }[]
+  syncItems: (
+    updates: { productId: string; name?: string; stockStatus?: StockStatus }[]
   ) => void;
   clearCart: () => void;
-  getSubtotal: () => number;
   getItemCount: () => number;
 }
 
@@ -59,7 +58,7 @@ export const useCartStore = create<CartStore>()(
           ),
         });
       },
-      syncPrices: (updates) => {
+      syncItems: (updates) => {
         if (updates.length === 0) return;
         const byId = new Map(updates.map((u) => [u.productId, u]));
         set({
@@ -68,7 +67,6 @@ export const useCartStore = create<CartStore>()(
             if (!update) return item;
             return {
               ...item,
-              price: update.price,
               ...(update.name ? { name: update.name } : {}),
               ...(update.stockStatus ? { stockStatus: update.stockStatus } : {}),
             };
@@ -76,8 +74,6 @@ export const useCartStore = create<CartStore>()(
         });
       },
       clearCart: () => set({ items: [] }),
-      getSubtotal: () =>
-        get().items.reduce((sum, i) => sum + i.price * i.quantity, 0),
       getItemCount: () =>
         get().items.reduce((sum, i) => sum + i.quantity, 0),
     }),

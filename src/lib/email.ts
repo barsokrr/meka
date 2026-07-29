@@ -60,17 +60,19 @@ Kargo: ${order.shippingFee} €
 Toplam: ${order.total} €
 `.trim();
 
+  const customerItemsList = order.items
+    .map((i) => `- ${i.name} x${i.quantity}`)
+    .join("\n");
+
   const customerBody = `
 Merhaba ${order.customerName},
 
 Sipariş talebiniz alındı. Sipariş numaranız: ${order.orderNumber}
 
 Sipariş Özeti:
-${itemsList}
+${customerItemsList}
 
-Ara Toplam: ${order.subtotal} €
-Kargo: ${order.shippingFee === 0 ? "Ücretsiz" : `${order.shippingFee} €`}
-Toplam: ${order.total} €
+Fiyat ve kargo bilgisi görüşmemizde paylaşılacaktır.
 
 En kısa sürede sizinle iletişime geçeceğiz.
 
