@@ -30,6 +30,17 @@ export function MessagesClient({ initialMessages }: { initialMessages: Message[]
     setMessages((prev) => prev.map((m) => (m.id === id ? { ...m, read } : m)));
   };
 
+  const remove = async (id: string) => {
+    if (!confirm("Bu mesajı silmek istediğinize emin misiniz?")) return;
+    const res = await fetch("/api/admin/messages", {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id }),
+    });
+    if (!res.ok) return;
+    setMessages((prev) => prev.filter((m) => m.id !== id));
+  };
+
   if (messages.length === 0) {
     return <p className="text-sm text-muted">Henüz mesaj yok.</p>;
   }
@@ -57,6 +68,13 @@ export function MessagesClient({ initialMessages }: { initialMessages: Message[]
                 className="underline hover:text-charcoal"
               >
                 {m.read ? "Okunmadı işaretle" : "Okundu"}
+              </button>
+              <button
+                type="button"
+                onClick={() => remove(m.id)}
+                className="underline hover:text-terracotta"
+              >
+                Sil
               </button>
             </div>
           </div>

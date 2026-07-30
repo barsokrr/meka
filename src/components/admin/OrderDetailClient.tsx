@@ -37,6 +37,7 @@ export function OrderDetailClient({ order }: OrderDetailProps) {
   const router = useRouter();
   const [status, setStatus] = useState(order.status);
   const [saving, setSaving] = useState(false);
+  const [deleting, setDeleting] = useState(false);
 
   const updateStatus = async () => {
     setSaving(true);
@@ -47,6 +48,18 @@ export function OrderDetailClient({ order }: OrderDetailProps) {
     });
     setSaving(false);
     router.refresh();
+  };
+
+  const removeOrder = async () => {
+    if (!confirm(`${order.orderNumber} numaralı siparişi silmek istediğinize emin misiniz?`)) return;
+    setDeleting(true);
+    const res = await fetch("/api/admin/orders", {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: order.id }),
+    });
+    setDeleting(false);
+    if (res.ok) router.push("/admin/siparisler");
   };
 
   return (
@@ -79,6 +92,13 @@ export function OrderDetailClient({ order }: OrderDetailProps) {
               {saving ? "..." : "Kaydet"}
             </button>
           </div>
+          <button
+            onClick={removeOrder}
+            disabled={deleting}
+            className="mt-4 text-xs uppercase tracking-widest text-terracotta underline disabled:opacity-50"
+          >
+            {deleting ? "Siliniyor..." : "Siparişi Sil"}
+          </button>
         </div>
       </div>
 

@@ -36,4 +36,23 @@ export async function PATCH(request: NextRequest) {
   return NextResponse.json(message);
 }
 
+export async function DELETE(request: NextRequest) {
+  const session = await getSession();
+  if (!session) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const { id } = (await request.json()) as { id?: string };
+  if (!id) {
+    return NextResponse.json({ error: "Geçersiz istek" }, { status: 400 });
+  }
+
+  try {
+    await prisma.contactMessage.delete({ where: { id } });
+    return NextResponse.json({ success: true });
+  } catch {
+    return NextResponse.json({ error: "Mesaj silinemedi" }, { status: 400 });
+  }
+}
+
 export const dynamic = "force-dynamic";
