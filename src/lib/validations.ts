@@ -50,6 +50,9 @@ export const orderSchema = z.object({
     .min(1, "Sepetiniz boş"),
 });
 
+/** Checkout form fields only — cart items are attached at submit time. */
+export const checkoutFormSchema = orderSchema.omit({ items: true });
+
 export const contactSchema = z.object({
   name: z.string().min(2, "Ad en az 2 karakter olmalıdır"),
   email: z.string().email("Geçerli bir e-posta adresi girin"),
@@ -102,6 +105,7 @@ export const siteSettingsSchema = z.object({
 });
 
 export type OrderInput = z.infer<typeof orderSchema>;
+export type CheckoutFormInput = z.infer<typeof checkoutFormSchema>;
 export type ContactInput = z.infer<typeof contactSchema>;
 export type ProductInput = z.infer<typeof productSchema>;
 export type LoginInput = z.infer<typeof loginSchema>;

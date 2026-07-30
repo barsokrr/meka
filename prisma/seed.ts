@@ -433,15 +433,61 @@ const products = [
   },
 ];
 
-async function main() {
-  if (process.env.SEED_IF_EMPTY === "1") {
-    const existingProducts = await prisma.product.count();
-    if (existingProducts > 0) {
-      console.log(`Seed atlandı: ${existingProducts} ürün mevcut.`);
-      return;
-    }
+const adminDefaults = {
+  email: "admin@barisoker.com",
+  name: "Barış Öker Admin",
+};
+
+const settingsDefaults = {
+  id: "default",
+  shippingFee: 150,
+  freeShippingMinimum: 5000,
+  phone: "+90 506 584 73 51",
+  email: "barsokrr@gmail.com",
+  whatsapp: "905065847351",
+  instagram: "barisoker.studio",
+  city: "İstanbul",
+  shippingNote:
+    "5.000 ₺ ve üzeri siparişlerde kargo ücretsizdir. Altındaki siparişlerde 150 ₺ kargo ücreti uygulanır.",
+};
+
+function productData(product: (typeof products)[number]) {
+  return {
+    ...product,
+    colors: JSON.stringify(product.colors),
+    images: JSON.stringify(product.images),
+    active: true,
+  };
+}
+
+/** Boot-time repair: fills in missing catalog rows without touching orders or messages. */
+async function seedIfEmpty() {
+  const passwordHash = await bcrypt.hash("BarisOker2026!", 12);
+
+  if ((await prisma.admin.count()) === 0) {
+    await prisma.admin.create({ data: { ...adminDefaults, passwordHash } });
   }
 
+  await prisma.siteSettings.upsert({
+    where: { id: settingsDefaults.id },
+    update: {},
+    create: settingsDefaults,
+  });
+
+  const existingProducts = await prisma.product.count();
+  if (existingProducts > 0) {
+    console.log(`Seed atlandı: ${existingProducts} ürün mevcut.`);
+    return;
+  }
+
+  for (const product of products) {
+    await prisma.product.create({ data: productData(product) });
+  }
+
+  console.log(`Seed tamamlandı: ${products.length} ürün eklendi (siparişler korundu).`);
+}
+
+async function seedFromScratch() {
   await prisma.orderItem.deleteMany();
   await prisma.order.deleteMany();
   await prisma.product.deleteMany();
@@ -451,41 +497,23 @@ async function main() {
 
   const passwordHash = await bcrypt.hash("BarisOker2026!", 12);
 
-  await prisma.admin.create({
-    data: {
-      email: "admin@barisoker.com",
-      passwordHash,
-      name: "Barış Öker Admin",
-    },
-  });
-
-  await prisma.siteSettings.create({
-    data: {
-      id: "default",
-      shippingFee: 150,
-      freeShippingMinimum: 5000,
-      phone: "+90 506 584 73 51",
-      email: "barsokrr@gmail.com",
-      whatsapp: "905065847351",
-      instagram: "barisoker.studio",
-      city: "İstanbul",
-      shippingNote:
-        "5.000 ₺ ve üzeri siparişlerde kargo ücretsizdir. Altındaki siparişlerde 150 ₺ kargo ücreti uygulanır.",
-    },
-  });
+  await prisma.admin.create({ data: { ...adminDefaults, passwordHash } });
+  await prisma.siteSettings.create({ data: settingsDefaults });
 
   for (const product of products) {
-    await prisma.product.create({
-      data: {
-        ...product,
-        colors: JSON.stringify(product.colors),
-        images: JSON.stringify(product.images),
-        active: true,
-      },
-    });
+    await prisma.product.create({ data: productData(product) });
   }
 
   console.log(`Seed tamamlandı: ${products.length} ürün, admin ve site ayarları oluşturuldu.`);
+}
+
+async function main() {
+  if (process.env.SEED_IF_EMPTY === "1") {
+    await seedIfEmpty();
+    return;
+  }
+
+  await seedFromScratch();
 }
 
 main()

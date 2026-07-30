@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useCartStore } from "@/store/cart";
-import { orderSchema, type OrderInput } from "@/lib/validations";
+import { checkoutFormSchema, type CheckoutFormInput } from "@/lib/validations";
 import { CITY_NAMES, getDistricts } from "@/data/turkey-cities";
 import { BRAND } from "@/types";
 import { getPublicPhone } from "@/lib/contact-channels";
@@ -27,8 +27,8 @@ export default function CheckoutPage() {
     watch,
     setValue,
     formState: { errors },
-  } = useForm<OrderInput>({
-    resolver: zodResolver(orderSchema),
+  } = useForm<CheckoutFormInput>({
+    resolver: zodResolver(checkoutFormSchema),
     defaultValues: { kvkkAccepted: undefined },
   });
 
@@ -58,7 +58,7 @@ export default function CheckoutPage() {
     );
   }
 
-  const onSubmit = async (data: OrderInput) => {
+  const onSubmit = async (data: CheckoutFormInput) => {
     setSubmitting(true);
     setError("");
 
@@ -70,6 +70,7 @@ export default function CheckoutPage() {
           ...data,
           items: items.map((i) => ({
             productId: i.productId,
+            name: i.name,
             quantity: i.quantity,
           })),
         }),
@@ -112,7 +113,12 @@ export default function CheckoutPage() {
         .
       </p>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="mt-10 grid gap-12 lg:grid-cols-3">
+      <form
+        onSubmit={handleSubmit(onSubmit, () =>
+          setError("Lütfen işaretli alanları kontrol edin.")
+        )}
+        className="mt-10 grid gap-12 lg:grid-cols-3"
+      >
         <div className="space-y-4 lg:col-span-2">
           <div>
             <label className="mb-1 block text-sm text-muted">Ad Soyad *</label>
