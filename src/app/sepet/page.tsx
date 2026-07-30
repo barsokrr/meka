@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCartStore } from "@/store/cart";
+import { useCartSync } from "@/lib/use-cart-sync";
 import { BRAND } from "@/types";
 import { getPublicPhone } from "@/lib/contact-channels";
 
@@ -12,6 +13,7 @@ export default function CartPage() {
   const [mounted, setMounted] = useState(false);
   const phone = getPublicPhone();
   const email = process.env.NEXT_PUBLIC_EMAIL || BRAND.email;
+  const cartNotice = useCartSync(mounted);
 
   useEffect(() => setMounted(true), []);
 
@@ -36,6 +38,10 @@ export default function CartPage() {
   return (
     <div className="container-site py-12 md:py-16">
       <h1 className="section-title">Sepet</h1>
+
+      {cartNotice && (
+        <p className="mt-6 border border-border bg-surface p-4 text-sm text-muted">{cartNotice}</p>
+      )}
 
       <div className="mt-10 grid gap-12 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-6">

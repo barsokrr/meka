@@ -25,10 +25,19 @@ export async function POST(request: NextRequest) {
 
     const data = parsed.data;
     const productIds = data.items.map((i) => i.productId);
+    const slugs = data.items
+      .map((i) => i.slug)
+      .filter((slug): slug is string => Boolean(slug));
+
+    // Match on slug as well: product ids change whenever the catalog is rebuilt
     const products = await prisma.product.findMany({
-      where: { id: { in: productIds }, active: true },
+      where: {
+        active: true,
+        OR: [{ id: { in: productIds } }, { slug: { in: slugs } }],
+      },
     });
     const productMap = new Map(products.map((p) => [p.id, p]));
+    const productBySlug = new Map(products.map((p) => [p.slug, p]));
 
     const lineItems: {
       productId: string;
@@ -38,7 +47,9 @@ export async function POST(request: NextRequest) {
     }[] = [];
 
     for (const item of data.items) {
-      const product = productMap.get(item.productId);
+      const product =
+        productMap.get(item.productId) ??
+        (item.slug ? productBySlug.get(item.slug) : undefined);
       if (!product) {
         return NextResponse.json(
           { error: `"${item.name}" artık satışta değil. Sepetinizi güncelleyin.` },
@@ -51,6 +62,12 @@ export async function POST(request: NextRequest) {
           { status: 400 }
         );
       }
+      const existing = lineItems.find((l) => l.productId === product.id);
+      if (existing) {
+        existing.quantity += item.quantity;
+        continue;
+      }
+
       lineItems.push({
         productId: product.id,
         name: product.name,

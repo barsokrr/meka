@@ -453,6 +453,8 @@ const settingsDefaults = {
 
 function productData(product: (typeof products)[number]) {
   return {
+    // Slug as id keeps saved carts valid when the catalog is rebuilt
+    id: product.slug,
     ...product,
     colors: JSON.stringify(product.colors),
     images: JSON.stringify(product.images),

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useCartStore } from "@/store/cart";
+import { useCartSync } from "@/lib/use-cart-sync";
 import { checkoutFormSchema, type CheckoutFormInput } from "@/lib/validations";
 import { CITY_NAMES, getDistricts } from "@/data/turkey-cities";
 import { BRAND } from "@/types";
@@ -33,6 +34,7 @@ export default function CheckoutPage() {
   });
 
   const city = watch("city");
+  const cartNotice = useCartSync(mounted);
 
   useEffect(() => setMounted(true), []);
 
@@ -70,6 +72,7 @@ export default function CheckoutPage() {
           ...data,
           items: items.map((i) => ({
             productId: i.productId,
+            slug: i.slug,
             name: i.name,
             quantity: i.quantity,
           })),
@@ -112,6 +115,10 @@ export default function CheckoutPage() {
         )}
         .
       </p>
+
+      {cartNotice && (
+        <p className="mt-6 border border-border bg-surface p-4 text-sm text-muted">{cartNotice}</p>
+      )}
 
       <form
         onSubmit={handleSubmit(onSubmit, () =>
