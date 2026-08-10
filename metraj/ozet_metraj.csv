@@ -1,0 +1,24 @@
+﻿No,Poz / Eleman,Birim,Miktar,Fire %,Toplam (+fire),Not / Dayanak
+1,C35/45 RADYE TEMEL (h=80cm),m³,913.2,3,940.6,Alan 1141.5 m² × 0.80 m (DWG Foundation polyg.)
+2,C16/20 GROBETON (h=10cm),m³,114.2,5,119.9,Alan 1141.5 m² × 0.10 m
+3,FORE KAZIK Ø80 cm L=13.7 m (birim hacim),m³/adet,6.89,5,7.23,Paftada Ø80 / L=13.7m; ADET sayımı gerekli
+3a,FORE KAZIK tahmini toplam (24–40 adet),m³,165–275,5,174–289,Sol paftada ~8 etiket; 2–3 sıra varsayımı
+4,BODRUM PERDE (C35/45),m³,182.6,3,188.1,CL 133.8 m × t 0.325 m × H 4.2 m
+5,BODRUM KOLON (C35/45),m³,26.6,3,27.4,Plan alanı 6.324 m² × H 4.2 m
+6,ÜST KAT PERDE (4 × 4.00 m aralık),m³,536.1,3,552.2,33.5 m² × 4.0 m × 4
+7,ÜST KAT KOLON (4 × 4.00 m aralık),m³,101.2,3,104.2,6.324 m² × 4.0 m × 4
+8,DÖŞEME BETON h=20 cm (5 kat),m³,931.4,3,959.4,(971-34-6.3)×0.20×5; h=20 paftadan
+9,KİRİŞ BETON kaburga (5 kat),m³,166.6,3,171.6,"L×b×(h-d); ort. 32/60, d=20"
+10,RADYE YAN KALIP,m²,120.4,5,126.4,Dış çevre × 0.80 m
+11,BODRUM PERDE KALIP (çift yüz),m²,1123.9,5,1180.1,CL×2×H; boşluk düşümü ayrıca
+12,BODRUM KOLON KALIP,m²,194.0,5,203.7,Çevre × H
+13,ÜST KAT PERDE KALIP (çift yüz),m²,3299.2,5,3464.2,4 kat aralığı
+14,ÜST KAT KOLON KALIP,m²,739.2,5,776.2,4 kat aralığı
+15,DÖŞEME ALT KALIP (5 kat),m²,4432.1,5,4653.7,Net alan; merdiven/asansör düşülmüş
+16,KİRİŞ KALIP yan+alt (5 kat),m²,1441.8,5,1513.9,L×(2×kaburga + b)
+17,SU GEÇİRİMSİZLİK KATKISI kapsama betonu,m³,1290.1,0,1290.1,Radye+bodrum perde+teras; çimento dozajı %1
+
+,YAPI BETON (kazık hariç) firesiz,m³,2857.7
+,YAPI BETON +%3,m³,2943.5
+,KALIP firesiz,m²,11350.7
+,KALIP +%5,m²,11918.2
