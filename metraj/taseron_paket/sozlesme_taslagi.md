@@ -136,9 +136,15 @@ Taraflar aşağıda yazılı şartlarda anlaşmışlardır.
 
 7.1. TAŞERON, çalıştırdığı tüm personeli kendi işyeri / aracı dosyası üzerinden sigortalar; aylık bildirge ve prim ödemelerini zamanında yapar.
 
-7.2. İŞVEREN, şantiye girişlerinde kimlik / sigorta kontrolü yapabilir; eksik sigortalı personeli sahaya almayabilir.
+7.2. Planlanan temel ekip (değişiklik tutanakla kayda geçirilir):
+- **2 usta** (kalıp) — 4A
+- **3 çırak / yardımcı** — 4A
+- **1 şantiye mühendisi** — 4A
+- **Şirket sahibi** — 4B Bağ-Kur (şahıs şirketi sahibi; işbu sözleşmede maaşlı personel değildir)
 
-7.3. Alt-alt yüklenici çalıştırılacaksa İŞVEREN’in yazılı onayı şarttır; aynı Seçenek A kuralları geçerlidir.
+7.3. İŞVEREN, şantiye girişlerinde kimlik / sigorta kontrolü yapabilir; eksik sigortalı personeli sahaya almayabilir.
+
+7.4. Alt-alt yüklenici çalıştırılacaksa İŞVEREN’in yazılı onayı şarttır; aynı Seçenek A kuralları geçerlidir.
 
 ---
 

@@ -1,7 +1,8 @@
 # Sonraki Adımlar — Şahıs Şirketi Kalıp Taşeronu
 
 Proje: **Karşıyaka Ortaokulu (24 derslik)**  
-Model: **Seçenek A** (işçiler şahıs SGK’sında + Aracı No + tevkifatlı hakediş faturası)
+Model: **Seçenek A** (işçiler şahıs SGK’sında + Aracı No + tevkifatlı hakediş faturası)  
+Ekip: **2 usta + 3 çırak + 1 mühendis + şirket sahibi** (6 kişi 4A + sahip 4B Bağ-Kur)
 
 ---
 
@@ -29,10 +30,13 @@ Model: **Seçenek A** (işçiler şahıs SGK’sında + Aracı No + tevkifatlı 
 
 ## 4) Mali takip
 
-1. Excel **MALIYET KAR** sayfasındaki işçi adedi / ücret / süre varsayımlarını güncelle
+1. Excel **MALIYET KAR** sayfasında rol bazlı ücretleri güncelle:
+   - 2 usta, 3 çırak, 1 mühendis → **4A şahıs şirketi**
+   - şirket sahibi → **4B Bağ-Kur** (maaş satırı yok; geçim kârdan çekim)
 2. Aylık: ücret, SGK, Bağ-Kur, damga, muhasebe
 3. 3 ayda bir: geçici vergi
 4. Yıl sonunda: Gelir Vergisi dilimleri (%15–%40)
+5. Çıraklar için çıraklık / asgari ücret uygulamasını MM ile netleştir
 
 ## 5) Yasak hatırlatma
 
