@@ -1,0 +1,12 @@
+﻿Sira,Poz,Tarif,Birim,Miktar,BirimFiyat,Tutar
+1,15.180.1002/A,Radye temel yan kalıbı yapılması,m²,120.4,470.0,56588.0
+2,15.180.1002/B,"Bodrum perde kalıbı (çift yüz, boşluk düşümlü)",m²,1152.7,470.0,541769.0
+3,15.180.1002/C,Bodrum kolon kalıbı,m²,184.0,470.0,86480.0
+4,15.180.1002/D,Üst kat perde kalıbı (4 kat aralığı),m²,3468.8,470.0,1630336.0
+5,15.180.1002/E,Üst kat kolon kalıbı (4 kat aralığı),m²,699.2,470.0,328624.0
+6,15.180.1002/F,Döşeme alt kalıbı (5 kat),m²,4706.5,470.0,2212055.0
+7,15.180.1002/G,"Kiriş kalıbı (yan + alt, 5 kat)",m²,1441.8,470.0,677646.0
+
+,,TOPLAM,m²,11773.4,470.0,5533498.0
+,,KDV %20,,,,1106699.6
+,,KDV DAHIL,,,,6640197.6
