@@ -1,0 +1,11 @@
+﻿No,Kalıp Pozu,Birim,Miktar m2,Pay %,Hesap
+1,Radye yan kalıp,m²,120.4,1.1,Çevre 150.5 m × h 0.8 m
+2,"Bodrum perde kalıp (çift yüz, boşluk düşümlü)",m²,1051.2,9.3,2×133.8×4.0 − 12×2×1.6×0.5
+3,Bodrum kolon kalıp,m²,183.8,1.6,Çevre 45.96 m × H 4.0 m
+4,"Üst kat perde kalıp (4 aralık, boşluk düşümlü)",m²,3083.0,27.3,2×103.1×3.8×4 − 8×2×1.60×0.50×4
+5,Üst kat kolon kalıp (4 aralık),m²,698.6,6.2,45.96×3.8×4
+6,Döşeme alt kalıp (5 kat),m²,4716.9,41.8,(1028.2−33.5−6.3−45)×5
+7,Kiriş kalıp yan+alt (5 kat),m²,1441.8,12.8,L×(2×0.4+0.325); kiriş boyu DWG/2
+
+,NET TOPLAM,m²,11295.7
+,+%5 fire,m²,11860.5
