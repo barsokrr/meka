@@ -17,7 +17,7 @@
   table { width:100%; border-collapse:collapse; font-size:0.92rem; }
   td, th { padding:0.45rem 0.2rem; border-bottom:1px solid #eee; text-align:left; vertical-align:top; }
   th { color:#555; font-weight:600; width:42%; }
-  .big { font-size:1.2rem; font-weight:700; color:var(--accent); }
+  .big { font-size:1.15rem; font-weight:700; color:var(--accent); }
   .warn { background:#fff7ed; border-left:4px solid var(--accent); }
   .ok { background:#f0fdf4; border-left:4px solid #15803d; }
   ol { padding-left:1.2rem; margin:0.3rem 0; }
@@ -29,55 +29,50 @@
 </head>
 <body>
 <header>
-  <span class="pill">Seçenek A · Tevkifat 4/10</span>
+  <span class="pill">Seçenek A · 450 TL/m² · Tevkifat 4/10</span>
   <h1>Karşıyaka Ortaokulu<br/>Taşeron Kalıp Özeti</h1>
-  <p>2 usta · 3 çırak · 1 mühendis · şirket sahibi</p>
+  <p>11.773,4 m² kırık · 2 usta · 3 çırak · 1 mühendis · sahip</p>
 </header>
 <main>
   <div class="card">
-    <h2>Kırık ölçü (tercih)</h2>
+    <h2>Kırık ölçü (kanonik)</h2>
     <table>
       <tr><th>Metraj</th><td>11.773,4 m²</td></tr>
-      <tr><th>Birim</th><td>450 TL/m²</td></tr>
+      <tr><th>Birim</th><td>450 TL/m² (işçilik)</td></tr>
       <tr><th>Matrah</th><td>5.298.030 TL</td></tr>
       <tr><th>Tevkifat 4/10</th><td>423.842 TL</td></tr>
-      <tr><th>Fatura tahsil</th><td class="big">5.933.794 TL</td></tr>
+      <tr><th>Ödenecek</th><td class="big">5.933.794 TL</td></tr>
     </table>
   </div>
   <div class="card">
-    <h2>Düz ölçü (alternatif)</h2>
+    <h2>ÇŞB mukayese</h2>
     <table>
-      <tr><th>Metraj</th><td>11.295,7 m² × 750</td></tr>
-      <tr><th>Matrah</th><td>8.471.775 TL</td></tr>
-      <tr><th>Fatura tahsil</th><td class="big">9.488.388 TL</td></tr>
+      <tr><th>Poz</th><td>15.180.1002</td></tr>
+      <tr><th>ÇŞB BF</th><td>917 TL/m² (malzeme+işçilik+GG+kâr)</td></tr>
+      <tr><th>ÇŞB toplam</th><td>10.796.208 TL</td></tr>
     </table>
   </div>
-  <div class="card ok"><h2>Doğru model</h2>
-    <p>İşçiler şahıs SGK’sında · <b>Aracı No</b> · İşçilik+SGK dahil tevkifatlı fatura · NACE <b>43.99.05</b></p>
+  <div class="card ok">
+    <h2>Doğru model</h2>
+    <p>Şahıs SGK + <b>Aracı No</b> + tevkifatlı fatura · NACE <b>43.99.05</b></p>
   </div>
-  <div class="card warn"><h2>Yasak</h2>
-    <p>Müteahhitte sigortalı işçi + şahıs şirketine fatura <b>yok</b>.</p>
+  <div class="card warn">
+    <h2>Yasak</h2>
+    <p>Müteahhitte sigortalı işçi + şahıs şirketine fatura yok.</p>
   </div>
-  <div class="card"><h2>Ekip</h2>
+  <div class="card">
+    <h2>Kabaca kâr (6 ay)</h2>
     <table>
-      <tr><th>2 usta</th><td>4A · ~55.000 TL/ay</td></tr>
-      <tr><th>3 çırak</th><td>4A · ~28.000 TL/ay</td></tr>
-      <tr><th>1 mühendis</th><td>4A · ~65.000 TL/ay</td></tr>
-      <tr><th>Sahip</th><td>4B Bağ-Kur</td></tr>
+      <tr><th>Gider</th><td>~2,25 M TL</td></tr>
+      <tr><th>Vergi öncesi</th><td>~3,04 M TL</td></tr>
+      <tr><th>Net (kabaca)</th><td>~2,03 M TL</td></tr>
     </table>
   </div>
-  <div class="card"><h2>Sonraki adımlar</h2>
-    <ol>
-      <li>SGK + Aracı No</li>
-      <li>Sözleşme (avukat)</li>
-      <li>6 kişi 4A giriş</li>
-      <li>İSG / MYB</li>
-      <li>Hakediş + e-Fatura</li>
-    </ol>
-  </div>
-  <a class="btn" href="01_Telefon_Ozet.pdf">Özet PDF</a>
-  <a class="btn secondary" href="02_Sozlesme_Taslagi.pdf">Sözleşme PDF</a>
-  <p style="font-size:0.75rem;opacity:.65;text-align:center">Taslak — avukat / MM / İSG kontrolü şart</p>
+  <a class="btn" href="01_Telefon_Ozet.pdf">1 · Özet PDF</a>
+  <a class="btn secondary" href="02_Sozlesme_Taslagi.pdf">2 · Sözleşme PDF</a>
+  <a class="btn secondary" href="03_Kalip_Metraj_Fiyat_Tablosu.pdf">3 · Metraj / ÇŞB PDF</a>
+  <a class="btn secondary" href="04_Fatura_Kesim_Formu.pdf">4 · Fatura formu PDF</a>
+  <p style="font-size:0.75rem;opacity:.65;text-align:center">Taslak — avukat / MM / İSG kontrolü şart · Güncel BF: 450 (eski 470 değil)</p>
 </main>
 </body>
 </html>

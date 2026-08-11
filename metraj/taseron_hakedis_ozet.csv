@@ -1,5 +1,6 @@
-﻿Yontem,Metraj_m2,Birim_TL,Imalat_KDV_haric,KDV_dahil,Taserona_net
-Kirik,11773.4,450.0,5298030.0,6357636.0,5933793.6
-Duz,11295.7,750.0,8471775.0,10166130.0,9488388.0
+﻿Yontem,Metraj_m2,Birim_TL,Imalat_KDV_haric,KDV_dahil_tam,Taserona_net_tevkifatli
+Kirik,11773.4,450,5298030.0,6357636.0,5933793.6
+Duz,11295.7,750,8471775,10166130.0,9488388
 
-Okul_toplam_KDV_haric,129862443.06
+Okul_toplam_KDV_haric,129862502.0
+Kalip_pay_%,4.08
