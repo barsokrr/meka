@@ -64,12 +64,24 @@ Yaklaşık inşaat alanı (6 kot): **~6.169 m²**.
 
 Kesin hesap mali müşavirindir. Detay: `Ekip_Gider_Kirilimi.xlsx`
 
-## 6) Okul yaklaşık toplam
+## 6) İş süresi tahmini (metraj × ekip)
+
+| Senaryo | Süre |
+|---|---|
+| Saf iş (bekleme yok, kısmi paralel) | ~4,0 ay |
+| İyimser | ~4,4 ay |
+| **Gerçekçi (baz)** | **~5,2 ay** |
+| Kötümser | ~6,2 ay |
+| **Sözleşme / maliyet önerisi** | **5,5–6 ay** |
+
+Detay: `Is_Suresi_Tahmini.xlsx`
+
+## 7) Okul yaklaşık toplam
 
 III.B × 6.169 m² × 21.050 TL/m² ≈ **129,9 M TL** (KDV hariç).  
 Kalıp işçilik payı ≈ **%4,1**.
 
-## 7) Ana dosyalar
+## 8) Ana dosyalar
 
 | Dosya | Kullanım |
 |---|---|
@@ -81,7 +93,7 @@ Kalıp işçilik payı ≈ **%4,1**.
 | `taseron_paket/telefon/` | Telefonda PDF/HTML |
 | `PROJE_OZET.md` | Bu özet |
 
-## 8) Sonraki adımlar
+## 9) Sonraki adımlar
 
 1. Aracı No + 4A girişleri (ekip)  
 2. Sözleşmeyi avukatla imzala (kırık × 450)  
