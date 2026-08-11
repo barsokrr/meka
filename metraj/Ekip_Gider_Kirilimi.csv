@@ -1,0 +1,14 @@
+﻿Kalem,Adet,Brut_ay_kisi,Aylik_toplam,Sure_ay,Donem_toplam,Statu,Hesap
+Usta (kalıp),2,55000,110000,6,660000,4A,2×55000×6
+Çırak / yardımcı,3,28000,84000,6,504000,4A,3×28000×6
+Şantiye mühendisi,1,65000,65000,6,390000,4A,1×65000×6
+4A ücret toplamı,,,259000,6,1554000,4A,usta+çırak+mühendis
+"İşveren SGK+işsizlik (~%22,5)",,,,,349650.0,—,"1554000×0,225"
+Bağ-Kur (şirket sahibi),1,10000,10000,6,60000,4B,10000×6
+Muhasebe,1,5000,5000,6,30000,—,5000×6
+İSG / eğitim / MYB,,,,,80000,—,dönem toplamı
+Küçük sarf (malzeme hariç),,,,,100000,—,dönem toplamı
+Ulaşım / iletişim / diğer,,,,,80000,—,dönem toplamı
+
+TOPLAM İŞLETME GİDERİ,,,,,2253650.0,,
+Not,Ücretler brüt varsayımdır; MM ile güncellenir. Sahip maaşı yoktur (Bağ-Kur + kârdan çekim).
