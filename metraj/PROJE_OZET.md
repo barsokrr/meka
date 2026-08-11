@@ -68,13 +68,14 @@ Kesin hesap mali müşavirindir. Detay: `Ekip_Gider_Kirilimi.xlsx`
 
 | Senaryo | Süre |
 |---|---|
-| Saf iş (bekleme yok, kısmi paralel) | ~4,0 ay |
-| İyimser | ~4,4 ay |
-| **Gerçekçi (baz)** | **~5,2 ay** |
-| Kötümser | ~6,2 ay |
-| **Sözleşme / maliyet önerisi** | **5,5–6 ay** |
+| Saf iş (bekleme yok, kısmi paralel) | ~5.3 ay |
+| İyimser | ~5.9 ay |
+| **Gerçekçi (baz)** | **~7.1 ay** |
+| Kötümser | ~8.5 ay |
+| **Sözleşme / maliyet önerisi** | **7.5 ay (≈6 ay)** |
 
 Detay: `Is_Suresi_Tahmini.xlsx`
+
 
 ## 7) Okul yaklaşık toplam
 
