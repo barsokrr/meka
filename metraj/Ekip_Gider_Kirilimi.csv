@@ -1,14 +1,17 @@
 ﻿Kalem,Adet,Brut_ay_kisi,Aylik_toplam,Sure_ay,Donem_toplam,Statu,Hesap
-Usta (kalıp),2,55000,110000,6,660000,4A,2×55000×6
-Çırak / yardımcı,3,28000,84000,6,504000,4A,3×28000×6
-Şantiye mühendisi,1,65000,65000,6,390000,4A,1×65000×6
-4A ücret toplamı,,,259000,6,1554000,4A,usta+çırak+mühendis
-"İşveren SGK+işsizlik (~%22,5)",,,,,349650.0,—,"1554000×0,225"
+Usta (kalıp),2,120000,240000,6,1440000,4A,2×120000×6
+Çırak / yardımcı,3,60000,180000,6,1080000,4A,3×60000×6
+Şantiye mühendisi,1,70000,70000,6,420000,4A,1×70000×6
+4A ücret toplamı,,,490000,6,2940000,4A,usta+çırak+mühendis
+"İşveren SGK+işsizlik (~%22,5)",,,,,661500.0,—,"2940000×0,225"
 Bağ-Kur (şirket sahibi),1,10000,10000,6,60000,4B,10000×6
 Muhasebe,1,5000,5000,6,30000,—,5000×6
-İSG / eğitim / MYB,,,,,80000,—,dönem toplamı
-Küçük sarf (malzeme hariç),,,,,100000,—,dönem toplamı
-Ulaşım / iletişim / diğer,,,,,80000,—,dönem toplamı
+İSG / eğitim / MYB,,,,,80000,—,dönem
+Küçük sarf,,,,,100000,—,dönem
+Ulaşım / iletişim / diğer,,,,,80000,—,dönem
 
-TOPLAM İŞLETME GİDERİ,,,,,2253650.0,,
-Not,Ücretler brüt varsayımdır; MM ile güncellenir. Sahip maaşı yoktur (Bağ-Kur + kârdan çekim).
+TOPLAM İŞLETME GİDERİ,,,,,3951500.0,,
+Hakedis_matrah,,,,,5298030.0,,
+Vergi_oncesi_kar,,,,,1346530.0,,
+Tahmini_GV,,,,,403285.5,,
+Net_kar_GV_sonrasi,,,,,931244.5,,

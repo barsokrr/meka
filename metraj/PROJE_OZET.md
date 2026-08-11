@@ -53,14 +53,16 @@ Yaklaşık inşaat alanı (6 kot): **~6.169 m²**.
 
 ## 5) Maliyet / kâr (kabaca, 6 ay, kırık 450)
 
+Ücretler: usta **120.000** · çırak **60.000** · mühendis **70.000** TL/ay brüt.
+
 | | TL |
 |---|---:|
 | Gelir (matrah) | 5.298.030 |
-| İşletme gideri (ücret+SGK+Bağ-Kur+İSG+sarf…) | ~2.254.000 |
-| Vergi öncesi kâr | **~3.044.000** |
-| GV sonrası net (kabaca) | **~2.033.000** |
+| İşletme gideri (ücret+SGK+Bağ-Kur+İSG+sarf…) | **3.951.500** |
+| Vergi öncesi kâr | **1.346.530** |
+| GV sonrası net (kabaca) | **931.244** |
 
-Ücret varsayımları Excel’de düzenlenebilir; kesin hesap mali müşavirindir.
+Kesin hesap mali müşavirindir. Detay: `Ekip_Gider_Kirilimi.xlsx`
 
 ## 6) Okul yaklaşık toplam
 
