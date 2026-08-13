@@ -93,6 +93,7 @@ Kalıp işçilik payı ≈ **%4,1**.
 | `taseron_paket/sozlesme_taslagi.md` | Taşeronluk sözleşmesi taslağı |
 | `taseron_paket/telefon/` | Telefonda PDF/HTML |
 | `PROJE_OZET.md` | Bu özet |
+| `bilgi_deposu/` | Yapı kalıp + ÇŞB poz + MYB/KKD bilgi deposu |
 
 ## 9) Sonraki adımlar
 
