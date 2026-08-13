@@ -1,0 +1,8 @@
+﻿Poz,Eski_Poz,Tanim,Birim,Kapsam_Not,Dahil_Degil,Analiz_Iscilik_Ozeti
+15.180.1000,Y.21.001/00,KALIP (başlık/grup),—,Grup başlığı,İskele ayrı,—
+15.180.1001,Y.21.001/01,Ahşaptan seri kalıp yapılması,m²,Seri/münferit; yerde hazırlanıp taşınan,Malzeme yükleniciye,Ahşap Kalıpçı + yardımcı + düz işçi
+15.180.1002,Y.21.001/02,Ahşaptan düz yüzeyli beton ve betonarme kalıbı yapılması,m²,En yaygın yapı kalıbı pozı; kırık/düz ölçü,İskele ayrı; malzeme yükleniciye,"10.100.1086 Ahşap Kalıpçı 0,75s; 10.100.1090 yardımcı 0,75s; 10.100.1062 düz 0,50s"
+15.180.1003,Y.21.001/03,Plywood ile düz yüzeyli betonarme kalıbı yapılması,m²,Film kaplı plywood panel,İskele ayrı,Panel Kalıpçı + yardımcı + düz işçi
+15.180.1004,Y.21.001/04,Sac ile eğri yüzeyli beton ve betonarme kalıbı yapılması,m²,Eğri yüzey / sac,İskele ayrı,Özel eğri kalıp
+15.180.1005,Y.21.001/05,Tünel kalıp sistemi ile betonarme kalıp yapılması,m²,Tünel kalıp sistemi,Sistem şartnamesine göre,Tünel Kalıpçı MYB
+15.180.1007,Y.21.001/07,Tünel kalıp sistemi ile betonarme kalıp yapılması (ilgili alt poz),m²,Tünel kalıp varyantı,Resmi kitaptan teyit,Tünel Kalıpçı
