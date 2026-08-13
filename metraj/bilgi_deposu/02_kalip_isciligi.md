@@ -70,3 +70,12 @@ Gecikme (beton/demir/yağış/vinç) ile süre %12–60 uzayabilir.
 | Taşeron işçilik BF | Sadece işçilik (+SGK yansıtma) | 450 / 500 / 550 TL/m² |
 | ÇŞB tam poz | Malzeme + işçilik + GG + kâr | 15.180.1002 ~917 TL/m² (2026 Nis. ref.) |
 | GG | Genel giderler | ÇŞB fiyatının parçası |
+
+## 9) Bu şahıs şirketi kimlik özeti
+
+Detay: `../taseron_paket/sirket_kimlik.md`
+
+- Unvan: ABDURRAHMAN BARIŞ ÖKER (gerçek kişi)
+- VD / VKN: Van / 6530560679
+- Ana kalıp NACE: 43.99.05 (12.08.2026)
+- Diğer: 71.11.01 mimarlık

@@ -19,11 +19,12 @@ Adres: _______________________________________________
 SGK İşyeri Sicil No (şantiye dosyası): __________________  
 
 **2) Taşeron / Alt Yüklenici (Bundan sonra “TAŞERON”)**  
-Unvan: _________________________ (Şahıs Şirketi)  
-Vergi Dairesi / No: ____________________________________  
-Adres: _______________________________________________  
+Unvan: **ABDURRAHMAN BARIŞ ÖKER** (Gerçek kişi / şahıs şirketi)  
+Vergi Dairesi / No: **Van Vergi Dairesi Müdürlüğü / 6530560679**  
+Adres: Yeni Mah. Çalıbaşı Van İpekyolu No:26/1, Van  
 Ana NACE: **43.99.05** — İnşaatlarda beton işleri (kalıp içerisine beton dökülmesi, kalıp çakılması vb.)  
-Yan NACE: **43.99.13** (inşaat demirciliği), **43.99.07** (iskele / çalışma platformu)  
+Diğer kayıtlı NACE: **71.11.01** (mimarlık / mimari danışmanlık)  
+İhtiyaç halinde eklenecek yan NACE: **43.99.13** (demir), **43.99.07** (iskele)  
 SGK Aracı (Taşeron) Dosya No: __________________________  
 Tehlike sınıfı: **Çok Tehlikeli**
 
