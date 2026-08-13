@@ -88,6 +88,7 @@ Kalıp işçilik payı ≈ **%4,1**.
 |---|---|
 | `Karsiyaka_Ortaokulu_Kalip_KIRIK_OLCU.xlsx` | Kırık ölçü cetveli |
 | `Kalip_Cizim_Metraj_Fiyat_Tablosu.xlsx` | m² + 450 + ÇŞB + tutar |
+| `Isveren_Fiyat_Teklifi_Kalip_Taseronlugu.xlsx` | **İşverene fiyat teklifi** (500 TL/m² + senaryo + metraj) |
 | `Fatura_Kesim_Formu_Kalip_Hakedis.xlsx` | Muhasebe e-Fatura formu |
 | `taseron_paket/Taseron_Saha_Hakedis_Maliyet_Paket.xlsx` | Tevkifatlı hakediş + maliyet + checklist |
 | `taseron_paket/sozlesme_taslagi.md` | Taşeronluk sözleşmesi taslağı |

@@ -1,0 +1,35 @@
+Bölüm,Alan,Değer
+Teklif Veren,Unvan,ABDURRAHMAN BARIŞ ÖKER
+Teklif Veren,Tür,Gerçek kişi / şahıs işletmesi
+Teklif Veren,Vergi Dairesi,Van Vergi Dairesi Müdürlüğü
+Teklif Veren,VKN,6530560679
+Teklif Veren,Adres,"Yeni Mah. Çalıbaşı Van İpekyolu No:26/1, Van"
+Teklif Veren,NACE,43.99.05 — İnşaatlarda beton işleri (kalıp)
+Proje,Ad,Karşıyaka Ortaokulu (24 derslik)
+Proje,Proje No,MEBİZ.73-10-25-01-SU-001-R0
+Proje,İş Tanımı,Betonarme ahşap kalıp işçiliği (taşeron)
+Proje,Ölçü Yöntemi,Kırık ölçü (a × b × c)
+Proje,Tahmini Süre,7.5 ay
+Teklif,Birim Fiyat (TL/m²),500
+Teklif,Geçerlilik,30 gün
+,, 
+Sıra,Poz,İş Kalemi,Birim,Miktar_m2,Birim_Fiyat_TL,Tutar_TL
+1,15.180.1002/A,Radye temel yan kalıbı yapılması (işçilik),m²,120.4,500,60200.0
+2,15.180.1002/B,"Bodrum perde kalıbı yapılması (çift yüz, boşluk düşümlü, işçilik)",m²,1152.7,500,576350.0
+3,15.180.1002/C,Bodrum kolon kalıbı yapılması (işçilik),m²,184.0,500,92000.0
+4,15.180.1002/D,Üst kat perde kalıbı yapılması (4 kat aralığı işçilik),m²,3468.8,500,1734400.0
+5,15.180.1002/E,Üst kat kolon kalıbı yapılması (4 kat aralığı işçilik),m²,699.2,500,349600.0
+6,15.180.1002/F,Döşeme alt kalıbı yapılması (5 kat işçilik),m²,4706.5,500,2353250.0
+7,15.180.1002/G,Kiriş kalıbı yapılması — yan + alt (5 kat işçilik),m²,1441.8,500,720900.0
+,,GENEL TOPLAM,m²,11773.4,500,5886700.0
+,,,,,,
+Finansal Özet,Kalem,Tutar_TL
+Finansal Özet,Matrah (KDV hariç),5886700.0
+Finansal Özet,KDV (%20),1177340.0
+Finansal Özet,KDV Tevkifatı (4/10),470936.0
+Finansal Özet,Tahsil edilecek KDV (6/10),706404.0
+Finansal Özet,TOPLAM ÖDENECEK (matrah + 6/10 KDV),6593104.0
+,, 
+Kapsam Dahil,,Kalıp imalatı montaj söküm işçilik; işçi SGK prim yansıtması; saha İSG uygulamaları
+Kapsam Dışı,,Kalıp malzemesi iskele beton demir nakliye vinç (işveren tarafından)
+Ödeme,,Dönemsel hakediş — çift imzalı metraj tutanağı + e-Fatura (KDV tevkifatı 4/10)
