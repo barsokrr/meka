@@ -93,7 +93,8 @@ Kalıp işçilik payı ≈ **%4,1**.
 | `Fatura_Kesim_Formu_Kalip_Hakedis.xlsx` | Muhasebe e-Fatura formu |
 | `taseron_paket/Taseron_Saha_Hakedis_Maliyet_Paket.xlsx` | Tevkifatlı hakediş + maliyet + checklist |
 | `taseron_paket/sozlesme_taslagi.md` | Taşeronluk sözleşmesi taslağı |
-| `taseron_paket/telefon/` | Telefonda PDF/HTML |
+| `public/kalip/` | **Telefonda görüntüleme** — `/kalip` mobil portal (HTML) |
+| `taseron_paket/telefon/` | `/kalip` yönlendirme |
 | `PROJE_OZET.md` | Bu özet |
 | `bilgi_deposu/` | Yapı kalıp + ÇŞB poz + MYB/KKD bilgi deposu |
 
