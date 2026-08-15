@@ -1,0 +1,15 @@
+﻿Sira,Poz,Tarif,Birim,Miktar_m2,Birim_Fiyat_Taseron_TL,Taseron_Tutar_TL,CSB_Birim_Fiyat_TL,CSB_Tutar_TL
+1,15.180.1002/A,Radye temel yan kalıbı,m²,120.4,450.0,54180.0,917.0,110406.8
+2,15.180.1002/B,"Bodrum perde kalıbı (çift yüz, boşluk düşümlü)",m²,1152.7,450.0,518715.0,917.0,1057025.9
+3,15.180.1002/C,Bodrum kolon kalıbı,m²,184.0,450.0,82800.0,917.0,168728.0
+4,15.180.1002/D,Üst kat perde kalıbı (4 kat aralığı),m²,3468.8,450.0,1560960.0,917.0,3180889.6
+5,15.180.1002/E,Üst kat kolon kalıbı (4 kat aralığı),m²,699.2,450.0,314640.0,917.0,641166.4
+6,15.180.1002/F,Döşeme alt kalıbı (5 kat),m²,4706.5,450.0,2117925.0,917.0,4315860.5
+7,15.180.1002/G,"Kiriş kalıbı (yan + alt, 5 kat)",m²,1441.8,450.0,648810.0,917.0,1322130.6
+
+,,GENEL TOPLAM,m²,11773.4,450.0,5298030.0,917.0,10796207.8
+
+Not,Birim fiyat = taşeron işçilik (malzeme hariç) 450 TL/m²
+Not,"ÇŞB birim = 15.180.1002 ahşap düz yüzeyli kalıp, 2026 Nisan ~917 TL/m² (malzeme+işçilik+GG+kâr)"
+Not,Metraj: kalıp çizimi kırık ölçü (MEBİZ.73-10-25-01-SU-001-R0)
+Not,KDV hariç tutarlar

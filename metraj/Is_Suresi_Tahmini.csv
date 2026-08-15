@@ -1,0 +1,16 @@
+﻿Kalem,m2,Verim_m2_gun,Ekip_gunu,Ay
+Radye yan kalıp,120.4,45,2.68,0.111
+Bodrum perde,1152.7,55,20.96,0.873
+Bodrum kolon,184.0,50,3.68,0.153
+Üst perde (4 aralık),3468.8,70,49.55,2.065
+Üst kolon (4 aralık),699.2,55,12.71,0.53
+Döşeme alt (5 kat),4706.5,130,36.2,1.508
+Kiriş (5 kat),1441.8,50,28.84,1.202
+TOPLAM_SIRALI,11773.4,,154.62,6.443
+NET_PARALEL,11773.4,,126.79,5.283
+
+Senaryo,Carpan,Isgunu,Ay,m2_gun
+İyimser,1.12,142.0,5.92,82.9
+Gerçekçi (baz),1.35,171.2,7.13,68.8
+Kötümser,1.6,202.9,8.45,58.0
+Onerilen_sozlesme,,,7.5,

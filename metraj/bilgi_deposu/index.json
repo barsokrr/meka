@@ -1,0 +1,20 @@
+{
+  "title": "Yapı Kalıp / Kalıp İşçiliği / ÇŞB Poz Bilgi Deposu",
+  "updated": "2026-08-13",
+  "scope": [
+    "yapı kalıp bilgisi",
+    "kalıp işçiliği",
+    "ÇŞB kalıp pozları",
+    "MYB/KKD",
+    "metraj",
+    "taşeron operasyon"
+  ],
+  "official_sources": [
+    "https://yfk.csb.gov.tr/birim-fiyatlar-100468",
+    "https://yfk.csb.gov.tr/haberler/1-ocak-2026-tarihinden-itibaren-gecerli-2026-yili-insaat-ve-tesisat-birim-fiyatlari-yayinlanmistir-302559"
+  ],
+  "project_link": "Karşıyaka Ortaokulu kalıp taşeron paketi (metraj/)",
+  "canonical_poz_for_project": "15.180.1002",
+  "canonical_labor_price_TL_m2": 450,
+  "notes": "Fiyatlar dönemsel değişir; resmi YFK PDF teyit edilmelidir."
+}

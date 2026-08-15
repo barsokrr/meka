@@ -1,0 +1,14 @@
+﻿Sira,Kod,Aciklama,Birim,Miktar,BirimFiyat,MalHizmetTutari,KDVOrani,TevkifatOrani
+1,15.180.1002/A,Radye temel yan kalıbı yapılması (işçilik) — Karşıyaka Ortaokulu kalıp işçiliği (malzeme hariç),m²,120.4,450.0,54180.0,20,4/10
+2,15.180.1002/B,"Bodrum perde kalıbı yapılması (çift yüz, işçilik) — Karşıyaka Ortaokulu kalıp işçiliği (malzeme hariç)",m²,1152.7,450.0,518715.0,20,4/10
+3,15.180.1002/C,Bodrum kolon kalıbı yapılması (işçilik) — Karşıyaka Ortaokulu kalıp işçiliği (malzeme hariç),m²,184.0,450.0,82800.0,20,4/10
+4,15.180.1002/D,Üst kat perde kalıbı yapılması (işçilik) — Karşıyaka Ortaokulu kalıp işçiliği (malzeme hariç),m²,3468.8,450.0,1560960.0,20,4/10
+5,15.180.1002/E,Üst kat kolon kalıbı yapılması (işçilik) — Karşıyaka Ortaokulu kalıp işçiliği (malzeme hariç),m²,699.2,450.0,314640.0,20,4/10
+6,15.180.1002/F,Döşeme alt kalıbı yapılması (işçilik) — Karşıyaka Ortaokulu kalıp işçiliği (malzeme hariç),m²,4706.5,450.0,2117925.0,20,4/10
+7,15.180.1002/G,Kiriş kalıbı yapılması — yan+alt (işçilik) — Karşıyaka Ortaokulu kalıp işçiliği (malzeme hariç),m²,1441.8,450.0,648810.0,20,4/10
+
+ICMAL,Matrah,5298030.0
+ICMAL,KDV20,1059606.0
+ICMAL,Tevkifat_4_10,423842.4
+ICMAL,Tahsil_KDV_6_10,635763.6
+ICMAL,Odenecek,5933793.6
