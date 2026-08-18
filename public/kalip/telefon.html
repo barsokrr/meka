@@ -5,167 +5,171 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <meta name="theme-color" content="#1f4e79"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
-<title>Karşıyaka Kalıp — Telefon</title>
+<title>Karşıyaka Kalıp — Özet Tablo</title>
 <style>
 :root{--brand:#1f4e79;--accent:#e94560;--accent2:#f5a623;--mint:#4ecdc4;--card:#fff;--muted:#64748b;--line:#e2e8f0}
-*{box-sizing:border-box} html{-webkit-text-size-adjust:100%}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
 body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:linear-gradient(180deg,#e8eef5,#f6f3ee 45%);color:#1a1a1a;line-height:1.45;padding-bottom:calc(4.5rem + env(safe-area-inset-bottom))}
-header{padding:1rem;text-align:center;max-width:560px;margin:0 auto}
-header h1{margin:.2rem 0;font-size:1.25rem;color:var(--brand)}
-.pill{display:inline-block;background:#dbeafe;color:#1e3a5f;padding:.2rem .55rem;border-radius:999px;font-size:.72rem;font-weight:700}
-nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:#fff;border-top:1px solid var(--line);padding:.35rem .25rem calc(.35rem + env(safe-area-inset-bottom));z-index:99;box-shadow:0 -4px 20px rgba(0,0,0,.06)}
-nav button{flex:1;border:0;background:0;font:inherit;font-size:.68rem;color:var(--muted);padding:.45rem .15rem;border-radius:8px}
+header{padding:1rem 1rem .5rem;text-align:center;max-width:560px;margin:0 auto}
+header h1{margin:.25rem 0;font-size:1.2rem;color:var(--brand)}
+.pill{display:inline-block;background:#dbeafe;color:#1e3a5f;padding:.2rem .55rem;border-radius:999px;font-size:.7rem;font-weight:700}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:#fff;border-top:1px solid var(--line);padding:.35rem .2rem calc(.35rem + env(safe-area-inset-bottom));z-index:99;box-shadow:0 -4px 20px rgba(0,0,0,.06)}
+nav button{flex:1;border:0;background:0;font:inherit;font-size:.65rem;color:var(--muted);padding:.45rem .1rem;border-radius:8px}
 nav button.on{color:var(--brand);font-weight:700;background:#eef4fa}
-.panel{display:none;max-width:560px;margin:0 auto;padding:0 1rem 1rem}
+.panel{display:none;max-width:560px;margin:0 auto;padding:0 .85rem 1rem}
 .panel.on{display:block}
-.card{background:var(--card);border-radius:14px;padding:1rem;margin:.65rem 0;box-shadow:0 8px 24px rgba(31,78,121,.07)}
-.card h2{margin:0 0 .5rem;font-size:1rem;color:var(--brand)}
+.card{background:var(--card);border-radius:14px;padding:.9rem;margin:.6rem 0;box-shadow:0 8px 24px rgba(31,78,121,.07)}
+.card h2{margin:0 0 .45rem;font-size:.95rem;color:var(--brand)}
 .card.dark{background:linear-gradient(145deg,#1a1a2e,#16213e);color:#e8e8e8}
 .card.dark h2{color:var(--accent2)}
-table{width:100%;border-collapse:collapse;font-size:.88rem}
-td,th{padding:.4rem .1rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-th{color:var(--muted);font-weight:600;width:44%}
+table{width:100%;border-collapse:collapse;font-size:.84rem}
+td,th{padding:.38rem .1rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600;width:42%}
 .card.dark td,.card.dark th{border-color:rgba(255,255,255,.12)}.card.dark th{color:#8892a0}
-.big{font-size:1.15rem;font-weight:800;color:var(--accent2)}.card.dark .big{color:var(--mint)}
+.big{font-size:1.1rem;font-weight:800;color:var(--accent2)}.card.dark .big{color:var(--mint)}
 .warn{background:#fff7ed;border-left:4px solid #b45309}.ok{background:#f0fdf4;border-left:4px solid #15803d}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
-.stat{background:rgba(255,255,255,.08);border-radius:10px;padding:.55rem;text-align:center}
-.stat .v{font-size:1.1rem;font-weight:800;color:var(--mint)}.stat .l{font-size:.65rem;color:#8892a0}
-.bar{height:7px;background:rgba(255,255,255,.12);border-radius:999px;overflow:hidden;margin-top:.15rem}
-.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2))}
-.scroll-x{overflow-x:auto;-webkit-overflow-scrolling:touch}.scroll-x table{min-width:460px;font-size:.8rem}
-footer.note{font-size:.7rem;color:var(--muted);text-align:center;padding:0 1rem 1rem}
+.hero{background:linear-gradient(135deg,#1f4e79,#16213e);color:#fff;border-radius:14px;padding:1rem;margin:.6rem 0;text-align:center}
+.hero .num{font-size:1.5rem;font-weight:800;color:var(--accent2)}
+.hero .sub{font-size:.75rem;opacity:.85;margin-top:.2rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:.45rem}
+.mini{background:#f8fafc;border-radius:10px;padding:.55rem;text-align:center;font-size:.75rem}
+.mini b{display:block;font-size:1rem;color:var(--brand)}
+.scroll-x{overflow-x:auto;-webkit-overflow-scrolling:touch}.scroll-x table{min-width:420px;font-size:.78rem}
+.tag{display:inline-block;background:#fee2e2;color:#991b1b;font-size:.65rem;font-weight:700;padding:.1rem .4rem;border-radius:4px}
+.tag.ok{background:#dcfce7;color:#166534}
+footer.note{font-size:.68rem;color:var(--muted);text-align:center;padding:0 1rem 1rem}
 </style>
 </head>
 <body>
 <header>
-  <span class="pill">11.773 m² · Karşıyaka Ortaokulu</span>
-  <h1>Kalıp Taşeron — Mobil</h1>
-  <p style="font-size:.82rem;color:var(--muted);margin:.3rem 0 0">Tek dosya · internet gerekmez · yer imine ekleyin</p>
+  <span class="pill">ÖZET TABLO · 11.773 m²</span>
+  <h1>Karşıyaka Kalıp Taşeron</h1>
 </header>
 
-<section id="p-ozet" class="panel on">
-  <div class="card ok"><h2>Doğru model</h2><p style="margin:0;font-size:.88rem">Şahıs SGK (4A) + <b>Aracı No</b> + tevkifatlı fatura · NACE <b>43.99.05</b></p></div>
-  <div class="card warn"><h2>Yasak</h2><p style="margin:0;font-size:.88rem">Müteahhitte sigortalı işçi + size fatura (muvazaa).</p></div>
-  <div class="card">
-    <h2>Metraj (kırık ölçü)</h2>
-    <table>
-      <tr><th>Radye yan</th><td>120,4 m²</td></tr>
-      <tr><th>Bodrum perde</th><td>1.152,7 m²</td></tr>
-      <tr><th>Bodrum kolon</th><td>184,0 m²</td></tr>
-      <tr><th>Üst perde</th><td>3.468,8 m²</td></tr>
-      <tr><th>Üst kolon</th><td>699,2 m²</td></tr>
-      <tr><th>Döşeme alt</th><td>4.706,5 m²</td></tr>
-      <tr><th>Kiriş</th><td>1.441,8 m²</td></tr>
-      <tr><th>TOPLAM</th><td><b>11.773,4 m²</b></td></tr>
-    </table>
+<!-- TAB 1: ÖZET TABLO -->
+<section id="p-tablo" class="panel on">
+  <div class="hero">
+    <div class="sub">Teklif (500 TL/m²) · Tevkifatlı</div>
+    <div class="num">6.593.104 TL</div>
+    <div class="sub">Matrah 5.886.700 TL · KDV hariç işçilik</div>
   </div>
-  <div class="card">
-    <h2>Süre &amp; ekip</h2>
-    <table>
-      <tr><th>Gerçekçi süre</th><td>~7,1 ay</td></tr>
-      <tr><th>Sözleşme</th><td>7,5 ay</td></tr>
-      <tr><th>Ekip</th><td>2 usta · 3 çırak · 1 mühendis</td></tr>
-      <tr><th>Tarih planı</th><td>01.09.2026 — 15.04.2027</td></tr>
-    </table>
+  <div class="grid2">
+    <div class="mini"><b>11.773 m²</b>Metraj</div>
+    <div class="mini"><b>7,5 ay</b>Süre</div>
+    <div class="mini"><b>6 kişi</b>Ekip</div>
+    <div class="mini"><b>~874k</b>Net kâr (500)</div>
   </div>
+  <div class="card"><h2>Proje</h2>
+  <table>
+    <tr><th>Proje</th><td>Karşıyaka Ortaokulu (24 derslik)</td></tr>
+    <tr><th>Proje no</th><td>MEBİZ.73-10-25-01-SU-001-R0</td></tr>
+    <tr><th>Taşeron</th><td>ABDURRAHMAN BARIŞ ÖKER</td></tr>
+    <tr><th>VKN</th><td>6530560679 · Van VD</td></tr>
+    <tr><th>NACE</th><td>43.99.05 · Seçenek A</td></tr>
+  </table></div>
+  <div class="card scroll-x"><h2>Metraj</h2>
+  <table>
+    <tr><th>Kalem</th><th>m²</th><th>%</th></tr>
+    <tr><td>Döşeme alt</td><td>4.706,5</td><td>40</td></tr>
+    <tr><td>Üst perde</td><td>3.468,8</td><td>29,5</td></tr>
+    <tr><td>Kiriş</td><td>1.441,8</td><td>12,2</td></tr>
+    <tr><td>Bodrum perde</td><td>1.152,7</td><td>9,8</td></tr>
+    <tr><td>Üst kolon</td><td>699,2</td><td>5,9</td></tr>
+    <tr><td>Bodrum kolon</td><td>184</td><td>1,6</td></tr>
+    <tr><td>Radye</td><td>120,4</td><td>1</td></tr>
+    <tr><th>TOPLAM</th><th>11.773,4</th><th>100</th></tr>
+  </table></div>
+  <div class="card scroll-x"><h2>Fiyat &amp; kâr (7,1 ay)</h2>
+  <table>
+    <tr><th>BF</th><th>Matrah</th><th>Ödenecek</th><th>Net kâr</th></tr>
+    <tr><td>450</td><td>5.298.030</td><td>5.933.794</td><td>491k <span class="tag">Sınırda</span></td></tr>
+    <tr><td><b>500 ★</b></td><td><b>5.886.700</b></td><td><b>6.593.104</b></td><td><b>874k</b> <span class="tag ok">Teklif</span></td></tr>
+    <tr><td>550</td><td>6.475.370</td><td>7.252.414</td><td>1.256k</td></tr>
+  </table></div>
+  <div class="card warn"><h2>Eksikler</h2>
+  <table>
+    <tr><th>Aracı No</th><td>❌ Alınmadı</td></tr>
+    <tr><th>SGK</th><td>⚠️ Kalıpçı + MYB</td></tr>
+    <tr><th>Sözleşme</th><td>📝 Taslak</td></tr>
+    <tr><th>Pazarlık</th><td>⏳ 500–550 hedef</td></tr>
+  </table></div>
+  <div class="card ok"><h2>Hızlı karar</h2>
+  <table>
+    <tr><th>Teklif ver</th><td>500 TL/m² → 6.593.104 TL</td></tr>
+    <tr><th>Minimum</th><td>450 + 6 ayda bitir</td></tr>
+    <tr><th>Yasak</th><td>Müteahhit SGK + fatura</td></tr>
+  </table></div>
 </section>
 
+<!-- TAB 2: TEKLİF -->
 <section id="p-teklif" class="panel">
-  <div class="card">
-    <h2>Fiyat teklifi (500 TL/m²)</h2>
-    <table>
-      <tr><th>Matrah</th><td>5.886.700 TL</td></tr>
-      <tr><th>KDV %20</th><td>1.177.340 TL</td></tr>
-      <tr><th>Tevkifat 4/10</th><td>470.936 TL</td></tr>
-      <tr><th>Ödenecek</th><td class="big">6.593.104 TL</td></tr>
-    </table>
-  </div>
-  <div class="card scroll-x">
-    <h2>Kalem kırılımı</h2>
-    <table>
-      <tr><th>Poz</th><th>Kalem</th><th>m²</th><th>Tutar</th></tr>
-      <tr><td>A</td><td>Radye</td><td>120,4</td><td>60.200</td></tr>
-      <tr><td>B</td><td>Bodrum perde</td><td>1.152,7</td><td>576.350</td></tr>
-      <tr><td>C</td><td>Bodrum kolon</td><td>184</td><td>92.000</td></tr>
-      <tr><td>D</td><td>Üst perde</td><td>3.468,8</td><td>1.734.400</td></tr>
-      <tr><td>E</td><td>Üst kolon</td><td>699,2</td><td>349.600</td></tr>
-      <tr><td>F</td><td>Döşeme</td><td>4.706,5</td><td>2.353.250</td></tr>
-      <tr><td>G</td><td>Kiriş</td><td>1.441,8</td><td>720.900</td></tr>
-    </table>
-  </div>
-  <div class="card">
-    <h2>Senaryolar</h2>
-    <table>
-      <tr><th>450 TL/m²</th><td>Ödenecek 5.933.794 TL</td></tr>
-      <tr><th>500 TL/m²</th><td><b>Teklif</b> · 6.593.104 TL</td></tr>
-      <tr><th>550 TL/m²</th><td>Ödenecek 7.252.414 TL</td></tr>
-    </table>
-  </div>
+  <div class="card"><h2>500 TL/m² teklif</h2>
+  <table>
+    <tr><th>Matrah</th><td>5.886.700 TL</td></tr>
+    <tr><th>KDV</th><td>1.177.340 TL</td></tr>
+    <tr><th>Tevkifat</th><td>470.936 TL</td></tr>
+    <tr><th>Ödenecek</th><td class="big">6.593.104 TL</td></tr>
+  </table></div>
+  <div class="card scroll-x"><h2>Kalem kırılımı</h2>
+  <table>
+    <tr><th>Poz</th><th>Kalem</th><th>m²</th><th>Tutar</th></tr>
+    <tr><td>A</td><td>Radye</td><td>120,4</td><td>60.200</td></tr>
+    <tr><td>B</td><td>Bodrum perde</td><td>1.152,7</td><td>576.350</td></tr>
+    <tr><td>C</td><td>Bodrum kolon</td><td>184</td><td>92.000</td></tr>
+    <tr><td>D</td><td>Üst perde</td><td>3.468,8</td><td>1.734.400</td></tr>
+    <tr><td>E</td><td>Üst kolon</td><td>699,2</td><td>349.600</td></tr>
+    <tr><td>F</td><td>Döşeme</td><td>4.706,5</td><td>2.353.250</td></tr>
+    <tr><td>G</td><td>Kiriş</td><td>1.441,8</td><td>720.900</td></tr>
+  </table></div>
 </section>
 
+<!-- TAB 3: METRAJ -->
+<section id="p-metraj" class="panel">
+  <div class="card ok"><h2>Model</h2><p style="margin:0;font-size:.86rem">4A + Aracı No + tevkifat · NACE 43.99.05</p></div>
+  <div class="card warn"><h2>Yasak</h2><p style="margin:0;font-size:.86rem">Müteahhit SGK + size fatura</p></div>
+  <div class="card"><h2>Süre &amp; ekip</h2>
+  <table>
+    <tr><th>Gerçekçi</th><td>~7,1 ay</td></tr>
+    <tr><th>Sözleşme</th><td>7,5 ay</td></tr>
+    <tr><th>Ekip</th><td>2 usta · 3 çırak · 1 müh.</td></tr>
+    <tr><th>Ücret/ay</th><td>490.000 TL brüt</td></tr>
+    <tr><th>Gider 7,1 ay</th><td>~4,63 M TL</td></tr>
+    <tr><th>Plan</th><td>01.09.26 — 15.04.27</td></tr>
+  </table></div>
+  <div class="card scroll-x"><h2>Gider (6 ay)</h2>
+  <table>
+    <tr><th>Kalem</th><th>TL</th></tr>
+    <tr><td>Usta 2×120k</td><td>1.440.000</td></tr>
+    <tr><td>Çırak 3×60k</td><td>1.080.000</td></tr>
+    <tr><td>Mühendis</td><td>420.000</td></tr>
+    <tr><td>SGK+işsizlik</td><td>661.500</td></tr>
+    <tr><th>Toplam</th><th>3.951.500</th></tr>
+  </table></div>
+</section>
+
+<!-- TAB 4: DASHBOARD -->
 <section id="p-dash" class="panel">
-  <div class="card dark">
-    <h2>Dashboard KPI</h2>
-    <div class="grid2">
-      <div class="stat"><div class="v">%0</div><div class="l">İlerleme</div></div>
-      <div class="stat"><div class="v">6</div><div class="l">Personel</div></div>
-      <div class="stat"><div class="v">7,5 ay</div><div class="l">Plan süre</div></div>
-      <div class="stat"><div class="v">69</div><div class="l">m²/gün hedef</div></div>
-    </div>
-  </div>
-  <div class="card dark">
-    <h2>Aşamalar (plan)</h2>
-    <p style="font-size:.78rem;color:#8892a0;margin:0 0 .4rem">Hazırlık &amp; Ölçü</p><div class="bar"><span style="width:0%"></span></div>
-    <p style="font-size:.78rem;color:#8892a0;margin:.5rem 0 .4rem">Kalıp Montaj</p><div class="bar"><span style="width:0%"></span></div>
-    <p style="font-size:.78rem;color:#8892a0;margin:.5rem 0 .4rem">Beton &amp; Kontrol</p><div class="bar"><span style="width:0%"></span></div>
-    <p style="font-size:.78rem;color:#8892a0;margin:.5rem 0 .4rem">Söküm &amp; Devretme</p><div class="bar"><span style="width:0%"></span></div>
-  </div>
-  <div class="card dark">
-    <h2>Aylık hedef (m²)</h2>
-    <table>
-      <tr><th>Eyl'26</th><td>800</td></tr><tr><th>Eki'26</th><td>1.100</td></tr>
-      <tr><th>Kas'26</th><td>1.400</td></tr><tr><th>Ara'26</th><td>1.700</td></tr>
-      <tr><th>Oca'27</th><td>1.900</td></tr><tr><th>Şub'27</th><td>2.000</td></tr>
-      <tr><th>Mar'27</th><td>1.873</td></tr><tr><th>Nis'27</th><td>1.000</td></tr>
-    </table>
-  </div>
-</section>
-
-<section id="p-tablo" class="panel">
-  <div class="card scroll-x">
-    <h2>Kâr (7,1 ay)</h2>
-    <table>
-      <tr><th>BF</th><th>Net kâr</th></tr>
-      <tr><td>450</td><td>~491.000 TL</td></tr>
-      <tr><td>500</td><td>~874.000 TL</td></tr>
-      <tr><td>550</td><td>~1.256.000 TL</td></tr>
-    </table>
-  </div>
-  <div class="card scroll-x">
-    <h2>Gider (6 ay ref.)</h2>
-    <table>
-      <tr><th>Kalem</th><th>6 ay</th></tr>
-      <tr><td>Usta (2×120k)</td><td>1.440.000</td></tr>
-      <tr><td>Çırak (3×60k)</td><td>1.080.000</td></tr>
-      <tr><td>Mühendis</td><td>420.000</td></tr>
-      <tr><td>SGK+işsizlik</td><td>661.500</td></tr>
-      <tr><th>Toplam</th><th>3.951.500</th></tr>
-    </table>
-  </div>
-  <div class="card">
-    <h2>Sonraki adımlar</h2>
-    <ol style="margin:0;padding-left:1.15rem;font-size:.86rem">
-      <li>Aracı No al</li><li>SGK kalıpçı kodu + MYB</li><li>BF pazarlığı 500–550</li><li>Sözleşme imzası</li>
-    </ol>
-  </div>
+  <div class="card dark"><h2>KPI</h2>
+  <div class="grid2">
+    <div class="mini" style="background:rgba(255,255,255,.08);color:#fff"><b style="color:var(--mint)">%0</b>İlerleme</div>
+    <div class="mini" style="background:rgba(255,255,255,.08);color:#fff"><b style="color:var(--mint)">6</b>Personel</div>
+    <div class="mini" style="background:rgba(255,255,255,.08);color:#fff"><b style="color:var(--mint)">69</b>m²/gün</div>
+    <div class="mini" style="background:rgba(255,255,255,.08);color:#fff"><b style="color:var(--mint)">7,5</b>Ay</div>
+  </div></div>
+  <div class="card dark"><h2>Aylık hedef (m²)</h2>
+  <table>
+    <tr><th>Eyl</th><td>800</td></tr><tr><th>Eki</th><td>1.100</td></tr>
+    <tr><th>Kas</th><td>1.400</td></tr><tr><th>Ara</th><td>1.700</td></tr>
+    <tr><th>Oca</th><td>1.900</td></tr><tr><th>Şub</th><td>2.000</td></tr>
+    <tr><th>Mar</th><td>1.873</td></tr><tr><th>Nis</th><td>1.000</td></tr>
+  </table></div>
 </section>
 
 <nav>
-  <button type="button" class="on" data-p="p-ozet">Özet</button>
+  <button type="button" class="on" data-p="p-tablo">Özet Tablo</button>
   <button type="button" data-p="p-teklif">Teklif</button>
+  <button type="button" data-p="p-metraj">Metraj</button>
   <button type="button" data-p="p-dash">Dashboard</button>
-  <button type="button" data-p="p-tablo">Tablolar</button>
 </nav>
 
 <script>
@@ -179,6 +183,6 @@ document.querySelectorAll('nav button').forEach(function(btn){
   });
 });
 </script>
-<footer class="note">ABDURRAHMAN BARIŞ ÖKER · VKN 6530560679 · Taslak</footer>
+<footer class="note">VKN 6530560679 · Taslak · Yer imine ekle</footer>
 </body>
 </html>
