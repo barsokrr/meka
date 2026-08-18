@@ -1,0 +1,73 @@
+Bölüm,Alan,Değer,Birim,Not
+PROJE,Proje adı,Karşıyaka Ortaokulu (24 derslik),,
+PROJE,Proje no,MEBİZ.73-10-25-01-SU-001-R0,,
+PROJE,İş tanımı,Betonarme ahşap kalıp işçiliği (taşeron),,
+PROJE,Ölçü yöntemi,Kırık ölçü (a×b×c),,Tercih
+PROJE,Alternatif ölçü,Düz ölçü,11.295,7 m²
+PROJE,İnşaat alanı (6 kot),~6.169,m²,Referans
+,,,,
+TAŞERON,Unvan,ABDURRAHMAN BARIŞ ÖKER,,
+TAŞERON,Tür,Gerçek kişi / şahıs işletmesi,,
+TAŞERON,VKN,6530560679,,
+TAŞERON,Vergi dairesi,Van Vergi Dairesi Müdürlüğü,,
+TAŞERON,NACE (ana),43.99.05 — Kalıp işleri,,
+TAŞERON,Operasyon modeli,Seçenek A — 4A + Aracı No + tevkifat,,
+,,,,
+METRAJ,Radye temel yan kalıbı,120.4,m²,1.0%
+METRAJ,Bodrum perde kalıbı,1152.7,m²,9.8%
+METRAJ,Bodrum kolon kalıbı,184.0,m²,1.6%
+METRAJ,Üst kat perde kalıbı,3468.8,m²,29.5%
+METRAJ,Üst kat kolon kalıbı,699.2,m²,5.9%
+METRAJ,Döşeme alt kalıbı,4706.5,m²,40.0%
+METRAJ,Kiriş kalıbı,1441.8,m²,12.2%
+METRAJ,TOPLAM (kırık),11773.4,m²,100%
+METRAJ,+%5 fire (referans),12362.1,m²,
+,,,,
+FİYAT — 450 TL/m²,Birim fiyat,450,TL/m²,İşçilik · malzeme hariç
+FİYAT — 450 TL/m²,Matrah (KDV hariç),5298030,TL,
+FİYAT — 450 TL/m²,KDV %20,1059606,TL,
+FİYAT — 450 TL/m²,Tevkifat 4/10,423842,TL,
+FİYAT — 450 TL/m²,Ödenecek (matrah+6/10 KDV),5933794,TL,Kanonik
+,,,,
+FİYAT — 500 TL/m² (TEKLİF),Birim fiyat,500,TL/m²,İşveren teklifi
+FİYAT — 500 TL/m² (TEKLİF),Matrah (KDV hariç),5886700,TL,
+FİYAT — 500 TL/m² (TEKLİF),Ödenecek (matrah+6/10 KDV),6593104,TL,Önerilen
+,,,,
+FİYAT — 550 TL/m²,Birim fiyat,550,TL/m²,Pazarlık hedefi
+FİYAT — 550 TL/m²,Matrah (KDV hariç),6475370,TL,
+FİYAT — 550 TL/m²,Ödenecek (matrah+6/10 KDV),7252414,TL,
+,,,,
+REFERANS,ÇŞB poz,15.180.1002,,
+REFERANS,ÇŞB birim (2026 Nis.),917,TL/m²,Malzeme+işçilik+GG+kâr
+REFERANS,ÇŞB toplam,10796208,TL,
+REFERANS,Okul toplam bütçe (tahmini),~129.9,M TL,Kalip payı ~%4.1
+,,,,
+EKİP,Kalıp ustası,2 × 120.000,TL/ay brüt,4A
+EKİP,Çırak / yardımcı,3 × 60.000,TL/ay brüt,4A
+EKİP,Şantiye mühendisi,1 × 70.000,TL/ay brüt,4A
+EKİP,Toplam aylık ücret,490000,TL/ay,4A
+EKİP,Personel (pik),6,kişi,+ sahip 4B
+,,,,
+MALİYET,İşletme gideri (6 ay ref.),3951500,TL,
+MALİYET,İşletme gideri (7.1 ay ref.),4628275,TL,Gerçekçi süre
+,,,,
+KÂR — 7.1 ay,450 TL/m² net kâr,491341,TL,Sınırda
+KÂR — 7.1 ay,500 TL/m² net kâr,873976,TL,Yapılabilir
+KÂR — 7.1 ay,550 TL/m² net kâr,1256612,TL,Değer
+KÂR — 6 ay (450 ref.),Net kâr (GV sonrası),931244,TL,İyimser süre
+,,,,
+SÜRE,Saf iş (paralel yok),~5.3,ay,
+SÜRE,İyimser,~5.9,ay,
+SÜRE,Gerçekçi (baz),~7.1,ay,
+SÜRE,Kötümser,~8.5,ay,
+SÜRE,Sözleşme önerisi,7.5,ay,
+SÜRE,Plan başlangıç,01.09.2026,,
+SÜRE,Plan bitiş,15.04.2027,,
+SÜRE,Verim hedefi,~69,m²/gün·ekip,
+,,,,
+DURUM,Aracı No,Alınmadı,,Kritik
+DURUM,SGK meslek kodu,Düzeltilmeli,,Kalıpçı + MYB
+DURUM,Ekip 4A girişleri,Eksik,,Çırak + mühendis
+DURUM,Sözleşme,Taslak,,Avukat onayı
+DURUM,İSG / MYB / KKD,Yapılmadı,,
+DURUM,BF pazarlığı,Bekliyor,,500–550 hedef
