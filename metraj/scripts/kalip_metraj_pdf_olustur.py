@@ -16,7 +16,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CIZIM_POZ = ROOT / "cizimler" / "poz"
 OUT_PDF_PUBLIC = Path(__file__).resolve().parents[2] / "public" / "kalip" / "metraj-alanlari.pdf"
 OUT_PDF_METRAJ = ROOT / "Kalip_Metraj_Alanlari.pdf"
-OUT_HTML = Path(__file__).resolve().parents[2] / "public" / "kalip" / "metraj-pdf.html"
+OUT_HTML = Path(__file__).resolve().parents[2] / "public" / "kalip" / "metraj-alanlari.html"
+OUT_HTML_LEGACY = Path(__file__).resolve().parents[2] / "public" / "kalip" / "metraj-pdf.html"
 
 L, W = 51.18, 20.09
 PAGE = landscape(A4)
@@ -470,13 +471,109 @@ def scale_drawing(drawing, max_w, max_h):
     return drawing
 
 
-def build_pdf():
+def write_html(poz_svgs: list[tuple[dict, str]]):
+    poz_links = "".join(
+        f'<tr><td><span class="dot" style="background:{p["color"]}"></span> {p["kod"]}</td>'
+        f'<td>{p["ad"]}</td><td class="num">{p["m2"]:,.1f}</td><td>{p["pay"]}</td></tr>'
+        for p in POZLAR
+    )
+    poz_cards = ""
+    for poz, svg in poz_svgs:
+        poz_cards += f'''
+<section class="card" id="poz-{poz["kod"]}">
+  <h2><span class="dot" style="background:{poz["color"]}"></span> Poz {poz["kod"]} — {poz["ad"]}</h2>
+  <p class="sub">{poz["formul"]} · <b>{poz["m2"]:,.1f} m²</b></p>
+  <div class="svg-wrap">{svg}</div>
+  <p class="note">{poz["detay"]}</p>
+</section>'''
+
+    html = f'''<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="theme-color" content="#1f4e79"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<title>Metraj Alanları — Karşıyaka</title>
+<style>
+:root{{--brand:#1f4e79;--accent:#f5a623;--card:#fff;--muted:#64748b;--line:#e2e8f0}}
+*{{box-sizing:border-box}}body{{margin:0;font-family:system-ui,sans-serif;background:#eef2f7;line-height:1.45}}
+header{{background:linear-gradient(160deg,#1f4e79,#0f2744);color:#fff;padding:1.1rem;text-align:center}}
+header h1{{margin:0;font-size:1.1rem}}header p{{margin:.3rem 0 0;font-size:.82rem;opacity:.9}}
+main{{max-width:580px;margin:0 auto;padding:.85rem 1rem 2.5rem}}
+.card{{background:var(--card);border-radius:12px;padding:.9rem;margin:.65rem 0;box-shadow:0 4px 14px rgba(0,0,0,.06)}}
+.card h2{{margin:0 0 .4rem;font-size:.92rem;color:var(--brand);display:flex;align-items:center;gap:.4rem;flex-wrap:wrap}}
+.sub{{font-size:.78rem;color:var(--muted);margin:0 0 .5rem}}
+.note{{font-size:.76rem;color:#475569;margin:.5rem 0 0;padding:.5rem;background:#f8fafc;border-radius:6px}}
+.btn{{display:block;text-align:center;background:var(--brand);color:#fff;padding:.85rem;border-radius:10px;text-decoration:none;font-weight:700;margin:.5rem 0;font-size:.9rem}}
+.btn.secondary{{background:#fff;color:var(--brand);border:2px solid var(--brand)}}
+.btn.accent{{background:linear-gradient(135deg,#b45309,#f5a623);color:#1a1a1a}}
+.svg-wrap{{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:8px;background:#fafafa}}
+.svg-wrap svg{{display:block;max-width:100%;height:auto}}
+table{{width:100%;border-collapse:collapse;font-size:.8rem}}
+td,th{{padding:.4rem .2rem;border-bottom:1px solid var(--line)}}
+th{{color:var(--muted);text-align:left}}
+td.num{{text-align:right;font-variant-numeric:tabular-nums}}
+.dot{{display:inline-block;width:10px;height:10px;border-radius:2px;flex-shrink:0}}
+.back{{display:block;padding:1rem;color:var(--brand);font-weight:600;text-decoration:none}}
+.nav{{display:flex;flex-wrap:wrap;gap:.3rem;margin:.5rem 0}}
+.nav a{{font-size:.65rem;padding:.28rem .45rem;background:#fff;border:1px solid var(--line);border-radius:6px;color:var(--brand);text-decoration:none;font-weight:600}}
+.banner{{background:#fffbeb;border-left:4px solid var(--accent);padding:.75rem;border-radius:0 8px 8px 0;font-size:.82rem;margin:.65rem 0}}
+</style>
+</head>
+<body>
+<a class="back" href="index.html">← Portal</a>
+<header>
+  <h1>Metraj Alanları Görünüş</h1>
+  <p>7 poz · plan + kesit · 11.773,4 m²</p>
+</header>
+<main>
+<div class="banner">📱 Telefonda kaydırarak tüm çizimleri görebilirsiniz. PDF indirmek isteğe bağlıdır.</div>
+<nav class="nav">
+  <a href="#poz-A">A Radye</a><a href="#poz-B">B Perde</a><a href="#poz-C">C Kolon</a>
+  <a href="#poz-D">D Perde</a><a href="#poz-E">E Kolon</a><a href="#poz-F">F Döşeme</a><a href="#poz-G">G Kiriş</a>
+</nav>
+{poz_cards}
+<div class="card">
+  <h2>Poz özeti</h2>
+  <table>
+    <tr><th>Poz</th><th>Alan</th><th class="num">m²</th><th>Pay</th></tr>
+    {poz_links}
+    <tr><th colspan="2">TOPLAM</th><th class="num"><b>11.773,4</b></th><th>100%</th></tr>
+  </table>
+</div>
+<div class="card">
+  <h2>PDF (masaüstü / indir)</h2>
+  <p class="sub">Telefonda PDF görünmüyorsa yukarıdaki çizimler yeterlidir.</p>
+  <a class="btn accent" href="metraj-alanlari.pdf" download="Karşıyaka_Kalip_Metraj_Alanlari.pdf">📥 PDF İndir (8 sayfa)</a>
+  <a class="btn secondary" href="metraj-alanlari.pdf" target="_blank" rel="noopener">PDF Aç</a>
+</div>
+</main>
+</body>
+</html>'''
+    OUT_HTML.write_text(html, encoding="utf-8")
+    # Eski link çalışsın diye yönlendirme
+    redirect = '''<!DOCTYPE html>
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta http-equiv="refresh" content="0;url=metraj-alanlari.html"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Yönlendiriliyor…</title>
+</head><body><p><a href="metraj-alanlari.html">Metraj alanları sayfasına git</a></p></body></html>'''
+    OUT_HTML_LEGACY.write_text(redirect, encoding="utf-8")
+    print(f"HTML: {OUT_HTML}")
+    print(f"Redirect: {OUT_HTML_LEGACY}")
+
+
+def main():
     CIZIM_POZ.mkdir(parents=True, exist_ok=True)
+    poz_svgs = []
     pages = [("00_kapak", svg_cover())]
     for poz in POZLAR:
         svg = svg_poz_combined(poz)
         fname = f'{poz["kod"]}_{poz["ad"][:20].replace(" ", "_")}.svg'
         (CIZIM_POZ / fname).write_text(svg, encoding="utf-8")
+        poz_svgs.append((poz, svg))
         pages.append((f'poz_{poz["kod"]}', svg))
 
     margin = 1.2 * cm
@@ -496,76 +593,7 @@ def build_pdf():
         c.save()
         print(f"PDF: {out_path} ({len(pages)} sayfa)")
 
-
-def write_html():
-    poz_links = "".join(
-        f'<tr><td><span class="dot" style="background:{p["color"]}"></span> {p["kod"]}</td>'
-        f'<td>{p["ad"]}</td><td class="num">{p["m2"]:,.1f}</td><td>{p["pay"]}</td></tr>'
-        for p in POZLAR
-    )
-    html = f'''<!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-<meta name="theme-color" content="#1f4e79"/>
-<title>Metraj Alanları PDF — Karşıyaka</title>
-<style>
-:root{{--brand:#1f4e79;--accent:#f5a623;--card:#fff;--muted:#64748b;--line:#e2e8f0}}
-*{{box-sizing:border-box}}body{{margin:0;font-family:system-ui,sans-serif;background:#eef2f7;line-height:1.45}}
-header{{background:linear-gradient(160deg,#1f4e79,#0f2744);color:#fff;padding:1.1rem;text-align:center}}
-header h1{{margin:0;font-size:1.1rem}}header p{{margin:.3rem 0 0;font-size:.82rem;opacity:.9}}
-main{{max-width:580px;margin:0 auto;padding:.85rem 1rem 2rem}}
-.card{{background:var(--card);border-radius:12px;padding:.9rem;margin:.65rem 0;box-shadow:0 4px 14px rgba(0,0,0,.06)}}
-.card h2{{margin:0 0 .5rem;font-size:.95rem;color:var(--brand)}}
-.sub{{font-size:.78rem;color:var(--muted);margin:0 0 .5rem}}
-.btn{{display:block;text-align:center;background:var(--brand);color:#fff;padding:.85rem;border-radius:10px;text-decoration:none;font-weight:700;margin:.5rem 0}}
-.btn.accent{{background:linear-gradient(135deg,#b45309,#f5a623);color:#1a1a1a}}
-.pdf-frame{{width:100%;height:min(70vh,520px);border:1px solid var(--line);border-radius:8px;background:#525659}}
-table{{width:100%;border-collapse:collapse;font-size:.8rem}}
-td,th{{padding:.4rem .2rem;border-bottom:1px solid var(--line)}}
-th{{color:var(--muted);text-align:left}}
-td.num{{text-align:right;font-variant-numeric:tabular-nums}}
-.dot{{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:middle}}
-.back{{display:block;padding:1rem;color:var(--brand);font-weight:600;text-decoration:none}}
-</style>
-</head>
-<body>
-<a class="back" href="index.html">← Portal</a>
-<header>
-  <h1>Metraj Alanları — PDF</h1>
-  <p>7 poz · plan + kesit görünüş · 11.773,4 m²</p>
-</header>
-<main>
-<div class="card">
-  <h2>PDF Görüntüle</h2>
-  <p class="sub">Her metraj pozunun plan ve kesit görünüşü — 8 sayfa</p>
-  <iframe class="pdf-frame" src="metraj-alanlari.pdf" title="Metraj PDF"></iframe>
-  <a class="btn accent" href="metraj-alanlari.pdf" download="Karşıyaka_Kalip_Metraj_Alanlari.pdf">📥 PDF İndir</a>
-  <a class="btn" href="metraj-alanlari.pdf" target="_blank" rel="noopener">PDF Yeni Sekmede Aç</a>
-</div>
-<div class="card">
-  <h2>Poz listesi</h2>
-  <table>
-    <tr><th>Poz</th><th>Alan</th><th class="num">m²</th><th>Pay</th></tr>
-    {poz_links}
-    <tr><th colspan="2">TOPLAM</th><th class="num"><b>11.773,4</b></th><th>100%</th></tr>
-  </table>
-</div>
-<div class="card">
-  <h2>Alternatif</h2>
-  <p class="sub"><a href="metraj-cizim.html">HTML detay çizimler</a> · <a href="telefon.html">Özet tablo</a></p>
-</div>
-</main>
-</body>
-</html>'''
-    OUT_HTML.write_text(html, encoding="utf-8")
-    print(f"HTML: {OUT_HTML}")
-
-
-def main():
-    build_pdf()
-    write_html()
+    write_html(poz_svgs)
 
 
 if __name__ == "__main__":
