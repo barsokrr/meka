@@ -6,43 +6,62 @@
 <meta name="theme-color" content="#1f4e79"/>
 <title>Kot Farkları — Karşıyaka</title>
 <style>
-:root{--brand:#1f4e79;--accent:#f5a623;--card:#fff;--muted:#64748b;--line:#e2e8f0}
+:root{--brand:#1f4e79;--accent:#f5a623;--card:#fff;--muted:#64748b;--line:#e2e8f0;--roof:#7c3aed}
 *{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;background:#eef2f7;line-height:1.45}
 header{background:linear-gradient(160deg,#1f4e79,#0f2744);color:#fff;padding:1.1rem;text-align:center}
 header h1{margin:0;font-size:1.1rem}header p{margin:.3rem 0 0;font-size:.8rem;opacity:.9}
 main{max-width:560px;margin:0 auto;padding:.85rem 1rem 2rem}
 .card{background:var(--card);border-radius:12px;padding:.9rem;margin:.65rem 0;box-shadow:0 4px 14px rgba(0,0,0,.06)}
 .card h2{margin:0 0 .45rem;font-size:.95rem;color:var(--brand)}
+.card.roof h2{color:var(--roof)}
 .sub{font-size:.78rem;color:var(--muted);margin:0 0 .5rem}
 .hero{background:linear-gradient(135deg,#1e3a5f,#2563eb);color:#fff;border-radius:12px;padding:1rem;text-align:center;margin:.65rem 0}
+.hero.roof{background:linear-gradient(135deg,#4c1d95,#7c3aed)}
 .hero .big{font-size:1.6rem;font-weight:800;color:var(--accent)}
+.hero .row{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-top:.5rem}
+.hero .chip{background:rgba(255,255,255,.15);border-radius:8px;padding:.45rem .7rem;font-size:.78rem;min-width:7rem}
+.hero .chip b{display:block;font-size:1.1rem;color:var(--accent)}
 table{width:100%;border-collapse:collapse;font-size:.82rem}
 td,th{padding:.4rem .15rem;border-bottom:1px solid var(--line);vertical-align:top}
 th{color:var(--muted);font-weight:600;text-align:left;width:38%}
 td.num{text-align:right;font-variant-numeric:tabular-nums}
 .highlight{background:#fffbeb;border-left:4px solid var(--accent);padding:.75rem;border-radius:0 8px 8px 0;font-size:.84rem;margin:.5rem 0}
+.highlight.roof{background:#f5f3ff;border-left-color:var(--roof)}
 .plan-tag{display:inline-block;background:#dbeafe;color:#1e40af;font-size:.68rem;font-weight:700;padding:.15rem .45rem;border-radius:4px}
+.plan-tag.roof{background:#ede9fe;color:#5b21b6}
+.nav{display:flex;gap:.4rem;margin:.65rem 0;flex-wrap:wrap}
+.nav a{flex:1;min-width:7rem;text-align:center;background:#fff;border:1px solid var(--line);border-radius:8px;padding:.5rem .4rem;font-size:.78rem;font-weight:600;color:var(--brand);text-decoration:none}
+.nav a.roof{color:var(--roof)}
 .back{display:block;padding:1rem;color:var(--brand);font-weight:600;text-decoration:none;font-size:.9rem}
 .scroll-x{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.section-label{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:1rem 0 .25rem}
 </style>
 </head>
 <body>
 <a class="back" href="index.html">← Portal</a>
 <header>
   <h1>Yapı Kot Farkları</h1>
-  <p>Karşıyaka Ortaokulu · Temel plan (CAD)</p>
+  <p>Karşıyaka Ortaokulu · Temel + Çatı (+20,00) CAD</p>
 </header>
 <main>
 
+<div class="nav">
+  <a href="#temel">Temel plan</a>
+  <a href="#cati" class="roof">+20,00 kalıp planı</a>
+  <a href="#merdiven">Tam merdiven</a>
+</div>
+
+<p class="section-label" id="temel">Temel / bodrum</p>
+
 <div class="hero">
-  <div class="sub" style="color:#cbd5e1">Planda okunan fark (CAD)</div>
+  <div class="sub" style="color:#cbd5e1">Temel plandan okunan fark</div>
   <div class="big">0,60 m</div>
   <div class="sub" style="color:#cbd5e1">T.Ü.K. −5,10 → B.A.K. −4,50</div>
 </div>
 
 <div class="card">
-  <h2>Plandan okunan kotlar <span class="plan-tag">CAD</span></h2>
-  <p class="sub">Gönderdiğiniz temel/bodrum plan kesiti</p>
+  <h2>Plandan okunan kotlar <span class="plan-tag">CAD temel</span></h2>
+  <p class="sub">Temel / bodrum plan kesiti</p>
   <table>
     <tr><th>Kot adı</th><th>Kısaltma</th><th class="num">Kot (m)</th><th>Not</th></tr>
     <tr><td>Temel üst kotu</td><td>T.Ü.K.</td><td class="num"><b>−5,10</b></td><td>RD01 · radye üst</td></tr>
@@ -53,7 +72,7 @@ td.num{text-align:right;font-variant-numeric:tabular-nums}
 </div>
 
 <div class="card scroll-x">
-  <h2>Kot farkları (plandan)</h2>
+  <h2>Kot farkları (temel plan)</h2>
   <table>
     <tr><th>Arası</th><th class="num">Fark (m)</th><th>Açıklama</th></tr>
     <tr><td>Radye alt → T.Ü.K.</td><td class="num">0,80</td><td>Radye kalınlığı (h=80)</td></tr>
@@ -63,40 +82,99 @@ td.num{text-align:right;font-variant-numeric:tabular-nums}
   </table>
 </div>
 
-<div class="card scroll-x">
-  <h2>Tam bina kot merdiveni</h2>
-  <p class="sub">Metraj cetveli + plan birleşimi (referans ±0,00)</p>
-  <table>
-    <tr><th>Sıra</th><th>Kot / Kat</th><th class="num">Kot (m)</th><th class="num">Bir alt kot farkı</th><th>Net H (kalıp)</th></tr>
-    <tr><td>0</td><td>Radye alt (T.A.K.)</td><td class="num">−5,90</td><td class="num">—</td><td>—</td></tr>
-    <tr><td>1</td><td>T.Ü.K. (radye üst)</td><td class="num">−5,10</td><td class="num">0,80</td><td>yan kalıp h=0,80</td></tr>
-    <tr><td>2</td><td>B.A.K.</td><td class="num">−4,50</td><td class="num">0,60</td><td>ara beton</td></tr>
-    <tr><td>3</td><td>Bodrum taban / temel bandı</td><td class="num">≈ −4,20</td><td class="num">0,30</td><td>—</td></tr>
-    <tr><td>4</td><td><b>±0,00</b> Zemin</td><td class="num"><b>0,00</b></td><td class="num">4,20</td><td>brüt bodrum kat</td></tr>
-    <tr><td>5</td><td>+4,00 (1. kat)</td><td class="num">+4,00</td><td class="num">4,00</td><td>3,80 net perde</td></tr>
-    <tr><td>6</td><td>+8,00 (2. kat)</td><td class="num">+8,00</td><td class="num">4,00</td><td>3,80</td></tr>
-    <tr><td>7</td><td>+12,00 (3. kat)</td><td class="num">+12,00</td><td class="num">4,00</td><td>3,80</td></tr>
-    <tr><td>8</td><td>+16,00 (çatı)</td><td class="num">+16,00</td><td class="num">4,00</td><td>çatı döşemesi</td></tr>
-  </table>
-</div>
-
 <div class="card">
-  <h2>Planda görülen elemanlar (metrajla ilişki)</h2>
+  <h2>Temel planda elemanlar</h2>
   <table>
     <tr><th>Etiket</th><th>Boyut</th><th>Kalıp tipi</th></tr>
     <tr><td>P109</td><td>30/160</td><td>Perde</td></tr>
     <tr><td>P122, P124</td><td>180/30</td><td>Perde</td></tr>
     <tr><td>P103</td><td>280/35</td><td>Perde</td></tr>
     <tr><td>BP1, BP17, BP18</td><td>30/290–575</td><td>Bodrum perde</td></tr>
-    <tr><td>H1</td><td>20/60</td><td>Kiriş (h=60 kaburga 40)</td></tr>
-    <tr><td>BOŞLUK</td><td>100/220</td><td>Düşüm — asansör/mekan</td></tr>
+    <tr><td>H1</td><td>20/60</td><td>Kiriş</td></tr>
+    <tr><td>BOŞLUK</td><td>100/220</td><td>Düşüm</td></tr>
     <tr><td>Fore kazık</td><td>Ø80 · L=13,7 m</td><td>Kalıp dışı</td></tr>
     <tr><td>Merdiven</td><td>MH1 20/77</td><td>Çekirdek kalıbı</td></tr>
   </table>
 </div>
 
+<p class="section-label" id="cati">Çatı — +20,00 kalıp planı</p>
+
+<div class="hero roof">
+  <div class="sub" style="color:#ddd6fe">Kesit A-A / B-B farkları (CAD)</div>
+  <div class="row">
+    <div class="chip"><b>0,20 m</b>Döşeme h=20</div>
+    <div class="chip"><b>0,80 m</b>+20,20 → +21,00</div>
+    <div class="chip"><b>0,60 m</b>+21,00 → +21,60</div>
+  </div>
+  <div class="sub" style="color:#ddd6fe;margin-top:.5rem">Toplam: +20,00 → +21,60 = <b style="color:var(--accent)">1,60 m</b></div>
+</div>
+
+<div class="card roof">
+  <h2>+20,00 KOTU KALIP PLANI <span class="plan-tag roof">CAD çatı</span></h2>
+  <p class="sub">Plan 1/50 · Izgara 5–6 / A–C · Kesit A-A ve B-B</p>
+  <table>
+    <tr><th>Kot adı</th><th class="num">Kot (m)</th><th>Not</th></tr>
+    <tr><td>Kalıp plan kotu</td><td class="num"><b>+20,00</b></td><td>Referans döşeme alt</td></tr>
+    <tr><td>Döşeme üst</td><td class="num"><b>+20,20</b></td><td>D601/D602 · h=20 cm</td></tr>
+    <tr><td>Ara kot (kiriş/duvar)</td><td class="num"><b>+21,00</b></td><td>Kesit A-A / B-B</td></tr>
+    <tr><td>Üst kot (parapet)</td><td class="num"><b>+21,60</b></td><td>Kesit üst sınır</td></tr>
+  </table>
+</div>
+
+<div class="card roof scroll-x">
+  <h2>Kot farkları (+20,00 planı)</h2>
+  <table>
+    <tr><th>Arası</th><th class="num">Fark (m)</th><th>Açıklama</th></tr>
+    <tr><td>+20,00 → +20,20</td><td class="num"><b>0,20</b></td><td>D601/D602 döşeme kalınlığı</td></tr>
+    <tr><td>+20,20 → +21,00</td><td class="num"><b>0,80</b></td><td>K0601–K0604 kiriş bandı / duvar</td></tr>
+    <tr><td>+21,00 → +21,60</td><td class="num"><b>0,60</b></td><td>Parapet / üst duvar</td></tr>
+    <tr><td><b>+20,00 → +21,60</b></td><td class="num"><b>1,60</b></td><td>Kesit toplam yükseklik</td></tr>
+    <tr><td>+16,00 → +20,00</td><td class="num">4,00</td><td>Metraj çatısı ile fark — teyit</td></tr>
+  </table>
+</div>
+
+<div class="card roof">
+  <h2>Planda elemanlar (+20,00)</h2>
+  <table>
+    <tr><th>Etiket</th><th>Boyut</th><th>Not</th></tr>
+    <tr><td>D601, D602</td><td>h=20</td><td>Döşeme</td></tr>
+    <tr><td>K0601–K0604</td><td>25/60</td><td>Kiriş</td></tr>
+    <tr><td>PRP.1–PRP.4</td><td>14/100 – 20/50</td><td>Donatı</td></tr>
+    <tr><td>GM1</td><td>—</td><td>Kesit B-B taban</td></tr>
+    <tr><td>Plan ölçü</td><td>675 × 680 (dış)</td><td>650 × 650 (iç)</td></tr>
+    <tr><td>Tip lento</td><td>20×30 / 30×30</td><td>4ø12 · ø8/20</td></tr>
+    <tr><td>Tip düşey hatıl</td><td>20×20</td><td>4ø12 · ø8/20</td></tr>
+  </table>
+</div>
+
+<p class="section-label" id="merdiven">Tam bina kot merdiveni</p>
+
+<div class="card scroll-x">
+  <h2>Tam bina kot merdiveni</h2>
+  <p class="sub">Metraj cetveli + iki CAD plan birleşimi (referans ±0,00)</p>
+  <table>
+    <tr><th>Sıra</th><th>Kot / Kat</th><th class="num">Kot (m)</th><th class="num">Fark</th><th>Kaynak</th></tr>
+    <tr><td>0</td><td>Radye alt (T.A.K.)</td><td class="num">−5,90</td><td class="num">—</td><td>Hesap</td></tr>
+    <tr><td>1</td><td>T.Ü.K.</td><td class="num">−5,10</td><td class="num">0,80</td><td>CAD temel</td></tr>
+    <tr><td>2</td><td>B.A.K.</td><td class="num">−4,50</td><td class="num">0,60</td><td>CAD temel</td></tr>
+    <tr><td>3</td><td>Bodrum taban</td><td class="num">≈ −4,20</td><td class="num">0,30</td><td>Metraj</td></tr>
+    <tr><td>4</td><td><b>±0,00</b> Zemin</td><td class="num"><b>0,00</b></td><td class="num">4,20</td><td>Metraj</td></tr>
+    <tr><td>5</td><td>+4,00 (1. kat)</td><td class="num">+4,00</td><td class="num">4,00</td><td>Metraj</td></tr>
+    <tr><td>6</td><td>+8,00 (2. kat)</td><td class="num">+8,00</td><td class="num">4,00</td><td>Metraj</td></tr>
+    <tr><td>7</td><td>+12,00 (3. kat)</td><td class="num">+12,00</td><td class="num">4,00</td><td>Metraj</td></tr>
+    <tr><td>8</td><td>+16,00 (ana çatı)</td><td class="num">+16,00</td><td class="num">4,00</td><td>Metraj</td></tr>
+    <tr><td>9</td><td>+20,00 (kalıp planı)</td><td class="num">+20,00</td><td class="num">4,00</td><td>CAD çatı</td></tr>
+    <tr><td>10</td><td>+20,20 (döş. üst)</td><td class="num">+20,20</td><td class="num">0,20</td><td>CAD kesit</td></tr>
+    <tr><td>11</td><td>+21,00</td><td class="num">+21,00</td><td class="num">0,80</td><td>CAD kesit</td></tr>
+    <tr><td>12</td><td>+21,60 (üst)</td><td class="num">+21,60</td><td class="num">0,60</td><td>CAD kesit</td></tr>
+  </table>
+</div>
+
 <div class="highlight">
-  <b>Not:</b> T.Ü.K. −5,10 ve B.A.K. −4,50 plandan okunmuştur. ±0,00’dan +16,00’a kadar kotlar metraj cetveli ile uyumludur (brüt kat 4,00 m). Bodrum taban kotu (−4,20) metraj brüt yüksekliğinden türetilmiştir — kesit paftası ile teyit edilmeli.
+  <b>Temel:</b> T.Ü.K. −5,10 ve B.A.K. −4,50 plandan okunmuştur. Bodrum taban (−4,20) metraj brüt yüksekliğinden türetilmiştir.
+</div>
+<div class="highlight roof">
+  <b>Çatı:</b> +20,00 kalıp planı küçük bir çatı/üst yapı (675×680 cm) için görünüyor — makine dairesi veya parapet detayı olabilir. +16,00 (metraj ana çatı) ile +20,00 arası 4,00 m fark kesit paftası ile teyit edilmeli.
 </div>
 
 </main>
