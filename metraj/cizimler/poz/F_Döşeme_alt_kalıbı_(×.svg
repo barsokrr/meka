@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500">
+  <rect width="720" height="500" fill="#ffffff"/>
+  <rect width="720" height="48" fill="#1f4e79"/>
+  <text x="360" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">POZ F — Döşeme alt kalıbı (×5 kat)</text>
+  <text x="360" y="38" text-anchor="middle" font-size="9" fill="#cbd5e1">(1.028,2 − 35,6 − 6,4 − 45) × 5 = 4.706,5 m² · 4,706.5 m²</text>
+  <g transform="translate(8,52) scale(0.95)"><g  viewBox="0 0 367.31600000000003 244.558">
+  <text x="183.65800000000002" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#16a34a">PLAN GÖRÜNÜŞ — DÖŞEME ALTI KALIP</text>
+  <g transform="translate(25,33)">
+    <rect width="317.31600000000003" height="124.558" fill="#f8fafc" stroke="#cbd5e1"/>
+    <rect x="12" y="12" width="293.31600000000003" height="100.558" fill="#16a34a" opacity="0.35" stroke="#16a34a"/>
+    <rect x="174.52380000000002" y="43.5953" width="55.800000000000004" height="31.0" fill="#fff" stroke="#f472b6" stroke-dasharray="3,2"/>
+    <text x="202.42380000000003" y="59.0953" text-anchor="middle" font-size="7" fill="#be185d">−45 m²</text>
+    <circle cx="38.07792" cy="24.911600000000004" r="5" fill="#dc2626" opacity="0.9"/><circle cx="111.06060000000001" cy="24.911600000000004" r="5" fill="#dc2626" opacity="0.9"/><circle cx="237.98700000000002" cy="24.911600000000004" r="5" fill="#dc2626" opacity="0.9"/><circle cx="38.07792" cy="93.41850000000001" r="5" fill="#dc2626" opacity="0.9"/><circle cx="111.06060000000001" cy="93.41850000000001" r="5" fill="#dc2626" opacity="0.9"/><circle cx="237.98700000000002" cy="93.41850000000001" r="5" fill="#dc2626" opacity="0.9"/><circle cx="158.65800000000002" cy="68.50690000000002" r="5" fill="#dc2626" opacity="0.9"/><circle cx="269.71860000000004" cy="62.279" r="5" fill="#dc2626" opacity="0.9"/>
+    <rect x="32.07792" y="18.911600000000004" width="12" height="12" fill="#fff" opacity="0.8"/>
+  </g>
+  <text x="183.65800000000002" y="187.558" text-anchor="middle" font-size="8" fill="#64748b">Yeşil = döşeme altı · net 941,3 m²/kat · ×5 kat = 4.706,5 m²</text>
+  <text x="183.65800000000002" y="199.558" text-anchor="middle" font-size="7" fill="#64748b">Brüt 1.028,2 − perde 35,6 − kolon 6,4 − boşluk 45</text>
+</g></g>
+  <g transform="translate(365,52) scale(0.95)"><g  viewBox="0 0 360 160">
+  <text x="180" y="16" text-anchor="middle" font-size="10" font-weight="700" fill="#16a34a">KESİT — DÖŞEME ALTI KALIP</text>
+  <rect x="60" y="70" width="240" height="14" fill="#cbd5e1" stroke="#64748b"/>
+  <rect x="60" y="84" width="240" height="8" fill="#16a34a" opacity="0.5" stroke="#16a34a"/>
+  <text x="180" y="79" text-anchor="middle" font-size="8">Beton döşeme h=20</text>
+  <text x="180" y="100" text-anchor="middle" font-size="8" fill="#16a34a">Alt kalıp (plywood)</text>
+  <text x="180" y="130" text-anchor="middle" font-size="8" fill="#64748b">Plan görünüşte yeşil alan = metraj</text>
+</g></g>
+  <rect x="16" y="280" width="688" height="200" fill="#f8fafc" stroke="#e2e8f0" rx="4"/>
+  <text x="28" y="302" font-size="10" font-weight="700" fill="#16a34a">±0 … +16 döşeme altı · brüt 51,18×20,09 m · net 941,3 m²/kat.</text>
+  <rect x="28" y="318" width="14" height="14" fill="#16a34a" opacity="0.55"/>
+  <text x="48" y="329" font-size="9" fill="#475569">Renkli bölge = metraj alanı · Plan (sol) + Kesit (sağ)</text>
+  <text x="28" y="355" font-size="9" fill="#64748b">Karşıyaka Ortaokulu · Kırık ölçü · Taslak metraj çizimi</text>
+  <text x="28" y="375" font-size="11" font-weight="700" fill="#1f4e79">Toplam poz: 4,706.5 m² (40,0% genel metraj)</text>
+</svg>

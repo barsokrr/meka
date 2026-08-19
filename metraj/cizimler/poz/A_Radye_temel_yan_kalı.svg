@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500">
+  <rect width="720" height="500" fill="#ffffff"/>
+  <rect width="720" height="48" fill="#1f4e79"/>
+  <text x="360" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">POZ A — Radye temel yan kalıbı</text>
+  <text x="360" y="38" text-anchor="middle" font-size="9" fill="#cbd5e1">150,5 m × 0,80 m = 120,4 m² · 120.4 m²</text>
+  <g transform="translate(8,52) scale(0.95)"><g  viewBox="0 0 400 320">
+  <text x="200.0" y="18" text-anchor="middle" font-size="11" font-weight="700" fill="#7c3aed">PLAN GÖRÜNÜŞ — RADYE YAN KALIP (metraj alanı)</text>
+  <rect x="30" y="30" width="340" height="200" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/><rect x="48" y="42" width="304" height="176" fill="#e2e8f0" opacity="0.5"/><rect x="30" y="30" width="340" height="200" fill="none" stroke="#7c3aed" stroke-width="16" opacity="0.55"/><rect x="30" y="30" width="340" height="200" fill="none" stroke="#7c3aed" stroke-width="2"/>
+  <text x="200.0" y="130.0" text-anchor="middle" font-size="9" fill="#475569">Radye döşeme RD01</text>
+  <text x="200.0" y="142.0" text-anchor="middle" font-size="8" fill="#7c3aed">Mor bant = yan kalıp · h=80 cm</text>
+  <text x="200.0" y="265" text-anchor="middle" font-size="8" fill="#64748b">Çevre ≈ 150,5 m · 150,5×0,80 = 120,4 m²</text>
+</g></g>
+  <g transform="translate(365,52) scale(0.95)"><g  viewBox="0 0 360 160">
+  <text x="180" y="16" text-anchor="middle" font-size="10" font-weight="700" fill="#7c3aed">KESİT GÖRÜNÜŞ — RADYE YAN</text>
+  <rect x="80" y="50" width="200" height="24" fill="#e2e8f0" stroke="#64748b"/>
+  <rect x="80" y="74" width="200" height="32" fill="#7c3aed" opacity="0.35" stroke="#7c3aed"/>
+  <text x="180" y="68" text-anchor="middle" font-size="8">Radye döşeme</text>
+  <text x="180" y="92" text-anchor="middle" font-size="8" fill="#7c3aed">Yan kalıp h=0,80 m</text>
+  <line x1="60" y1="50" x2="60" y2="106" stroke="#334155"/><line x1="55" y1="50" x2="65" y2="50" stroke="#334155"/>
+  <line x1="55" y1="106" x2="65" y2="106" stroke="#334155"/>
+  <text x="48" y="82" text-anchor="end" font-size="8">0,80</text>
+  <text x="180" y="130" text-anchor="middle" font-size="8" fill="#64748b">T.Ü.K. −5,10 · T.A.K. −5,90</text>
+</g></g>
+  <rect x="16" y="280" width="688" height="200" fill="#f8fafc" stroke="#e2e8f0" rx="4"/>
+  <text x="28" y="302" font-size="10" font-weight="700" fill="#7c3aed">Radye döşeme (RD01) çevresinde h=80 cm yan kalıp. T.Ü.K. −5,10.</text>
+  <rect x="28" y="318" width="14" height="14" fill="#7c3aed" opacity="0.55"/>
+  <text x="48" y="329" font-size="9" fill="#475569">Renkli bölge = metraj alanı · Plan (sol) + Kesit (sağ)</text>
+  <text x="28" y="355" font-size="9" fill="#64748b">Karşıyaka Ortaokulu · Kırık ölçü · Taslak metraj çizimi</text>
+  <text x="28" y="375" font-size="11" font-weight="700" fill="#1f4e79">Toplam poz: 120.4 m² (1,0% genel metraj)</text>
+</svg>
