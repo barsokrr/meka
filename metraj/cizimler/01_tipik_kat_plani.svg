@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 463.85 310.675" width="100%" style="max-width:560px;background:#fafafa">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e2e8f0" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#334155"/>
+    </marker>
+  </defs>
+  <text x="231.925" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#1f4e79">TİPİK KAT PLANI — KALIP METRAJ ŞEMASI (±0,00 ref.)</text>
+  <text x="231.925" y="38" text-anchor="middle" font-size="9" fill="#64748b">Brüt 51.18×20.09 m = 1.028,2 m² · Net döşeme ≈ 941,3 m²/kat · Proje: MEBİZ.73-10-25-01-SU-001-R0</text>
+
+  <g transform="translate(40,40)">
+    <rect width="383.85" height="150.675" fill="url(#grid)"/>
+    <!-- Perde band -->
+    <rect width="383.85" height="150.675" fill="none" stroke="#2563eb" stroke-width="14" opacity="0.35"/>
+    <rect width="383.85" height="150.675" fill="none" stroke="#2563eb" stroke-width="2"/>
+    <!-- Döşeme alanı -->
+    <rect x="7" y="7" width="369.85" height="136.675" fill="#16a34a" opacity="0.15"/>
+    <!-- Core boşluk -->
+    <rect x="211.11750000000004" y="52.73625" width="67.5" height="37.5" fill="#94a3b8" opacity="0.4" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="244.86750000000004" y="71.48625" text-anchor="middle" font-size="8" fill="#475569">MERDİVEN+</text>
+    <text x="244.86750000000004" y="81.48625" text-anchor="middle" font-size="8" fill="#475569">ASANSÖR</text>
+    <text x="244.86750000000004" y="93.48625" text-anchor="middle" font-size="7" fill="#64748b">45 m²/kat düşüm</text>
+    <circle cx="86.062" cy="70.135" r="6" fill="#dc2626" opacity="0.9"/><circle cx="174.3475" cy="70.135" r="6" fill="#dc2626" opacity="0.9"/><circle cx="327.88750000000005" cy="70.135" r="6" fill="#dc2626" opacity="0.9"/><circle cx="86.062" cy="153.00625000000002" r="6" fill="#dc2626" opacity="0.9"/><circle cx="174.3475" cy="153.00625000000002" r="6" fill="#dc2626" opacity="0.9"/><circle cx="327.88750000000005" cy="153.00625000000002" r="6" fill="#dc2626" opacity="0.9"/><circle cx="231.925" cy="122.87125000000002" r="6" fill="#dc2626" opacity="0.9"/><circle cx="366.27250000000004" cy="115.3375" r="6" fill="#dc2626" opacity="0.9"/>
+  </g>
+
+  <!-- Boyut okları -->
+  <line x1="40" y1="205.675" x2="423.85" y2="205.675" stroke="#334155" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <text x="231.925" y="218.675" text-anchor="middle" font-size="10" fill="#334155">51.18 m</text>
+  <line x1="438.85" y1="40" x2="438.85" y2="190.675" stroke="#334155" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <text x="451.85" y="115.3375" text-anchor="middle" font-size="10" fill="#334155" transform="rotate(90 451.85 115.3375)">20.09 m</text>
+
+  <!-- Lejant -->
+  <g transform="translate(40, 235.675)">
+    <rect x="0" y="0" width="12" height="12" fill="#2563eb" opacity="0.5"/><text x="16" y="10" font-size="9">Perde (çift yüz) — CL ≈ 103,1 m/kat</text>
+    <rect x="180" y="0" width="12" height="12" fill="#16a34a" opacity="0.5"/><text x="196" y="10" font-size="9">Döşeme altı net</text>
+    <rect x="0" y="16" width="12" height="12" fill="#dc2626"/><text x="16" y="26" font-size="9">Kolon — 13 ad/kat · çevre 45,96 m</text>
+    <rect x="180" y="16" width="12" height="12" fill="#94a3b8" opacity="0.5"/><text x="196" y="26" font-size="9">Boşluk düşümü</text>
+  </g>
+</svg>

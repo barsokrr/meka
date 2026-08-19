@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="theme-color" content="#1f4e79"/>
+<title>Kalıp Metraj Detay Çizim</title>
+<style>
+:root{--brand:#1f4e79;--card:#fff;--muted:#64748b;--line:#e2e8f0}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;background:#eef2f7;color:#1a1a1a;line-height:1.45}
+header{background:linear-gradient(160deg,#1f4e79,#0f2744);color:#fff;padding:1.2rem 1rem;text-align:center}
+header h1{margin:0;font-size:1.15rem}header p{margin:.35rem 0 0;font-size:.82rem;opacity:.9}
+main{max-width:580px;margin:0 auto;padding:1rem 1rem 2rem}
+.card{background:var(--card);border-radius:12px;padding:1rem;margin:.75rem 0;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.card h2{margin:0;font-size:1rem;color:var(--brand)}
+.sub{margin:.25rem 0 .75rem;font-size:.8rem;color:var(--muted)}
+.svg-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:#fafafa}
+table{width:100%;border-collapse:collapse;font-size:.78rem}
+td,th{padding:.35rem .2rem;border-bottom:1px solid var(--line);text-align:right}
+th{text-align:left;color:var(--muted)}
+.scroll-x{overflow-x:auto}
+.back{display:block;padding:1rem;color:var(--brand);font-weight:600;text-decoration:none}
+</style>
+</head>
+<body>
+<a class="back" href="index.html">← Portal</a>
+<header>
+  <h1>Kalıp Metraj Detay Çizimi</h1>
+  <p>Karşıyaka Ortaokulu · 11.773,4 m² · Kırık ölçü</p>
+</header>
+<main>
+
+<section class="card">
+  <h2>Tipik Kat Planı</h2>
+  <p class="sub">Perde, kolon, döşeme ve boşluk bölgeleri</p>
+  <div class="svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 463.85 310.675" width="100%" style="max-width:560px;background:#fafafa">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e2e8f0" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#334155"/>
+    </marker>
+  </defs>
+  <text x="231.925" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#1f4e79">TİPİK KAT PLANI — KALIP METRAJ ŞEMASI (±0,00 ref.)</text>
+  <text x="231.925" y="38" text-anchor="middle" font-size="9" fill="#64748b">Brüt 51.18×20.09 m = 1.028,2 m² · Net döşeme ≈ 941,3 m²/kat · Proje: MEBİZ.73-10-25-01-SU-001-R0</text>
+
+  <g transform="translate(40,40)">
+    <rect width="383.85" height="150.675" fill="url(#grid)"/>
+    <!-- Perde band -->
+    <rect width="383.85" height="150.675" fill="none" stroke="#2563eb" stroke-width="14" opacity="0.35"/>
+    <rect width="383.85" height="150.675" fill="none" stroke="#2563eb" stroke-width="2"/>
+    <!-- Döşeme alanı -->
+    <rect x="7" y="7" width="369.85" height="136.675" fill="#16a34a" opacity="0.15"/>
+    <!-- Core boşluk -->
+    <rect x="211.11750000000004" y="52.73625" width="67.5" height="37.5" fill="#94a3b8" opacity="0.4" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="244.86750000000004" y="71.48625" text-anchor="middle" font-size="8" fill="#475569">MERDİVEN+</text>
+    <text x="244.86750000000004" y="81.48625" text-anchor="middle" font-size="8" fill="#475569">ASANSÖR</text>
+    <text x="244.86750000000004" y="93.48625" text-anchor="middle" font-size="7" fill="#64748b">45 m²/kat düşüm</text>
+    <circle cx="86.062" cy="70.135" r="6" fill="#dc2626" opacity="0.9"/><circle cx="174.3475" cy="70.135" r="6" fill="#dc2626" opacity="0.9"/><circle cx="327.88750000000005" cy="70.135" r="6" fill="#dc2626" opacity="0.9"/><circle cx="86.062" cy="153.00625000000002" r="6" fill="#dc2626" opacity="0.9"/><circle cx="174.3475" cy="153.00625000000002" r="6" fill="#dc2626" opacity="0.9"/><circle cx="327.88750000000005" cy="153.00625000000002" r="6" fill="#dc2626" opacity="0.9"/><circle cx="231.925" cy="122.87125000000002" r="6" fill="#dc2626" opacity="0.9"/><circle cx="366.27250000000004" cy="115.3375" r="6" fill="#dc2626" opacity="0.9"/>
+  </g>
+
+  <!-- Boyut okları -->
+  <line x1="40" y1="205.675" x2="423.85" y2="205.675" stroke="#334155" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <text x="231.925" y="218.675" text-anchor="middle" font-size="10" fill="#334155">51.18 m</text>
+  <line x1="438.85" y1="40" x2="438.85" y2="190.675" stroke="#334155" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <text x="451.85" y="115.3375" text-anchor="middle" font-size="10" fill="#334155" transform="rotate(90 451.85 115.3375)">20.09 m</text>
+
+  <!-- Lejant -->
+  <g transform="translate(40, 235.675)">
+    <rect x="0" y="0" width="12" height="12" fill="#2563eb" opacity="0.5"/><text x="16" y="10" font-size="9">Perde (çift yüz) — CL ≈ 103,1 m/kat</text>
+    <rect x="180" y="0" width="12" height="12" fill="#16a34a" opacity="0.5"/><text x="196" y="10" font-size="9">Döşeme altı net</text>
+    <rect x="0" y="16" width="12" height="12" fill="#dc2626"/><text x="16" y="26" font-size="9">Kolon — 13 ad/kat · çevre 45,96 m</text>
+    <rect x="180" y="16" width="12" height="12" fill="#94a3b8" opacity="0.5"/><text x="196" y="26" font-size="9">Boşluk düşümü</text>
+  </g>
+</svg></div>
+</section>
+<section class="card">
+  <h2>Kot Kesiti</h2>
+  <p class="sub">Düşey yükseklikler ve kat kotları</p>
+  <div class="svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 640.0" width="100%" style="max-width:400px;background:#fafafa">
+  <text x="200" y="18" text-anchor="middle" font-size="12" font-weight="700" fill="#1f4e79">KESİT — KOT &amp; DÜŞEY KALIP YÜKSEKLİKLERİ</text>
+  <rect x="120" y="30" width="180" height="18" fill="#16a34a" opacity="0.25" stroke="#16a34a" stroke-width="1.5"/><text x="112" y="43.0" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b">+16,00</text><text x="210.0" y="43.0" text-anchor="middle" font-size="9" fill="#475569">Çatı döş.</text><rect x="120" y="48" width="180" height="106.39999999999999" fill="#2563eb" opacity="0.25" stroke="#2563eb" stroke-width="1.5"/><text x="112" y="105.19999999999999" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b">+12,00</text><text x="210.0" y="105.19999999999999" text-anchor="middle" font-size="9" fill="#475569">3. Kat</text><line x1="310" y1="48" x2="350" y2="48" stroke="#94a3b8" stroke-dasharray="2,2"/><text x="355" y="52" font-size="8" fill="#64748b">kot</text><rect x="120" y="154.39999999999998" width="180" height="106.39999999999999" fill="#2563eb" opacity="0.25" stroke="#2563eb" stroke-width="1.5"/><text x="112" y="211.59999999999997" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b">+8,00</text><text x="210.0" y="211.59999999999997" text-anchor="middle" font-size="9" fill="#475569">2. Kat</text><line x1="310" y1="154.39999999999998" x2="350" y2="154.39999999999998" stroke="#94a3b8" stroke-dasharray="2,2"/><text x="355" y="158.39999999999998" font-size="8" fill="#64748b">kot</text><rect x="120" y="260.79999999999995" width="180" height="106.39999999999999" fill="#2563eb" opacity="0.25" stroke="#2563eb" stroke-width="1.5"/><text x="112" y="317.99999999999994" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b">+4,00</text><text x="210.0" y="317.99999999999994" text-anchor="middle" font-size="9" fill="#475569">1. Kat</text><line x1="310" y1="260.79999999999995" x2="350" y2="260.79999999999995" stroke="#94a3b8" stroke-dasharray="2,2"/><text x="355" y="264.79999999999995" font-size="8" fill="#64748b">kot</text><rect x="120" y="367.19999999999993" width="180" height="106.39999999999999" fill="#2563eb" opacity="0.25" stroke="#2563eb" stroke-width="1.5"/><text x="112" y="424.3999999999999" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b">±0,00</text><text x="210.0" y="424.3999999999999" text-anchor="middle" font-size="9" fill="#475569">Zemin</text><line x1="310" y1="367.19999999999993" x2="350" y2="367.19999999999993" stroke="#94a3b8" stroke-dasharray="2,2"/><text x="355" y="371.19999999999993" font-size="8" fill="#64748b">kot</text><rect x="120" y="473.5999999999999" width="180" height="112.0" fill="#6366f1" opacity="0.25" stroke="#6366f1" stroke-width="1.5"/><text x="112" y="533.5999999999999" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b">Bodrum</text><text x="210.0" y="533.5999999999999" text-anchor="middle" font-size="9" fill="#475569">H=4,0</text><line x1="310" y1="473.5999999999999" x2="350" y2="473.5999999999999" stroke="#94a3b8" stroke-dasharray="2,2"/><text x="355" y="477.5999999999999" font-size="8" fill="#64748b">kot</text><rect x="120" y="585.5999999999999" width="180" height="22.400000000000002" fill="#7c3aed" opacity="0.25" stroke="#7c3aed" stroke-width="1.5"/><text x="112" y="600.8" text-anchor="end" font-size="10" font-weight="600" fill="#1e293b">Radye</text><text x="210.0" y="600.8" text-anchor="middle" font-size="9" fill="#475569">h=0,8</text>
+  <text x="200" y="625.0" text-anchor="middle" font-size="8" fill="#64748b">Brüt kat: 4,00 m · Net üst perde/kolon: 3,80 m · Bodrum: 4,00 m · d=döşeme 20 cm</text>
+</svg></div>
+</section>
+<section class="card">
+  <h2>Kırık Ölçü Şeması</h2>
+  <p class="sub">a×b×c formül tipleri</p>
+  <div class="svg-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" width="100%" style="max-width:520px;background:#fff">
+  <text x="260" y="18" text-anchor="middle" font-size="12" font-weight="700" fill="#1f4e79">KIRIK ÖLÇÜ (a × b × c) — ELEMAN TİPLERİ</text>
+  <g transform="translate(20,35)">
+    <rect width="140" height="70" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="70" y="22" text-anchor="middle" font-size="10" font-weight="600">PERDE</text>
+    <text x="70" y="38" text-anchor="middle" font-size="8">a=boy · b=H · c=2×adet</text>
+    <text x="70" y="52" text-anchor="middle" font-size="8">çift yüz</text>
+  </g>
+  <g transform="translate(190,35)">
+    <rect width="140" height="70" rx="6" fill="#fef2f2" stroke="#dc2626"/>
+    <text x="70" y="22" text-anchor="middle" font-size="10" font-weight="600">KOLON</text>
+    <text x="70" y="38" text-anchor="middle" font-size="8">a=çevre · b=H · c=adet</text>
+    <text x="70" y="52" text-anchor="middle" font-size="8">2×(en+boy)</text>
+  </g>
+  <g transform="translate(360,35)">
+    <rect width="140" height="70" rx="6" fill="#f0fdf4" stroke="#16a34a"/>
+    <text x="70" y="22" text-anchor="middle" font-size="10" font-weight="600">DÖŞEME ALT</text>
+    <text x="70" y="38" text-anchor="middle" font-size="8">a×b brüt − düşümler</text>
+    <text x="70" y="52" text-anchor="middle" font-size="8">perde+kolon+boşluk</text>
+  </g>
+  <g transform="translate(105,120)">
+    <rect width="140" height="70" rx="6" fill="#fffbeb" stroke="#d97706"/>
+    <text x="70" y="22" text-anchor="middle" font-size="10" font-weight="600">KİRİŞ</text>
+    <text x="70" y="38" text-anchor="middle" font-size="8">Yan: L×0,40×2</text>
+    <text x="70" y="52" text-anchor="middle" font-size="8">Alt: L×0,325</text>
+  </g>
+  <g transform="translate(275,120)">
+    <rect width="140" height="70" rx="6" fill="#f5f3ff" stroke="#7c3aed"/>
+    <text x="70" y="22" text-anchor="middle" font-size="10" font-weight="600">RADYE YAN</text>
+    <text x="70" y="38" text-anchor="middle" font-size="8">a=kenar · b=0,80</text>
+    <text x="70" y="52" text-anchor="middle" font-size="8">c=1 · çevre 150,5 m</text>
+  </g>
+  <text x="260" y="195" text-anchor="middle" font-size="9" font-weight="700" fill="#b45309">GENEL TOPLAM: 11.773,4 m² (+ %5 fire → 12.362 m²)</text>
+</svg></div>
+</section>
+<div class="card scroll-x">
+  <h2>Kat Bazlı Metraj (m²)</h2>
+  <p class="sub">KIRIK ÖLÇÜ cetvelinden — detay: Karsiyaka_Ortaokulu_Kalip_KIRIK_OLCU.xlsx</p>
+  <table>
+    <tr><th>Kot/Kat</th><th>H(m)</th><th>Perde</th><th>Kolon</th><th>Döşeme</th><th>Kiriş</th><th>Toplam</th></tr>
+    <tr><td>Temel (Radye)</td><td>h=0,80 m</td><td>—</td><td>—</td><td>—</td><td>—</td><td><b>120.4</b></td></tr><tr><td>Bodrum (±0,00 altı)</td><td>H=4,00 m</td><td>1152.7</td><td>184.0</td><td>—</td><td>—</td><td><b>1336.0</b></td></tr><tr><td>±0,00 (Zemin)</td><td>H=3,80 m</td><td>770.8</td><td>174.6</td><td>943.4</td><td>170.4</td><td><b>2059.2</b></td></tr><tr><td>+4,00 (1. Kat)</td><td>H=3,80 m</td><td>770.8</td><td>174.6</td><td>943.4</td><td>339.0</td><td><b>2227.7</b></td></tr><tr><td>+8,00 (2. Kat)</td><td>H=3,80 m</td><td>770.8</td><td>174.6</td><td>943.4</td><td>310.9</td><td><b>2199.7</b></td></tr><tr><td>+12,00 (3. Kat)</td><td>H=3,80 m</td><td>770.8</td><td>174.6</td><td>943.4</td><td>310.9</td><td><b>2199.7</b></td></tr><tr><td>+16,00 (Çatı)</td><td>—</td><td>—</td><td>—</td><td>943.4</td><td>310.5</td><td><b>1253.9</b></td></tr>
+    <tr><th colspan="6">GENEL TOPLAM</th><th><b>11.773,4</b></th></tr>
+  </table>
+</div>
+<div class="card">
+  <h2>Döşeme altı — kat kırılımı (±0 örnek)</h2>
+  <table>
+    <tr><th>Kalem</th><th>m²</th></tr>
+    <tr><td>Brüt 51,18×20,09</td><td>1.028,21</td></tr>
+    <tr><td>Perde izdüşümü (−)</td><td>35,56</td></tr>
+    <tr><td>Kolon izdüşümü (−)</td><td>6,36</td></tr>
+    <tr><td>Merdiven+asansör (−)</td><td>45,00</td></tr>
+    <tr><th>Net döşeme altı / kat</th><th>941,29</th></tr>
+    <tr><th>× 5 kat</th><th>4.706,5</th></tr>
+  </table>
+</div>
+</main>
+</body>
+</html>
