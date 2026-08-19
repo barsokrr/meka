@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="theme-color" content="#1f4e79"/>
+<title>Kot Farkları — Karşıyaka</title>
+<style>
+:root{--brand:#1f4e79;--accent:#f5a623;--card:#fff;--muted:#64748b;--line:#e2e8f0}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;background:#eef2f7;line-height:1.45}
+header{background:linear-gradient(160deg,#1f4e79,#0f2744);color:#fff;padding:1.1rem;text-align:center}
+header h1{margin:0;font-size:1.1rem}header p{margin:.3rem 0 0;font-size:.8rem;opacity:.9}
+main{max-width:560px;margin:0 auto;padding:.85rem 1rem 2rem}
+.card{background:var(--card);border-radius:12px;padding:.9rem;margin:.65rem 0;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.card h2{margin:0 0 .45rem;font-size:.95rem;color:var(--brand)}
+.sub{font-size:.78rem;color:var(--muted);margin:0 0 .5rem}
+.hero{background:linear-gradient(135deg,#1e3a5f,#2563eb);color:#fff;border-radius:12px;padding:1rem;text-align:center;margin:.65rem 0}
+.hero .big{font-size:1.6rem;font-weight:800;color:var(--accent)}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+td,th{padding:.4rem .15rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;text-align:left;width:38%}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+.highlight{background:#fffbeb;border-left:4px solid var(--accent);padding:.75rem;border-radius:0 8px 8px 0;font-size:.84rem;margin:.5rem 0}
+.plan-tag{display:inline-block;background:#dbeafe;color:#1e40af;font-size:.68rem;font-weight:700;padding:.15rem .45rem;border-radius:4px}
+.back{display:block;padding:1rem;color:var(--brand);font-weight:600;text-decoration:none;font-size:.9rem}
+.scroll-x{overflow-x:auto;-webkit-overflow-scrolling:touch}
+</style>
+</head>
+<body>
+<a class="back" href="index.html">← Portal</a>
+<header>
+  <h1>Yapı Kot Farkları</h1>
+  <p>Karşıyaka Ortaokulu · Temel plan (CAD)</p>
+</header>
+<main>
+
+<div class="hero">
+  <div class="sub" style="color:#cbd5e1">Planda okunan fark (CAD)</div>
+  <div class="big">0,60 m</div>
+  <div class="sub" style="color:#cbd5e1">T.Ü.K. −5,10 → B.A.K. −4,50</div>
+</div>
+
+<div class="card">
+  <h2>Plandan okunan kotlar <span class="plan-tag">CAD</span></h2>
+  <p class="sub">Gönderdiğiniz temel/bodrum plan kesiti</p>
+  <table>
+    <tr><th>Kot adı</th><th>Kısaltma</th><th class="num">Kot (m)</th><th>Not</th></tr>
+    <tr><td>Temel üst kotu</td><td>T.Ü.K.</td><td class="num"><b>−5,10</b></td><td>RD01 · radye üst</td></tr>
+    <tr><td>Radye kalınlığı</td><td>h</td><td class="num">0,80</td><td>Planda h=80 cm</td></tr>
+    <tr><td>Radye alt kotu (T.A.K.)</td><td>—</td><td class="num">−5,90</td><td>−5,10 − 0,80</td></tr>
+    <tr><td>Betonarme kotu</td><td>B.A.K.</td><td class="num"><b>−4,50</b></td><td>Boşluk (100/220) yanı</td></tr>
+  </table>
+</div>
+
+<div class="card scroll-x">
+  <h2>Kot farkları (plandan)</h2>
+  <table>
+    <tr><th>Arası</th><th class="num">Fark (m)</th><th>Açıklama</th></tr>
+    <tr><td>Radye alt → T.Ü.K.</td><td class="num">0,80</td><td>Radye kalınlığı (h=80)</td></tr>
+    <tr><td><b>T.Ü.K. → B.A.K.</b></td><td class="num"><b>0,60</b></td><td>Planda işaretli</td></tr>
+    <tr><td>B.A.K. → ±0,00</td><td class="num">4,50</td><td>B.A.K. referansına göre</td></tr>
+    <tr><td>T.Ü.K. → ±0,00</td><td class="num">5,10</td><td>Temel üstten zemin kotuna</td></tr>
+  </table>
+</div>
+
+<div class="card scroll-x">
+  <h2>Tam bina kot merdiveni</h2>
+  <p class="sub">Metraj cetveli + plan birleşimi (referans ±0,00)</p>
+  <table>
+    <tr><th>Sıra</th><th>Kot / Kat</th><th class="num">Kot (m)</th><th class="num">Bir alt kot farkı</th><th>Net H (kalıp)</th></tr>
+    <tr><td>0</td><td>Radye alt (T.A.K.)</td><td class="num">−5,90</td><td class="num">—</td><td>—</td></tr>
+    <tr><td>1</td><td>T.Ü.K. (radye üst)</td><td class="num">−5,10</td><td class="num">0,80</td><td>yan kalıp h=0,80</td></tr>
+    <tr><td>2</td><td>B.A.K.</td><td class="num">−4,50</td><td class="num">0,60</td><td>ara beton</td></tr>
+    <tr><td>3</td><td>Bodrum taban / temel bandı</td><td class="num">≈ −4,20</td><td class="num">0,30</td><td>—</td></tr>
+    <tr><td>4</td><td><b>±0,00</b> Zemin</td><td class="num"><b>0,00</b></td><td class="num">4,20</td><td>brüt bodrum kat</td></tr>
+    <tr><td>5</td><td>+4,00 (1. kat)</td><td class="num">+4,00</td><td class="num">4,00</td><td>3,80 net perde</td></tr>
+    <tr><td>6</td><td>+8,00 (2. kat)</td><td class="num">+8,00</td><td class="num">4,00</td><td>3,80</td></tr>
+    <tr><td>7</td><td>+12,00 (3. kat)</td><td class="num">+12,00</td><td class="num">4,00</td><td>3,80</td></tr>
+    <tr><td>8</td><td>+16,00 (çatı)</td><td class="num">+16,00</td><td class="num">4,00</td><td>çatı döşemesi</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h2>Planda görülen elemanlar (metrajla ilişki)</h2>
+  <table>
+    <tr><th>Etiket</th><th>Boyut</th><th>Kalıp tipi</th></tr>
+    <tr><td>P109</td><td>30/160</td><td>Perde</td></tr>
+    <tr><td>P122, P124</td><td>180/30</td><td>Perde</td></tr>
+    <tr><td>P103</td><td>280/35</td><td>Perde</td></tr>
+    <tr><td>BP1, BP17, BP18</td><td>30/290–575</td><td>Bodrum perde</td></tr>
+    <tr><td>H1</td><td>20/60</td><td>Kiriş (h=60 kaburga 40)</td></tr>
+    <tr><td>BOŞLUK</td><td>100/220</td><td>Düşüm — asansör/mekan</td></tr>
+    <tr><td>Fore kazık</td><td>Ø80 · L=13,7 m</td><td>Kalıp dışı</td></tr>
+    <tr><td>Merdiven</td><td>MH1 20/77</td><td>Çekirdek kalıbı</td></tr>
+  </table>
+</div>
+
+<div class="highlight">
+  <b>Not:</b> T.Ü.K. −5,10 ve B.A.K. −4,50 plandan okunmuştur. ±0,00’dan +16,00’a kadar kotlar metraj cetveli ile uyumludur (brüt kat 4,00 m). Bodrum taban kotu (−4,20) metraj brüt yüksekliğinden türetilmiştir — kesit paftası ile teyit edilmeli.
+</div>
+
+</main>
+</body>
+</html>
