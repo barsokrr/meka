@@ -1,0 +1,23 @@
+Sira,Kot_Adi,Kisaltma,Kot_m,Onceki_Kot,Fark_m,Kaynak,Not
+1,Radye alt kotu,T.A.K.,-5.90,,,Hesap,T.Ü.K. − 0.80
+2,Temel üst kotu,T.Ü.K.,-5.10,T.A.K.,0.80,CAD temel plan,RD01 h=80
+3,Betonarme kotu,B.A.K.,-4.50,T.Ü.K.,0.60,CAD temel plan,Boşluk 100/220 yanı
+4,Bodrum taban (brüt),—,-4.20,B.A.K.,0.30,Metraj türetim,4.20 brüt bodrum
+5,Zemin kotu,±0.00,0.00,Bodrum taban,4.20,Metraj,Referans kot
+6,1. kat döşemesi,+4.00,4.00,±0.00,4.00,Metraj,Net perde H=3.80
+7,2. kat döşemesi,+8.00,8.00,+4.00,4.00,Metraj,
+8,3. kat döşemesi,+12.00,12.00,+8.00,4.00,Metraj,
+9,Ana çatı döşemesi,+16.00,16.00,+12.00,4.00,Metraj,Metraj referans kotu
+10,Kalıp plan kotu,+20.00,20.00,+16.00,4.00,CAD çatı planı,+20.00 KALIP PLANI
+11,Döşeme üst,+20.20,20.20,+20.00,0.20,CAD kesit,D601/D602 h=20
+12,Ara kot (kesit),+21.00,21.00,+20.20,0.80,CAD kesit A-A / B-B,Kiriş/duvar bandı
+13,Üst kot (parapet),+21.60,21.60,+21.00,0.60,CAD kesit A-A / B-B,Duvar/parapet üst
+,,,,,,
+Temel — kritik fark,T.Ü.K. → B.A.K.,,0.60,,,CAD temel,
+Temel — radye kalınlığı,h,,0.80,,,CAD temel,h=80 cm
+Çatı — döşeme kalınlığı,h,,0.20,,,CAD çatı,D601/D602 h=20
+Çatı — kritik fark (kesit),+20.00 → +21.60,,1.60,,,CAD kesit,Toplam yapı yüksekliği
+Çatı — +16 → +20,,,4.00,,,Hesap,Makine dairesi / kot farkı — teyit
+T.Ü.K. → ±0.00 toplam,,,5.10,,,Hesap,
+±0.00 → +16.00 toplam,,,16.00,,,Metraj,4 kat × 4.00 m
+Radye alt → +21.60 toplam,,,27.50,,,Hesap,
