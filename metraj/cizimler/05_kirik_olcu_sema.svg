@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" width="100%" style="max-width:520px;background:#fff">
+  <text x="260" y="18" text-anchor="middle" font-size="12" font-weight="700" fill="#1f4e79">05 — KIRIK ÖLÇÜ (a × b × c)</text>
+  <g transform="translate(20,35)">
+    <rect width="140" height="75" rx="6" fill="#eff6ff" stroke="#2563eb"/>
+    <text x="70" y="20" text-anchor="middle" font-size="10" font-weight="600">PERDE</text>
+    <text x="70" y="36" text-anchor="middle" font-size="8">a=boy · b=H · c=2</text>
+    <text x="70" y="50" text-anchor="middle" font-size="8">Örn: 103,1×3,8×2</text>
+    <text x="70" y="64" text-anchor="middle" font-size="8" font-weight="600">= 783,6 m²/kat</text>
+  </g>
+  <g transform="translate(190,35)">
+    <rect width="140" height="75" rx="6" fill="#fef2f2" stroke="#dc2626"/>
+    <text x="70" y="20" text-anchor="middle" font-size="10" font-weight="600">KOLON</text>
+    <text x="70" y="36" text-anchor="middle" font-size="8">a=2(en+boy) · b=H</text>
+    <text x="70" y="50" text-anchor="middle" font-size="8">Örn: 45,96×3,8×13</text>
+    <text x="70" y="64" text-anchor="middle" font-size="8" font-weight="600">= 174,6 m²/kat</text>
+  </g>
+  <g transform="translate(360,35)">
+    <rect width="140" height="75" rx="6" fill="#f0fdf4" stroke="#16a34a"/>
+    <text x="70" y="20" text-anchor="middle" font-size="10" font-weight="600">DÖŞEME ALT</text>
+    <text x="70" y="36" text-anchor="middle" font-size="8">1028,2 − 35,6 − 6,4</text>
+    <text x="70" y="50" text-anchor="middle" font-size="8">− 45 boşluk</text>
+    <text x="70" y="64" text-anchor="middle" font-size="8" font-weight="600">= 941,3 m²/kat</text>
+  </g>
+  <g transform="translate(105,125)">
+    <rect width="140" height="75" rx="6" fill="#fffbeb" stroke="#d97706"/>
+    <text x="70" y="20" text-anchor="middle" font-size="10" font-weight="600">KİRİŞ</text>
+    <text x="70" y="36" text-anchor="middle" font-size="8">Yan: ΣL×0,40×2</text>
+    <text x="70" y="50" text-anchor="middle" font-size="8">Alt: ΣL×0,325</text>
+    <text x="70" y="64" text-anchor="middle" font-size="8" font-weight="600">Toplam 1.441,8 m²</text>
+  </g>
+  <g transform="translate(275,125)">
+    <rect width="140" height="75" rx="6" fill="#f5f3ff" stroke="#7c3aed"/>
+    <text x="70" y="20" text-anchor="middle" font-size="10" font-weight="600">RADYE YAN</text>
+    <text x="70" y="36" text-anchor="middle" font-size="8">150,5 × 0,80</text>
+    <text x="70" y="50" text-anchor="middle" font-size="8">tek yüz çevre</text>
+    <text x="70" y="64" text-anchor="middle" font-size="8" font-weight="600">= 120,4 m²</text>
+  </g>
+  <text x="260" y="215" text-anchor="middle" font-size="9" font-weight="700" fill="#b45309">GENEL TOPLAM: 11.773,4 m² (+ %5 fire → 12.362 m²)</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 200" width="100%" style="max-width:420px;background:#fff">
+  <text x="210" y="18" text-anchor="middle" font-size="12" font-weight="700" fill="#1f4e79">07 — PERDE KALIP DETAY (KIRIK ÖLÇÜ)</text>
+  <!-- duvar kesiti -->
+  <rect x="160" y="40" width="30" height="100" fill="#cbd5e1" stroke="#64748b"/>
+  <!-- sol kalıp -->
+  <rect x="130" y="40" width="30" height="100" fill="#2563eb" opacity="0.3" stroke="#2563eb"/>
+  <!-- sağ kalıp -->
+  <rect x="190" y="40" width="30" height="100" fill="#2563eb" opacity="0.3" stroke="#2563eb"/>
+  <!-- ölçü a -->
+  <line x1="130" y1="155" x2="220" y2="155" stroke="#334155" marker-end="url(#arr)"/>
+  <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#334155"/></marker></defs>
+  <text x="175" y="170" text-anchor="middle" font-size="9">a = boy (m)</text>
+  <!-- ölçü b -->
+  <line x1="235" y1="40" x2="235" y2="140" stroke="#334155"/>
+  <text x="250" y="95" font-size="9">b = H (m)</text>
+  <text x="250" y="108" font-size="8" fill="#64748b">3,80 üst kat</text>
+  <text x="250" y="120" font-size="8" fill="#64748b">4,00 bodrum</text>
+  <!-- c -->
+  <text x="175" y="35" text-anchor="middle" font-size="9" font-weight="600">c = 2 (çift yüz)</text>
+  <text x="210" y="195" text-anchor="middle" font-size="9" fill="#2563eb" font-weight="600">m² = a × b × 2 − boşluk düşümü</text>
+</svg>

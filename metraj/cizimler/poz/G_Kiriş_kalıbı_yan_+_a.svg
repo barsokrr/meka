@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500">
+  <rect width="720" height="500" fill="#ffffff"/>
+  <rect width="720" height="48" fill="#1f4e79"/>
+  <text x="360" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">POZ G — Kiriş kalıbı yan + alt (×5 kat)</text>
+  <text x="360" y="38" text-anchor="middle" font-size="9" fill="#cbd5e1">ΣL × (2×0,40 + 0,325) · H1 20/60 vb. · 1,441.8 m²</text>
+  <g transform="translate(8,52) scale(0.95)"><g  viewBox="0 0 367.31600000000003 224.558">
+  <text x="183.65800000000002" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="#d97706">PLAN GÖRÜNÜŞ — KİRİŞ KALIBI (yan+alt)</text>
+  <rect x="25" y="25" width="317.31600000000003" height="124.558" fill="#f8fafc" stroke="33" stroke-width="1"/><line x1="35" y1="76.59530000000001" x2="332.31600000000003" y2="76.59530000000001" stroke="#d97706" stroke-width="8" opacity="0.7"/><line x1="35" y1="101.50690000000002" x2="332.31600000000003" y2="101.50690000000002" stroke="#d97706" stroke-width="8" opacity="0.7"/><line x1="35" y1="126.41850000000001" x2="332.31600000000003" y2="126.41850000000001" stroke="#d97706" stroke-width="6" opacity="0.5"/><line x1="136.06060000000002" y1="43" x2="136.06060000000002" y2="147.558" stroke="#d97706" stroke-width="6" opacity="0.5"/>
+  <text x="199.52380000000002" y="74.10414" font-size="7" fill="#d97706">H1 20/60</text>
+  <text x="183.65800000000002" y="187.558" text-anchor="middle" font-size="8" fill="#64748b">Turuncu = kiriş kalıbı · yan 40 cm + alt 32,5 cm · 5 kat</text>
+</g></g>
+  <g transform="translate(365,52) scale(0.95)"><g  viewBox="0 0 360 180">
+  <text x="180" y="16" text-anchor="middle" font-size="10" font-weight="700" fill="#d97706">KESİT — KİRİŞ KALIP (H1 20/60)</text>
+  <rect x="80" y="90" width="200" height="40" fill="#cbd5e1" stroke="#64748b"/>
+  <rect x="80" y="50" width="200" height="40" fill="#d97706" opacity="0.25" stroke="#d97706"/>
+  <rect x="80" y="130" width="200" height="10" fill="#d97706" opacity="0.4" stroke="#d97706"/>
+  <text x="180" y="75" text-anchor="middle" font-size="8">Kaburga h=40</text>
+  <text x="180" y="115" text-anchor="middle" font-size="8">Kiriş h=60</text>
+  <text x="180" y="140" text-anchor="middle" font-size="7" fill="#d97706">Alt kalıp 32,5 cm</text>
+  <text x="180" y="165" text-anchor="middle" font-size="8" fill="#64748b">Yan: L×0,40×2 + Alt: L×0,325</text>
+</g></g>
+  <rect x="16" y="280" width="688" height="200" fill="#f8fafc" stroke="#e2e8f0" rx="4"/>
+  <text x="28" y="302" font-size="10" font-weight="700" fill="#d97706">Kaburga kiriş yan 40 cm + alt 32,5 cm · 5 kat toplamı.</text>
+  <rect x="28" y="318" width="14" height="14" fill="#d97706" opacity="0.55"/>
+  <text x="48" y="329" font-size="9" fill="#475569">Renkli bölge = metraj alanı · Plan (sol) + Kesit (sağ)</text>
+  <text x="28" y="355" font-size="9" fill="#64748b">Karşıyaka Ortaokulu · Kırık ölçü · Taslak metraj çizimi</text>
+  <text x="28" y="375" font-size="11" font-weight="700" fill="#1f4e79">Toplam poz: 1,441.8 m² (12,2% genel metraj)</text>
+</svg>
