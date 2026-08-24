@@ -4,11 +4,15 @@
   "scope": [
     "yapı kalıp bilgisi",
     "kalıp işçiliği",
+    "donatı sistemleri",
+    "egitim modulu",
     "ÇŞB kalıp pozları",
     "MYB/KKD",
     "metraj",
     "taşeron operasyon"
   ],
+  "education_module": "egitim/README.md",
+  "education_html": "public/kalip/egitim.html",
   "official_sources": [
     "https://yfk.csb.gov.tr/birim-fiyatlar-100468",
     "https://yfk.csb.gov.tr/haberler/1-ocak-2026-tarihinden-itibaren-gecerli-2026-yili-insaat-ve-tesisat-birim-fiyatlari-yayinlanmistir-302559"

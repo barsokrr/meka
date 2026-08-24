@@ -18,6 +18,7 @@
 | `myb_meslek_kodlari.csv` | MYB / NACE / SGK kodları |
 | `metraj_yontemleri.csv` | Kırık / düz / ÇŞB ölçü |
 | `index.json` | Depo indeksi |
+| [egitim/](egitim/README.md) | **Betonarme kalıp & donatı eğitim modülü** (7 ders) |
 
 ## Proje bağlantısı (Karşıyaka)
 
