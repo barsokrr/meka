@@ -52,16 +52,18 @@ Detay: `Resa_Teklif_Ozeti.md` · `Resa_Teklif_Kirilimi.csv` · `/mobilya/resa.ht
 |---|---:|
 | Girdi (Resa) | 14.856.180,00 |
 | Marj %25 | 3.714.045,00 |
-| **Müteahhit fiyatı (KDV dahil)** | **18.570.225,00** |
+| İmalat paketi (KDV dahil) | 18.570.225,00 |
+| Mimari danışmanlık (40 × 15.000) | 600.000,00 |
+| **Müteahhit genel toplam (KDV dahil)** | **19.170.225,00** |
 
 ### Ödeme yapısı
 
 | Kalem | TL |
 |---|---:|
 | Barter daire (1 adet) | 8.000.000,00 |
-| Kalan | 10.570.225,00 |
-| ↳ Nakit (%50) | 5.285.112,50 |
-| ↳ Çek / evrak (%50) | 5.285.112,50 |
+| Kalan | 11.170.225,00 |
+| ↳ Nakit (%50) | 5.585.112,50 |
+| ↳ Çek / evrak (%50) | 5.585.112,50 |
 
 ---
 
@@ -69,9 +71,9 @@ Detay: `Resa_Teklif_Ozeti.md` · `Resa_Teklif_Kirilimi.csv` · `/mobilya/resa.ht
 
 | | TL |
 |---|---:|
-| Tahsil edilecek likit (nakit + çek) | 10.570.225,00 |
+| Tahsil edilecek likit (nakit + çek) | 11.170.225,00 |
 | Resa Mutfak borcu | 14.856.180,00 |
-| **Açık (nakit ihtiyacı)** | **4.285.955,00** |
+| **Açık (nakit ihtiyacı)** | **3.685.955,00** |
 
 ### Net kâr senaryoları
 

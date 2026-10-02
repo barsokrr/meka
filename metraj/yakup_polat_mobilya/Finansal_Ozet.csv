@@ -5,21 +5,18 @@ Yüklenici,Abdurrahman Barış ÖKER — İç Mimar,
 Alt tedarikçi,Resa Mutfak,
 ,, 
 Resa teklifi KDV dahil (TL),14856180,Girdi maliyeti — belge 30.09.2026
-Resa mobilya 40 daire (TL),9260000,Resa bölüm toplamı
-Resa kapı bölümü (TL),5364680,Resa bölüm toplamı
-Resa kalem alt toplam (TL),14624680,Kontrol — belgeden 231500 TL fark
-Barter kâr marjı (%),25,
-Marj tutarı (TL),3714045,
-Müteahhit fiyatı KDV dahil (TL),18570225,
+Imalat paketi müteahhit (TL),18570225,Mobilya + kapı + montaj koordinasyonu
+Mimari danışmanlık (TL),600000,40 x 15000 · NACE 71.11.01
+Müteahhit genel toplam KDV dahil (TL),19170225,
 ,, 
 Ödeme barter daire (TL),8000000,1 adet
-Kalan tutar (TL),10570225,
-Kalan nakit %50 (TL),5285112.5,
-Kalan çek %50 (TL),5285112.5,
+Kalan tutar (TL),11170225,
+Kalan nakit %50 (TL),5585112.5,
+Kalan çek %50 (TL),5585112.5,
 ,, 
-Tahsil likit toplam (TL),10570225,Nakit + çek
+Tahsil likit toplam (TL),11170225,Nakit + çek
 Resa borcu (TL),14856180,
-Nakit açık (TL),4285955,Likit - Resa
+Nakit açık (TL),3685955,Likit - Resa
 ,, 
 Senaryo A Resa ödemesi barter sonrası (TL),6856180,14856180 - 8000000
-Senaryo A net likit kâr (TL),3714045,10570225 - 6856180
+Senaryo A net likit kâr (TL),4314045,11170225 - 6856180 (imalat marj + danışmanlık)

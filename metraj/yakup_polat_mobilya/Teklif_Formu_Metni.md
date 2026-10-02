@@ -33,26 +33,27 @@
 |---|---|
 | **İmalat adı** | Özel Tasarım PP Poliüretan Lake Kapı (284 Camsız + 40 Camlı) |
 | **Açıklama** | Hafele Werner Seri Kapı Kolu Setleri Dahil (164 Oda + 120 WC) |
-| **TOPLAM TUTAR** | **6.705.850,00 TL** |
+| **TOPLAM TUTAR** | **6.995.225,00 TL** (imalat + montaj koordinasyonu) |
 
 ---
 
-## 3. MONTAJ, NAKLİYE VE PROJE KOORDİNASYONU (40 DAİRE)
+## 3. MİMARİ DANIŞMANLIK (40 DAİRE)
 
 | | |
 |---|---|
-| **Açıklama** | Saha koordinasyonu, lojistik planlama, montaj organizasyonu |
-| **TOPLAM TUTAR** | **289.375,00 TL** |
+| **Açıklama** | Ölçü/onay, malzeme-kaplama seçimi, şantiye uygulama kontrolü (NACE 71.11.01) |
+| **Daire başı** | 15.000,00 TL |
+| **TOPLAM TUTAR** | **600.000,00 TL** |
 
 ---
 
-**GENEL TOPLAM:** **18.570.225,00 TL (KDV Dahil)**
+**GENEL TOPLAM:** **19.170.225,00 TL (KDV Dahil)**
 
 ---
 
 ## ÖDEME VE ŞARTLAR
 
-1. **Ödeme:** 8.000.000 TL barter (1 daire) + kalan 10.570.225 TL’nin %50 nakit (5.285.112,50) / %50 çek (5.285.112,50).
+1. **Ödeme:** 8.000.000 TL barter (1 daire) + kalan 11.170.225 TL’nin %50 nakit (5.585.112,50) / %50 çek (5.585.112,50).
 2. Barter daire tipi/kat/tapu devri ve çek kefaleti imza öncesi yazılı mutabakat.
 3. 6 ayı aşan işveren gecikmesinde TÜİK ÜFE malzeme fiyat farkı (sözleşme maddesi).
 4. Hafele aksesuarlar 2 yıl garantili.
