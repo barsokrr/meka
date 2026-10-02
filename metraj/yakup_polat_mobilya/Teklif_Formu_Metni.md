@@ -22,6 +22,7 @@
 |---|---|
 | **İmalat adı** | Mutfak, Genel Banyo, WC, Ebeveyn Banyo, Çamaşır Dolabı |
 | **Açıklama** | MDF Gövde, Lak Panel Kapak, Hafele Aksesuar Setleri |
+| **Referans imalatçı** | **Resa Mutfak** — Häfele Concept Tasarım Merkezi (Edremit/VAN) |
 | **Daire başı fiyat** | 289.375,00 TL |
 | **TOPLAM TUTAR** | **11.575.000,00 TL** |
 
