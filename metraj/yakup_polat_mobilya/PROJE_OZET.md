@@ -79,8 +79,10 @@ Detay: `Resa_Teklif_Ozeti.md` · `Resa_Teklif_Kirilimi.csv` · `/mobilya/resa.ht
 
 | Senaryo | Sonuç |
 |---|---|
-| **A — Barter daireyi Resa’ya devretmek** | Resa’ya kalan **6.856.180 TL** nakit/çek; **net kâr ~3.714.045 TL** likit |
-| **B — Daireyi şirkette tutmak** | **4.285.955 TL** özkaynak/iç borç ile açık kapatılır; net kâr **1 daire** (üzerinde ~4,28 M TL nakit yükümlülüğü) |
+| **A — Barter daireyi Resa’ya devretmek** | Resa’ya **6.856.180 TL**; **brüt likit kâr ~4.314.045 TL** |
+| **B — Daireyi şirkette tutmak** | **3.685.955 TL** likit açık; ekonomik brüt ~4,31 M (daire **8 M** varsayımı) |
+
+Detay: `Kar_Zarar_Analizi.md` · `/mobilya/kar-zarar.html`
 
 Detay: `Finansal_Ozet.csv`, `Nakit_Akis_Senaryolari.csv`
 
@@ -127,6 +129,9 @@ Detay: `Risk_Aksiyon_Plani.md`
 | `Resa_Teklif_Ozeti.md` | Resa kalem kırılımı (30.09.2026) |
 | `Resa_Teklif_Kirilimi.csv` | Resa satır verisi |
 | `Resa_Muteahhit_Marj_Eslesme.csv` | Bölüm marjı ↔ müteahhit satırları |
+| `Kar_Zarar_Analizi.md` | Kâr/zarar, senaryo A/B, hassasiyet, vergi notu |
+| `Kar_Zarar_Senaryolar.csv` | Brüt kâr kalem tablosu |
+| `Kar_Zarar_Hassasiyet.csv` | Resa/barter/çek varyasyonları |
 | `../taseron_paket/sirket_kimlik.md` | Güncel şirket kimliği (tüm projeler) |
 | `public/mobilya/` | Telefonda görüntüleme — `/mobilya` mobil portal |
 

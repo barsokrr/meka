@@ -1,0 +1,8 @@
+Senaryo,Tahsil_Barter,Tahsil_Likit,Resa_Odeme_Nakit,Net_Likit,Varlik_Daire,Brut_Kar_Not
+A,Barter Resa'ya 8000000,11170225,6856180,4314045,0,Likit kâr = imalat marjı + danışmanlık
+B,Daire sende 8000000,11170225,14856180,-3685955,8000000,Daire 8M satılırsa brüt ~4314045; likit önce eksi
+
+Kalem,Gelir_TL,Maliyet_TL,Brut_Kar_TL
+Imalat paketi,18570225,14856180,3714045
+Mimari danismanlik,600000,0,600000
+TOPLAM,19170225,14856180,4314045
