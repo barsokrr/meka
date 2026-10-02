@@ -27,15 +27,22 @@
 
 ## 2) Resa Mutfak girdi teklifi
 
-| | TL (KDV dahil) |
+**Resa → Yakup Polat · 30.09.2026 · KDV dahil**
+
+| Bölüm | TL (KDV dahil) |
 |---|---:|
-| **Resa toplam teklif** | **14.856.180,00** |
+| Genel mobilya (40 × 231.500) | 9.260.000,00 |
+| Kapı imalatları | 5.364.680,00 |
+| Kalem alt toplam | 14.624.680,00 |
+| **Belge genel toplam** | **14.856.180,00** |
 
-**İçerik (40 daire):**
+**1 daire mobilya (Hafele Concept, MDF + lak):** mutfak 190.000 · genel banyo 28.700 · WC 5.300 · ebeveyn 5.300 · çamaşır rayı 2.200 = **231.500 TL**.
 
-- MDF gövde, lak panel kapaklı mutfak; genel banyo, WC, ebeveyn banyo; Hafele teleskopik raylı çamaşır dolabı.
-- 284 adet camsız (80–90/210) + 40 adet camlı (125/210) PP poliüretan lake kapı.
-- Hafele Werner serisi kapı kolları (164 oda + 120 WC).
+**Kapı:** 284×15.500 camsız + 40×17.500 camlı; Werner kol 164 oda + 120 WC. **Hariç:** tezgah, LED, vitrifiye, ayna, kapı camı.
+
+**Kontrol:** Belge toplamı ile kalem alt toplamı arasında **231.500 TL** fark — Resa’dan yazılı teyit önerilir.
+
+Detay: `Resa_Teklif_Ozeti.md` · `Resa_Teklif_Kirilimi.csv` · `/mobilya/resa.html`
 
 ---
 
@@ -86,7 +93,7 @@ Detay: `Finansal_Ozet.csv`, `Nakit_Akis_Senaryolari.csv`
 | **Alt toplam (kalemler)** | **18.280.850,00** |
 | **Genel toplam (KDV dahil, hedef)** | **18.570.225,00** |
 
-**Kontrol notu:** Kalemler toplamı ile genel toplam arasında **289.375,00 TL** fark vardır (tek daire mobilya birim fiyatına eşit). Teklife sunmadan önce kapı/mobilya satırlarını genel toplamla hizalayın veya “montaj / lojistik / proje yönetimi” satırı ekleyin. Kanonik müteahhit tutarı: **18.570.225,00 TL**.
+**Kontrol notu:** Müteahhit satırları Resa **bölüm toplamları × %25** (11.575.000 + 6.705.850 = **18.280.850**). Hedef satış **18.570.225 TL** = Resa **belge toplamı** × 1,25. Aradaki **289.375 TL** fark, Resa belgedeki 231.500 TL kalem farkı + marj dağılımından gelir — teklif öncesi satırları hedef toplamla hizalayın veya Resa farkını netleştirin.
 
 Metin: `Teklif_Formu_Metni.md` · Mobil: `public/mobilya/teklif.html`
 
@@ -115,6 +122,9 @@ Detay: `Risk_Aksiyon_Plani.md`
 | `Teklif_Kalem_Kirilimi.csv` | Müteahhit teklif satırları |
 | `Teklif_Formu_Metni.md` | İmza için sade teklif metni |
 | `Teklif_Veren_Bilgileri.csv` | VKN, adres, iletişim (İVD kaydı) |
+| `Resa_Teklif_Ozeti.md` | Resa kalem kırılımı (30.09.2026) |
+| `Resa_Teklif_Kirilimi.csv` | Resa satır verisi |
+| `Resa_Muteahhit_Marj_Eslesme.csv` | Bölüm marjı ↔ müteahhit satırları |
 | `../taseron_paket/sirket_kimlik.md` | Güncel şirket kimliği (tüm projeler) |
 | `public/mobilya/` | Telefonda görüntüleme — `/mobilya` mobil portal |
 
