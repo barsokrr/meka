@@ -3,7 +3,16 @@
 **Tarih:** 01.10.2026  
 **İşveren:** Yakup Polat ve Ortakları  
 **Proje:** Elmalık Mah. 40 Daire Konut Projesi (A ve B Blok)  
-**Yüklenici:** Abdurrahman Barış ÖKER — İç Mimar  
+
+**Teklif veren (yüklenici):**
+
+| | |
+|---|---|
+| Unvan | **ABDURRAHMAN BARIŞ ÖKER** (gerçek kişi) |
+| Vergi dairesi / VKN | Van Vergi Dairesi Müdürlüğü / **6530560679** |
+| İş yeri | Cumhuriyet Mah. Zübeyde Hanım Cad. Kapı No: 11 A İpekyolu/VAN |
+| İletişim | 0 (506) 584 73 51 · barsokrr@gmail.com |
+| Faaliyet (NACE) | 71.11.01 — Mimarlık ve mimari danışmanlık |
 
 ---
 

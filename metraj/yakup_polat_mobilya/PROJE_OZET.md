@@ -114,6 +114,8 @@ Detay: `Risk_Aksiyon_Plani.md`
 | `Nakit_Akis_Senaryolari.csv` | Senaryo A / B |
 | `Teklif_Kalem_Kirilimi.csv` | Müteahhit teklif satırları |
 | `Teklif_Formu_Metni.md` | İmza için sade teklif metni |
+| `Teklif_Veren_Bilgileri.csv` | VKN, adres, iletişim (İVD kaydı) |
+| `../taseron_paket/sirket_kimlik.md` | Güncel şirket kimliği (tüm projeler) |
 | `public/mobilya/` | Telefonda görüntüleme — `/mobilya` mobil portal |
 
 ---
