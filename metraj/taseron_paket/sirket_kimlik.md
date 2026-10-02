@@ -1,30 +1,55 @@
-# Şahıs Şirketi — Kimlik Özeti (fatura / sözleşme)
+# Şahıs Şirketi — Kimlik Özeti (fatura / sözleşme / teklif)
 
-> TC Kimlik No bu dosyaya yazılmaz (hassas veri). e-Devlet / SGK işlemlerinde ayrıca kullanılır.
+> **T.C. Kimlik No** bu repoya yazılmaz (hassas veri). Sözleşme ve resmi formlarda e-Devlet / İVD kaydından kullanılır.
 
 | Alan | Değer |
 |---|---|
 | Unvan / Ad Soyad | **ABDURRAHMAN BARIŞ ÖKER** |
-| Şirket türü | Gerçek kişi (şahıs şirketi) |
+| Şirket türü | Gerçek kişi (şahıs işletmesi) |
 | Mükellef türü | Tam |
 | Vergi dairesi | **Van Vergi Dairesi Müdürlüğü** |
 | Vergi kimlik no (VKN) | **6530560679** |
-| Adres (SGK bildirgesinden) | Yeni Mah. Çalıbaşı Van İpekyolu No:26/1, Van |
+| İVD kullanıcı kodu | 65311333 |
+| Doğum tarihi | 20.12.1991 *(sözleşme formları — repoda referans)* |
 
-## Faaliyet kodları (bilgisayar programlama hariç)
+## Adresler
 
-| Kod | Faaliyet | Başlangıç | Durum |
-|---|---|---|---|
-| **43.99.05** (439905) | İnşaatlarda beton işleri (kalıp vb.) | 12.08.2026 | Aktif — **ana (kalıp)** |
-| **71.11.01** (711101) | Mimarlık faaliyetleri ve mimari danışmanlık | 01.02.2026 | Aktif |
+| Tür | Adres |
+|---|---|
+| **İkametgah** | Yeni Mah. Çalıbaşı Sk. Kapı No: 26 Daire No: 1 İpekyolu / Van |
+| **İş yeri (merkez)** | Cumhuriyet Mah. Zübeyde Hanım Cad. Kapı No: 11 A İpekyolu / Van |
+| Mükellefiyet | Merkez iş yeri · şube adı: merkez |
 
-Kapanan (hariç): 62.10.00 bilgisayar programlama (14.01.2026–12.08.2026).
+## İletişim
+
+| Kanal | Değer |
+|---|---|
+| GSM (talep / onay) | **0 (506) 584 73 51** |
+| e-Tebligat e-posta | **barsokrr@gmail.com** |
+| e-Tebligat | Aktif (aktivasyon yapıldı) |
+| Sabit telefon | — *(kayıtta boş)* |
+
+## Faaliyet kodları (NACE)
+
+| Kod | Faaliyet | Başlangıç | Bitiş | Durum |
+|---|---|---|---|---|
+| **43.99.05** (439905) | İnşaatlarda beton işleri (kalıp vb.) | 12.08.2026 | — | **Aktif** — kalıp taşeronluğu |
+| **71.11.01** (711101) | Mimarlık faaliyetleri ve mimari danışmanlık | 01.02.2026 | — | **Aktif** — iç mimarlık / mobilya-kapı taşeron |
+| 62.10.00 (621000) | Bilgisayar programlama faaliyetleri | 14.01.2026 | 12.08.2026 | Kapalı |
+
+### Proje bazında tercih edilen kod
+
+| Proje türü | Önerilen ana NACE |
+|---|---|
+| Kalıp taşeronluğu | **43.99.05** |
+| Mobilya, kapı, iç mimarlık uygulama (Yakup Polat vb.) | **71.11.01** |
+
+Gerekirse yan kodlar: 43.99.13 (demir), 43.99.07 (iskele).
 
 ## Operasyon notları
 
-- Kalıp taşeronluğu için ana kod: **43.99.05**
-- Gerekirse eklenecek yan kodlar: 43.99.13 (demir), 43.99.07 (iskele)
-- Şantiye: müteahhit dosyasında **Aracı No** alınacak
-- Dijital Vergi Dairesi’nde e-Tebligat ve borç durumunu periyodik kontrol edin
+- Şantiye SGK: müteahhit dosyasında **Aracı No**
+- Dijital Vergi Dairesi: e-Tebligat ve borç durumu periyodik kontrol
+- Mobilya/montaj faturalarında **KDV tevkifatı 4/10** (MM onayı)
 
-*Son güncelleme: 2026-08-14 (mükellef ekran görüntülerinden)*
+*Son güncelleme: 2026-10-02 (İnteraktif Vergi Dairesi ekran görüntülerinden)*
