@@ -93,7 +93,7 @@ Detay: `Finansal_Ozet.csv`, `Nakit_Akis_Senaryolari.csv`
 | **Alt toplam (kalemler)** | **18.280.850,00** |
 | **Genel toplam (KDV dahil, hedef)** | **18.570.225,00** |
 
-**Kontrol notu:** Müteahhit satırları Resa **bölüm toplamları × %25** (11.575.000 + 6.705.850 = **18.280.850**). Hedef satış **18.570.225 TL** = Resa **belge toplamı** × 1,25. Aradaki **289.375 TL** fark, Resa belgedeki 231.500 TL kalem farkı + marj dağılımından gelir — teklif öncesi satırları hedef toplamla hizalayın veya Resa farkını netleştirin.
+**İşveren teklif formu:** 11.575.000 + 6.705.850 + **289.375** (montaj/koordinasyon) = **18.570.225 TL** — `Isveren_Teklif_Formu_Yakup_Polat.md` · `/mobilya/yakup-polat-teklif-formu.html`
 
 Metin: `Teklif_Formu_Metni.md` · Mobil: `public/mobilya/teklif.html`
 

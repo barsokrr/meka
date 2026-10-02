@@ -1,6 +1,6 @@
 # TEKLİF FORMU
 
-**Tarih:** 01.10.2026  
+**Tarih:** 02.10.2026 · **Ref:** YP-ELM-40-2026  
 **İşveren:** Yakup Polat ve Ortakları  
 **Proje:** Elmalık Mah. 40 Daire Konut Projesi (A ve B Blok)  
 
@@ -37,16 +37,30 @@
 
 ---
 
+## 3. MONTAJ, NAKLİYE VE PROJE KOORDİNASYONU (40 DAİRE)
+
+| | |
+|---|---|
+| **Açıklama** | Saha koordinasyonu, lojistik planlama, montaj organizasyonu |
+| **TOPLAM TUTAR** | **289.375,00 TL** |
+
+---
+
 **GENEL TOPLAM:** **18.570.225,00 TL (KDV Dahil)**
 
 ---
 
 ## ÖDEME VE ŞARTLAR
 
-1. **Ödeme şekli:** 1 adet barter daire (8.000.000 TL) + kalan tutarın %50’si nakit / %50’si çek olarak tahsil edilecektir.
-2. Tüm Hafele aksesuarlar 2 yıl garantilidir.
-3. Mutfak tezgahı, vitrifiye, aynalar, LED aydınlatma ve kapı camları teklife dahil değildir.
-4. Bu teklif 15 gün süreyle geçerlidir.
+1. **Ödeme:** 8.000.000 TL barter (1 daire) + kalan 10.570.225 TL’nin %50 nakit (5.285.112,50) / %50 çek (5.285.112,50).
+2. Barter daire tipi/kat/tapu devri ve çek kefaleti imza öncesi yazılı mutabakat.
+3. 6 ayı aşan işveren gecikmesinde TÜİK ÜFE malzeme fiyat farkı (sözleşme maddesi).
+4. Hafele aksesuarlar 2 yıl garantili.
+5. Kapsam dışı: tezgah, LED/özel aksesuar, vitrifiye, aynalar, kapı camları.
+6. Montajlı işlerde KDV tevkifatı 4/10 uygulanabilir (MM onayı).
+7. Teklif 15 gün geçerlidir.
+
+**Yazdırılabilir form:** `public/mobilya/yakup-polat-teklif-formu.html`
 
 ---
 

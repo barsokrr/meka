@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Teklif Formu — Yakup Polat · Mobilya & Kapı</title>
+<style>
+  :root {
+    --brand: #1f4e79;
+    --line: #cbd5e1;
+    --muted: #475569;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 11pt;
+    color: #0f172a;
+    background: #e2e8f0;
+    line-height: 1.4;
+  }
+  .page {
+    max-width: 210mm;
+    min-height: 297mm;
+    margin: 1rem auto;
+    padding: 14mm 16mm 18mm;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,.12);
+  }
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; box-shadow: none; max-width: none; min-height: auto; padding: 10mm 12mm; }
+    .no-print { display: none !important; }
+  }
+  .toolbar {
+    max-width: 210mm;
+    margin: 0.75rem auto;
+    padding: 0 1rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .toolbar a, .toolbar button {
+    font: inherit;
+    font-size: 0.9rem;
+    padding: 0.45rem 0.85rem;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--brand);
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .toolbar button.primary { background: var(--brand); color: #fff; border-color: var(--brand); }
+  .head {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 3px solid var(--brand);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .head h1 {
+    margin: 0;
+    font-size: 1.35rem;
+    color: var(--brand);
+    letter-spacing: 0.04em;
+  }
+  .head .sub { font-size: 0.85rem; color: var(--muted); margin-top: 0.25rem; }
+  .meta {
+    text-align: right;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  .meta strong { color: #0f172a; display: block; font-size: 0.95rem; }
+  .parties {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.88rem;
+  }
+  .box {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 0.65rem 0.75rem;
+  }
+  .box h3 {
+    margin: 0 0 0.35rem;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--brand);
+  }
+  .box p { margin: 0.15rem 0; }
+  h2.section {
+    margin: 1rem 0 0.4rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--brand);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.25rem;
+  }
+  table.offer {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.86rem;
+    margin-bottom: 0.5rem;
+  }
+  table.offer th {
+    background: #f1f5f9;
+    color: var(--brand);
+    font-weight: 600;
+    text-align: left;
+    padding: 0.45rem 0.5rem;
+    border: 1px solid var(--line);
+  }
+  table.offer td {
+    padding: 0.4rem 0.5rem;
+    border: 1px solid var(--line);
+    vertical-align: top;
+  }
+  table.offer td.num, table.offer th.num { text-align: right; white-space: nowrap; }
+  table.offer tr.total td {
+    font-weight: 700;
+    background: #f8fafc;
+  }
+  table.offer tr.grand td {
+    font-weight: 700;
+    font-size: 1rem;
+    background: #dbeafe;
+    color: var(--brand);
+  }
+  .terms {
+    font-size: 0.84rem;
+    margin-top: 1rem;
+  }
+  .terms ol { margin: 0.35rem 0 0; padding-left: 1.2rem; }
+  .terms li { margin-bottom: 0.35rem; }
+  .exclude {
+    margin-top: 0.75rem;
+    padding: 0.5rem 0.65rem;
+    background: #fff7ed;
+    border-left: 3px solid #ea580c;
+    font-size: 0.82rem;
+  }
+  .sign {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    font-size: 0.88rem;
+  }
+  .sign .line {
+    border-top: 1px solid #0f172a;
+    margin-top: 3rem;
+    padding-top: 0.35rem;
+  }
+  footer.note {
+    margin-top: 1.5rem;
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="toolbar no-print">
+  <a href="index.html">← Portal</a>
+  <button type="button" class="primary" onclick="window.print()">Yazdır / PDF kaydet</button>
+</div>
+
+<article class="page">
+  <header class="head">
+    <div>
+      <h1>TEKLİF FORMU</h1>
+      <p class="sub">Mobilya &amp; kapı imalatı · taşeron / alt yüklenici</p>
+    </div>
+    <div class="meta">
+      <strong>Tarih: 02.10.2026</strong>
+      Geçerlilik: 15 gün<br/>
+      Ref: YP-ELM-40-2026
+    </div>
+  </header>
+
+  <div class="parties">
+    <div class="box">
+      <h3>Teklif veren (yüklenici)</h3>
+      <p><strong>ABDURRAHMAN BARIŞ ÖKER</strong></p>
+      <p>İç mimar · Gerçek kişi (şahıs işletmesi)</p>
+      <p>Van VD · VKN: <strong>6530560679</strong></p>
+      <p>Cumhuriyet Mah. Zübeyde Hanım Cad. Kapı No: 11 A<br/>İpekyolu / VAN</p>
+      <p>Tel: 0506 584 73 51 · barsokrr@gmail.com</p>
+    </div>
+    <div class="box">
+      <h3>İşveren (müteahhit)</h3>
+      <p><strong>YAKUP POLAT ve ORTAKLARI</strong></p>
+      <p>Proje: Elmalık Mah. 4273 Ada, 2 Parsel</p>
+      <p>A ve B Blok · 40 adet mesken (2+1 / 3+1)</p>
+      <p>Edremit / VAN</p>
+    </div>
+  </div>
+
+  <p style="font-size:0.88rem;margin:0 0 0.75rem;">
+    Aşağıda belirtilen işlerin imalat, tedarik koordinasyonu ve montaja hazır teslim kapsamında fiyat teklifimiz sunulmuştur. Fiyatlar <strong>KDV dahildir</strong>.
+  </p>
+
+  <h2 class="section">1 — Genel mobilya işleri (40 daire)</h2>
+  <table class="offer">
+    <thead>
+      <tr>
+        <th>İmalat adı</th>
+        <th>Ürün açıklaması</th>
+        <th class="num">Adet</th>
+        <th class="num">Birim (TL)</th>
+        <th class="num">Tutar (TL)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mutfak, banyo, WC, ebeveyn banyo, çamaşır dolabı</td>
+        <td>MDF gövde, lak panel kapak; Hafele Concept aksesuar setleri (tezgah hariç)</td>
+        <td class="num">40 daire</td>
+        <td class="num">289.375,00</td>
+        <td class="num">11.575.000,00</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">2 — Kapı imalatları (40 daire)</h2>
+  <table class="offer">
+    <thead>
+      <tr>
+        <th>İmalat adı</th>
+        <th>Ürün açıklaması</th>
+        <th class="num">Adet</th>
+        <th class="num">—</th>
+        <th class="num">Tutar (TL)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>PP poliüretan lake kapı</td>
+        <td>284 adet camsız (80–90/210) + 40 adet camlı kasa (125/210); kapı camı hariç</td>
+        <td class="num">324</td>
+        <td class="num">—</td>
+        <td class="num">6.705.850,00</td>
+      </tr>
+      <tr>
+        <td>Kapı kolu setleri</td>
+        <td>Hafele Werner serisi — 164 oda + 120 WC</td>
+        <td class="num">284 set</td>
+        <td class="num">—</td>
+        <td class="num">(yukarıda dahil)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">3 — Montaj, nakliye ve proje koordinasyonu</h2>
+  <table class="offer">
+    <tbody>
+      <tr>
+        <td colspan="4">Saha koordinasyonu, lojistik planlama, montaj organizasyonu (40 daire)</td>
+        <td class="num">289.375,00</td>
+      </tr>
+      <tr class="total">
+        <td colspan="4">Ara toplam (KDV dahil)</td>
+        <td class="num">18.570.225,00</td>
+      </tr>
+      <tr class="grand">
+        <td colspan="4">GENEL TOPLAM (KDV DAHİL)</td>
+        <td class="num">18.570.225,00</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="exclude">
+    <strong>Kapsam dışı:</strong> Mutfak tezgahı; dolap içi LED ve özel iç aksesuarlar; vitrifiye; banyo/WC aynaları; kapı camları.
+  </div>
+
+  <div class="terms">
+    <h2 class="section" style="margin-top:0.5rem">Ödeme ve şartlar</h2>
+    <ol>
+      <li><strong>Ödeme:</strong> Toplam bedelin <strong>8.000.000,00 TL</strong> karşılığı <strong>1 (bir) adet barter daire</strong> + kalan <strong>10.570.225,00 TL</strong>’nin <strong>%50 nakit</strong> (<strong>5.285.112,50 TL</strong>) ve <strong>%50 çek/evrak</strong> (<strong>5.285.112,50 TL</strong>) olarak tahsil edilmesi.</li>
+      <li>Barter dairenin tipi, katı, bağımsız bölüm no ve tapu devir tarihi sipariş/onay ile birlikte yazılı mutabakatla belirlenir.</li>
+      <li>Çeklerin vadesi ve kefaleti (müteahhit ve/veya ortaklar şahsi kefaleti) imza öncesi kararlaştırılır.</li>
+      <li>Montaj takvimi şantiye ilerlemesine bağlıdır; <strong>6 (altı) ayı aşan</strong> işveren kaynaklı gecikmelerde malzeme fiyat farkı <strong>TÜİK ÜFE</strong> oranında yansıtılabilir (nihai sözleşme maddesi).</li>
+      <li>Hafele markalı aksesuarlarda <strong>2 (iki) yıl</strong> garanti geçerlidir.</li>
+      <li>Montajı içeren işlerde yürürlükteki mevzuata göre <strong>KDV tevkifatı (4/10)</strong> uygulanması gerekebilir; fatura düzeni mali müşavir onayı ile kesilir.</li>
+      <li>Bu teklif <strong>15 gün</strong> geçerlidir. Onay sonrası detaylı sözleşme ve imalat ölçü listesi ile üretime geçilir.</li>
+    </ol>
+  </div>
+
+  <div class="sign">
+    <div>
+      <p><strong>Teklif eden</strong><br/>Abdurrahman Barış ÖKER<br/>İç Mimar</p>
+      <div class="line">İmza / Kaşe</div>
+    </div>
+    <div>
+      <p><strong>Müşteri onayı</strong><br/>Yakup POLAT ve Ortakları</p>
+      <div class="line">İmza / Kaşe · Tarih</div>
+    </div>
+  </div>
+
+  <footer class="note">
+    Taslak teklif formu — nihai metin avukat / mali müşavir onayına tabidir · NACE 71.11.01
+  </footer>
+</article>
+</body>
+</html>
