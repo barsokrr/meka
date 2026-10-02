@@ -8,7 +8,7 @@
 
 ## 2. Nakit, çek ve ciro
 
-- **Durum:** Likit tahsilat 10,57 M TL; Resa borcu 14,86 M TL → **4,29 M TL açık**.
+- **Durum:** Likit tahsilat **11,17 M TL**; Resa borcu 14,86 M TL → **3,69 M TL açık** (barter sende kalırsa).
 - **Risk:** Müteahhit çeklerinin Resa’ya cirolanması; ödenmeme halinde yüklenici ilk muhatap.
 - **Aksiyon:** Çeklerde müteahhit / ortak **şahsi kefalet**; vade takvimi Resa ödemeleri ile hizalı; mümkünse doğrudan müteahhit → Resa veya aval.
 

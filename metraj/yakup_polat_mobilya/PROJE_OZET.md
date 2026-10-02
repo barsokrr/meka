@@ -139,8 +139,16 @@ Detay: `Risk_Aksiyon_Plani.md`
 
 ## 8) Sonraki adımlar
 
-1. Teklif kalemlerini 18.570.225 TL ile mutabık hale getir  
-2. Yakup Polat ile nihai sözleşme (ÜFE, montaj takvimi, barter daire tapu/devir)  
-3. Çek kefalet / vade / ciro koşulları  
-4. Resa ile alt sözleşme (barter devri veya nakit planı)  
-5. e-Fatura ve 4/10 tevkifat satır planı (mali müşavir)
+1. **Aksiyon planı:** `Aksiyon_Plani_Santiye_Kredi.md` (irtifak, banka kredisi, mayıs kademe teslim)  
+2. Yakup Polat ile nihai sözleşme — **milestone ödeme**, ÜFE, montaj “hazır tutanağı”  
+3. Kat irtifakı tarihi + barter **BB no**  
+4. Resa alt sözleşme — kredi/hakediş sonrası imalat start  
+5. e-Fatura / tevkifat (MM)
+
+## 9) Şantiye & parsel (Ekim 2026)
+
+| | |
+|---|---|
+| Parsel | Elmalık · Ada 4273 Parsel 2 · **4.089,49 m²** arsa |
+| Saha | Bodrum/zemin kaba kalıp (foto) |
+| Montaj | Kademeli; **mayıs = pilot**, 40 daire tek seferde değil |
