@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<title>Teklif Formu — Yakup Polat</title>
+<style>
+  @page { size: A4; margin: 18mm; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    color: #000;
+    margin: 0;
+    padding: 18mm;
+    max-width: 180mm;
+  }
+  h1 {
+    text-align: center;
+    font-size: 16pt;
+    margin: 0 0 6mm;
+    letter-spacing: 1px;
+  }
+  .info { margin-bottom: 8mm; line-height: 1.5; }
+  .info p { margin: 2px 0; }
+  hr { border: none; border-top: 1px solid #000; margin: 5mm 0; }
+  h2 {
+    font-size: 11pt;
+    margin: 4mm 0 2mm;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 4mm;
+  }
+  td { padding: 2mm 0; vertical-align: top; }
+  td:last-child { text-align: right; white-space: nowrap; font-weight: bold; }
+  .total {
+    font-size: 12pt;
+    border-top: 2px solid #000;
+    padding-top: 3mm;
+    margin-top: 2mm;
+  }
+  .terms { font-size: 10pt; line-height: 1.45; }
+  .terms ol { margin: 2mm 0; padding-left: 5mm; }
+  .sign {
+    margin-top: 14mm;
+    display: flex;
+    justify-content: space-between;
+    gap: 10mm;
+    font-size: 10pt;
+  }
+  .sign div { width: 45%; }
+  .sign .line { border-top: 1px solid #000; margin-top: 18mm; padding-top: 2mm; }
+  .no-print {
+    position: fixed; top: 8px; right: 8px;
+    font-size: 12px; padding: 6px 10px; cursor: pointer;
+  }
+  @media print { .no-print { display: none; } body { padding: 0; } }
+</style>
+</head>
+<body>
+<button type="button" class="no-print" onclick="window.print()">PDF / Yazdır</button>
+
+<h1>TEKLİF FORMU</h1>
+
+<div class="info">
+  <p><strong>Tarih:</strong> 02.10.2026</p>
+  <p><strong>İşveren:</strong> Yakup Polat ve Ortakları</p>
+  <p><strong>Proje:</strong> Elmalık Mah. 40 Daire Konut Projesi (A ve B Blok)</p>
+  <p><strong>Yüklenici:</strong> Abdurrahman Barış ÖKER — İç Mimar · VKN 6530560679</p>
+</div>
+
+<hr/>
+
+<h2>1. GENEL MOBİLYA İŞLERİ (40 DAİRE)</h2>
+<table>
+  <tr>
+    <td>Mutfak, Genel Banyo, WC, Ebeveyn Banyo, Çamaşır Dolabı<br/>
+    <span style="font-weight:normal;font-size:10pt">MDF gövde, lak panel kapak, Hafele aksesuar (tezgah hariç)</span></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Daire başı fiyat</td>
+    <td>289.375,00 TL</td>
+  </tr>
+  <tr>
+    <td><strong>TOPLAM</strong></td>
+    <td>11.575.000,00 TL</td>
+  </tr>
+</table>
+
+<hr/>
+
+<h2>2. KAPI İMALATLARI (40 DAİRE)</h2>
+<table>
+  <tr>
+    <td>PP poliüretan lake kapı (284 camsız + 40 camlı), Hafele Werner kol setleri<br/>
+    <span style="font-weight:normal;font-size:10pt">164 oda + 120 WC · kapı camı hariç · montaj koordinasyonu dahil</span></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><strong>TOPLAM</strong></td>
+    <td>6.995.225,00 TL</td>
+  </tr>
+</table>
+
+<hr/>
+
+<table class="total">
+  <tr>
+    <td><strong>GENEL TOPLAM (KDV DAHİL)</strong></td>
+    <td><strong>18.570.225,00 TL</strong></td>
+  </tr>
+</table>
+
+<hr/>
+
+<div class="terms">
+  <p><strong>ÖDEME VE ŞARTLAR</strong></p>
+  <ol>
+    <li>Ödeme: 1 adet barter daire (8.000.000 TL) + kalan tutarın %50 nakit / %50 çek.</li>
+    <li>Hafele aksesuarlar 2 yıl garantilidir.</li>
+    <li>Tezgah, vitrifiye, aynalar, LED aydınlatma ve kapı camları teklife dahil değildir.</li>
+    <li>Bu teklif 15 gün süreyle geçerlidir.</li>
+  </ol>
+</div>
+
+<div class="sign">
+  <div>
+    <strong>TEKLİF EDEN</strong><br/>
+    Abdurrahman Barış ÖKER<br/>
+    İç Mimar
+    <div class="line">İmza / Kaşe</div>
+  </div>
+  <div>
+    <strong>MÜŞTERİ ONAYI</strong><br/>
+    Yakup Polat ve Ortakları
+    <div class="line">İmza / Kaşe</div>
+  </div>
+</div>
+
+</body>
+</html>
