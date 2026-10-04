@@ -9,8 +9,8 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Cm, Pt, RGBColor
 
 ROOT = Path(__file__).resolve().parents[1]
-MD = ROOT / "taseron_paket" / "Taseronlar_Arası_Demir_Kalip_Sozlesmesi.md"
-OUT = ROOT / "taseron_paket" / "Taseronlar_Arası_Demir_Kalip_Sozlesmesi.docx"
+MD = ROOT / "taseron_paket" / "Taseron_Demir_Kalip_Sozlesmesi_Basit.md"
+OUT = ROOT / "taseron_paket" / "Taseron_Demir_Kalip_Sozlesmesi_Basit.docx"
 
 
 def md_to_docx():
