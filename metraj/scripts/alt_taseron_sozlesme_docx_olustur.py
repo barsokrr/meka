@@ -91,5 +91,29 @@ def parse_md_to_docx():
     print(f"OK: {OUT}")
 
 
+def docx_to_pdf():
+    import subprocess
+
+    pdf = OUT.with_suffix(".pdf")
+    subprocess.run(
+        [
+            "libreoffice",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            str(OUT.parent),
+            str(OUT),
+        ],
+        check=True,
+        capture_output=True,
+    )
+    print(f"OK: {pdf}")
+
+
 if __name__ == "__main__":
     parse_md_to_docx()
+    try:
+        docx_to_pdf()
+    except (FileNotFoundError, subprocess.CalledProcessError) as e:
+        print("PDF atlandı (LibreOffice gerekli):", e)
