@@ -1,0 +1,22 @@
+Bolum,Kalem,Birim,Miktar,Birim_Fiyat_TL,Kaynak,Tutar_TL
+Metraj,Duz olcu (sozlesme),m2,2145,,Kullanici cetveli,
+Gelir,Sozlesme birim fiyati,TL/m2,2145,1700,KDV haric,3646500
+
+Iscilik_40gun,Yevmiye (6 usta x 4500 x 40),TL,1,1080000,Hesap,1080000
+Iscilik_40gun,Yemek 3 ogun (6 x 150 x 3 x 40),TL,1,108000,Hesap,108000
+Iscilik_40gun,Toplam isci + yemek,TL,1,1188000,,1188000
+Iscilik_40gun,SGK isveren payi (opsiyonel %22.5),TL,1,243000,1080000x0.225,243000
+Iscilik_40gun,Toplam iscilik+SGK+yemek (opsiyonel),TL,1,1431000,,1431000
+
+Malzeme_teklif,IS-KA genel toplam EUR,KDV dahil,51423.58,STEC-261736,
+Malzeme_teklif,EUR/TRY kur,TL/EUR,55.32,05.10.2026,
+Malzeme_teklif,KALIP MALZEMESI TL,TL,1,2844752,51423.58x55.32,2844752
+
+Tedarikci_proje,IS-KA Beamform (KDV dahil EUR),EUR,51423.58,STEC-261736 proje teklifi,
+Tedarikci_proje,Not,,,,"Sistem malzemesi; nakliye/montaj haric; ~371 m2 kolon+perde"
+
+Maliyet_toplam,Iscilik+yemek+kalip malzemesi (teklif TL),TL,1,4032752,40 gun 3 ogun,4032752
+Brut_fark,Gelir - maliyet toplam,TL,1,-386252,3646500-4032752,
+Verim,Net is m2 / usta-gun,m2,8.94,2145/(6x40),,
+
+Demir_malzeme,Isveren temini,TL,0,,Sozlesme,0
