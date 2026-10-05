@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Gündoğdu KM — işçilik, yemek ve ahşap kalıp malzemesi PDF."""
+"""Gündoğdu KM — işçilik, yemek ve kalıp malzemesi (IS-KA teklif EUR→TL) PDF."""
 
 from pathlib import Path
 
@@ -14,6 +14,13 @@ from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, Tabl
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "kocaeli_gundogdu_iscilik_yemek_malzeme.pdf"
 
+# IS-KA / Algüç Beamform proje teklifi STEC-261736 (05.10.2026)
+EUR_KDV_HARIC = 42_852.98
+EUR_KDV = 8_570.60
+EUR_GENEL_TOPLAM = 51_423.58
+EUR_TRY = 55.32  # 05.10.2026 piyasa kuru
+TL_KALIP_MALZEME = round(EUR_GENEL_TOPLAM * EUR_TRY)
+
 FONT_PATH = Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")
 FONT_BOLD = Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf")
 
@@ -21,6 +28,11 @@ FONT_BOLD = Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf")
 def fmt_tl(n: float | int) -> str:
     s = f"{int(round(n)):,}".replace(",", ".")
     return f"{s} TL"
+
+
+def fmt_eur(n: float) -> str:
+    s = f"{n:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    return f"{s} EUR"
 
 
 def register_fonts():
@@ -75,16 +87,19 @@ def build_pdf():
         textColor=colors.HexColor("#555555"),
     )
 
+    iscilik_yemek = 1_188_000
+    genel = iscilik_yemek + TL_KALIP_MALZEME
+
     story = []
     story.append(
         Paragraph(
-            "Kocaeli Gündoğdu Kültür Merkezi<br/>İşçilik, Yemek ve Ahşap Kalıp Malzemesi",
+            "Kocaeli Gündoğdu Kültür Merkezi<br/>İşçilik, Yemek ve Kalıp Malzemesi",
             title_style,
         )
     )
     story.append(
         Paragraph(
-            "6 usta · 40 iş günü · 3 öğün × 150 TL · sözleşme metrajı 2.145 m² (düz ölçü)",
+            "6 usta · 40 iş günü · 3 öğün × 150 TL · sözleşme metrajı 2.145 m²",
             sub_style,
         )
     )
@@ -113,43 +128,43 @@ def build_pdf():
         ["Kalem", "Hesap", "Tutar"],
         ["Yevmiye", "6 usta × 4.500 TL × 40 gün", fmt_tl(1_080_000)],
         ["Yemek", "6 kişi × 150 TL × 3 öğün × 40 gün", fmt_tl(108_000)],
-        ["Toplam işçilik + yemek", "", fmt_tl(1_188_000)],
-        ["SGK işveren payı (opsiyonel %22,5)", "yevmiye üzerinden", fmt_tl(243_000)],
+        ["Toplam işçilik + yemek", "", fmt_tl(iscilik_yemek)],
     ]
     story.append(table(iscilik, [7 * cm, 7.5 * cm, 3.5 * cm]))
 
     story.append(Spacer(1, 0.4 * cm))
-    story.append(Paragraph("2. Ahşap kalıp malzemesi (2.145 m², rayiç)", h_style))
+    story.append(
+        Paragraph(
+            "2. Kalıp malzemesi — İS-KA Beamform (STEC-261736, Algüç İnşaat proje teklifi)",
+            h_style,
+        )
+    )
     malzeme = [
-        ["Malzeme", "Miktar", "Tutar (TL)"],
-        ["Film kaplı plywood 18 mm", "322 m²", fmt_tl(172_495)],
-        ["Çam kereste II. sınıf", "29 m³", fmt_tl(277_418)],
-        ["Çivi, yağ, tel, distan, hurda/fire (%8)", "—", fmt_tl(75_933)],
-        ["Toplam ahşap kalıp malzemesi", "", fmt_tl(525_646)],
+        ["Kalem", "EUR", "TL"],
+        ["Teklif toplamı (KDV hariç)", fmt_eur(EUR_KDV_HARIC), fmt_tl(EUR_KDV_HARIC * EUR_TRY)],
+        ["KDV (%20)", fmt_eur(EUR_KDV), fmt_tl(EUR_KDV * EUR_TRY)],
+        [
+            "Genel toplam (KDV dahil)",
+            fmt_eur(EUR_GENEL_TOPLAM),
+            fmt_tl(TL_KALIP_MALZEME),
+        ],
     ]
-    story.append(table(malzeme, [7 * cm, 4 * cm, 4 * cm]))
-
-    story.append(Spacer(1, 0.4 * cm))
-    story.append(Paragraph("3. Malzeme kalemleri (miktar listesi)", h_style))
-    detay = [
-        ["Kalem", "Birim", "Miktar"],
-        ["Film kaplı plywood (18 mm)", "m²", "322"],
-        ["Çam kereste II. sınıf", "m³", "26"],
-        ["Ahşap dikme / payanda", "m³", "12"],
-        ["Çivi", "kg", "215"],
-        ["Kalıp ayırıcı yağ", "kg", "215"],
-        ["Bağ teli", "kg", "86"],
-        ["Plastik distan", "adet", "2.145"],
-        ["Hurda / fire payı", "%", "8 (sipariş ilavesi)"],
-    ]
-    story.append(table(detay, [8 * cm, 2.5 * cm, 5.5 * cm]))
+    story.append(table(malzeme, [6.5 * cm, 4 * cm, 4.5 * cm]))
+    story.append(Spacer(1, 0.2 * cm))
+    story.append(
+        Paragraph(
+            f"Döviz: 1 EUR = {EUR_TRY:.2f} TL (05.10.2026). "
+            f"Kalıp malzemesi TL = {fmt_eur(EUR_GENEL_TOPLAM)} × {EUR_TRY:.2f}.",
+            note_style,
+        )
+    )
 
     story.append(Spacer(1, 0.5 * cm))
     ozet = [
         ["Özet", "Tutar"],
-        ["İşçilik + yemek", fmt_tl(1_188_000)],
-        ["Ahşap kalıp malzemesi", fmt_tl(525_646)],
-        ["Genel toplam (KDV hariç)", fmt_tl(1_713_646)],
+        ["İşçilik + yemek", fmt_tl(iscilik_yemek)],
+        ["Kalıp malzemesi (teklif genel toplam, TL)", fmt_tl(TL_KALIP_MALZEME)],
+        ["Genel toplam", fmt_tl(genel)],
     ]
     t = Table(ozet, colWidths=[10 * cm, 5 * cm], hAlign="LEFT")
     t.setStyle(
@@ -174,8 +189,8 @@ def build_pdf():
     story.append(Spacer(1, 0.6 * cm))
     story.append(
         Paragraph(
-            "Not: Demir malzemesi, iskele, beton, vinç ve nakliye işveren teminidir. "
-            "IS-KA Beamform sistem malzemesi bu tabloya dahil değildir.",
+            "Not: Teklif fabrika teslim; nakliye ve montaj hariç. "
+            "Demir malzemesi, iskele, beton, vinç işveren teminidir.",
             note_style,
         )
     )
@@ -186,3 +201,5 @@ def build_pdf():
 if __name__ == "__main__":
     build_pdf()
     print(OUT)
+    print(f"Kalıp malzeme TL: {TL_KALIP_MALZEME}")
+    print(f"Genel toplam TL: {1_188_000 + TL_KALIP_MALZEME}")
