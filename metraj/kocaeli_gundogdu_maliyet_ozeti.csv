@@ -3,10 +3,10 @@ Metraj,Duz olcu (sozlesme),m2,2145,,Kullanici cetveli,
 Gelir,Sozlesme birim fiyati,TL/m2,2145,1700,KDV haric,3646500
 
 Iscilik_40gun,Yevmiye (6 usta x 4500 x 40),TL,1,1080000,Hesap,1080000
-Iscilik_40gun,Yemek 1 ogun (6 x 150 x 40),TL,1,36000,Hesap,36000
-Iscilik_40gun,Toplam isci + yemek,TL,1,1116000,,1116000
+Iscilik_40gun,Yemek 3 ogun (6 x 150 x 3 x 40),TL,1,108000,Hesap,108000
+Iscilik_40gun,Toplam isci + yemek,TL,1,1188000,,1188000
 Iscilik_40gun,SGK isveren payi (opsiyonel %22.5),TL,1,243000,1080000x0.225,243000
-Iscilik_40gun,Toplam iscilik+SGK+yemek (opsiyonel),TL,1,1359000,,1359000
+Iscilik_40gun,Toplam iscilik+SGK+yemek (opsiyonel),TL,1,1431000,,1431000
 
 Malzeme_rayic_2145,Film kapli plywood 18mm,m2,322,535.70,2145x0.15 CSB,172495
 Malzeme_rayic_2145,Cam kereste II sinif,m3,29,9566.13,olcek 2145/9490,277418
@@ -16,9 +16,9 @@ Malzeme_rayic_2145,TOPLAM AHSAP KALIP MALZEMESI,TL,1,525646,2145 m2 olcegi,52564
 Tedarikci_proje,IS-KA Beamform (KDV dahil),TL,1,2832400,STEC-261736 proje teklifi,2832400
 Tedarikci_proje,Not,,,,"Sistem malzemesi; nakliye/montaj haric; ~371 m2 kolon+perde"
 
-Maliyet_senaryo_A,Iscilik+yemek+ahsap malzeme (Beamform yok),TL,1,1641646,40 gun,1641646
-Maliyet_senaryo_B,Iscilik+yemek+ahsap+Beamform malzeme,TL,1,4474046,40 gun,4474046
-Brut_fark_senaryo_A,Gelir - senaryo A,TL,1,2004854,,2004854
+Maliyet_senaryo_A,Iscilik+yemek+ahsap malzeme (Beamform yok),TL,1,1713646,40 gun 3 ogun,1713646
+Maliyet_senaryo_B,Iscilik+yemek+ahsap+Beamform malzeme,TL,1,4546046,40 gun 3 ogun,4546046
+Brut_fark_senaryo_A,Gelir - senaryo A,TL,1,1932854,,1932854
 Brut_fark_senaryo_B,Gelir - senaryo B (Beamform isveren alirsa),TL,1,-827546,,negatif — kapsam/fiyat kontrolu
 Verim,Net is m2 / usta-gun,m2,8.94,2145/(6x40),,
 
