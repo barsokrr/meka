@@ -1,0 +1,22 @@
+Bolum,Kalem,Birim,Miktar,Birim_Fiyat_TL,Kaynak,Tutar_TL
+Metraj,Duz olcu (sozlesme),m2,2145,,Kullanici cetveli,
+Gelir,Sozlesme birim fiyati,TL/m2,2145,1700,KDV haric,3646500
+
+Iscilik_26gun,Yevmiye (6 kisi x 4500 x 26),TL,1,702000,Hesap,702000
+Iscilik_26gun,Yemek 1 ogun (6 x 150 x 26),TL,1,23400,Hesap,23400
+Iscilik_26gun,Toplam isci + yemek,TL,1,725400,,725400
+
+Malzeme_rayic_2145,Film kapli plywood 18mm,m2,322,535.70,2145x0.15 CSB,172495
+Malzeme_rayic_2145,Cam kereste II sinif,m3,29,9566.13,olcek 2145/9490,277418
+Malzeme_rayic_2145,Civi yagi tel distan+hurda,%8 ilave,TL,1,75933,yaklasik,75933
+Malzeme_rayic_2145,TOPLAM AHSAP KALIP MALZEMESI,TL,1,525646,2145 m2 olcegi,525646
+
+Tedarikci_proje,IS-KA Beamform (KDV dahil),TL,1,2832400,STEC-261736 proje teklifi,2832400
+Tedarikci_proje,Not,,,,"Sistem malzemesi; nakliye/montaj haric; ~371 m2 kolon+perde"
+
+Maliyet_senaryo_A,Iscilik+yemek+ahsap malzeme (Beamform yok),TL,1,1251046,,1251046
+Maliyet_senaryo_B,Iscilik+yemek+ahsap+Beamform malzeme,TL,1,4083446,,4083446
+Brut_fark_senaryo_A,Gelir - senaryo A,TL,1,2395454,,2395454
+Brut_fark_senaryo_B,Gelir - senaryo B (Beamform isveren alirsa),TL,1,-436946,,negatif — birim fiyat/metraj veya kapsam kontrolu
+
+Demir_malzeme,Isveren temini,TL,0,,Sozlesme,0

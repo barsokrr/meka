@@ -1,0 +1,21 @@
+# IS-KA Beamform — Gündoğdu Kültür Merkezi (Algüç İnşaat) proje teklifi STEC-261736 05.10.2026
+# Fabrika teslim Büyükçekmece; nakliye/montaj/iskele hariç; nakit; ~15 gün teslim
+
+Kalem,Detay,Miktar,Birim_Fiyat_EUR,Toplam_EUR
+Kolon kalıp seti,60×60 cm H=5,80 m,6 set,,,
+Kolon kalıp seti,80×80 cm H=5,80 m,3 set,,,
+Perde kalıp seti,L≈20 m H=5,80 m A=232 m²,1 set,,,
+Toplam malzeme,,,42852.98,KDV hariç
+Toplam malzeme KDV %20,,,51423.58,KDV dahil
+Agirlik yaklasik,kg,26126,,
+
+Kur,EUR/TRY (05.10.2026),55.08,,
+TL KDV hariç,,,2362842,42852.98×55.08
+TL KDV dahil,,,2832400,51423.58×55.08
+
+Sozlesme_iliskisi,Aciklama
+Proje,Gundogdu KM — salon statik + istinat paftalari ile uyumlu tedarikci metrajı
+Sozlesme metraji,2145 m² düz ölçü (demir+kalıp götürü birim fiyat cetveli)
+Teklif kapsami,Beamform sistem: 9 kolon + 232 m² perde (~371 m² kalıp temas alanı teklif satırları)
+Sozlesme disi satir degil,Geri kalan ~1774 m² (döşeme/kiriş/temel/diger) ahşap kalıp — götürü 1700 TL/m² içinde; IS-KA listesinde yok
+Cift sayim uyari,Beamform alınan yüzeylerde plywood/kereste ihtiyacı düşer; ahşap malzeme listesi net alanla güncellenmeli

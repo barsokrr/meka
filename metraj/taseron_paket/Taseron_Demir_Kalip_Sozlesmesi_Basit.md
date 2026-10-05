@@ -29,8 +29,8 @@ TAŞERON; demir işçiliği, kalıp işçiliği ve kalıp malzemesini birim fiya
 Demir malzemesi, iskele, beton, vinç ve nakliye İŞVEREN tarafından karşılanır.
 
 **3. Birim fiyat ve ölçü**  
-Birim fiyat: **1.950,00 TL/m² (KDV hariç)**.  
-Ölçü: düz ölçü. Metraj, imzalı hakediş tutanağı ile belirlenir.
+Birim fiyat: **1.700,00 TL/m² (KDV hariç)**.  
+Ölçü: düz ölçü; sözleşme metrajı **2.145 m²** (imzalı cetvel). Hakediş tutanağı ile teyit edilir.
 
 **4. Süre**  
 Başlangıç: ____ / ____ / 20____  

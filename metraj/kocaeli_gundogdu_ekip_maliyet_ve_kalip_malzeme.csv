@@ -1,0 +1,48 @@
+# Gündoğdu KM — 6 kişi ekip; düz ölçü sözleşme metrajı 2.145 m² (demir+kalıp cetveli)
+# ÇŞB 15.180.1002 malzeme katsayıları + proje plywood 0,15 m³/m² kalıp
+
+Kategori,Kalem,Birim,Miktar,Aciklama
+Metraj,Toplam düz ölçü (demir+kalıp birim fiyat cetveli),m²,2145,Sözleşme metraj referansı
+Metraj,Sadece kalıp yüzeyi (malzeme listesi için),m²,2145,Aynı cetvel — kalıp malzemesi bu alana göre
+Metraj,IS-KA Beamform teklif satırları (proje),m²,~371,9 kolon + 232 m² perde — STEC-261736
+Metraj,Ahşap kalıp (cetvel − Beamform yüzeyleri),m²,~1774,Çift sayım yapılmadan planlanmalı
+
+Ekip,Calisan sayisi,kişi,6,
+Ekip,Günlük yevmiye (kişi başı),TL/gün,4500,
+Ekip,Öğün ücreti (kişi başı),TL/öğün,150,
+
+Gun senaryosu,22 iş günü,,,
+Yevmiye toplam (6×4500×22),TL,594000,
+Yemek 1 öğün/gün (6×150×22),TL,19800,
+Yemek 2 öğün/gün (6×150×22×2),TL,39600,
+Ekip günlük toplam (yevmiye+yemek 1 öğün),TL/gün,27900,
+Ekip günlük toplam (yevmiye+yemek 2 öğün),TL/gün,28800,
+Aylik toplam (22 gün yevmiye+1 öğün),TL,613800,
+Aylik toplam (22 gün yevmiye+2 öğün),TL,633600,
+
+Gun senaryosu,26 iş günü,,,
+Yevmiye toplam (6×4500×26),TL,702000,
+Yemek 1 öğün/gün (6×150×26),TL,23400,
+Yemek 2 öğün/gün (6×150×26×2),TL,46800,
+Ekip günlük toplam (yevmiye+yemek 1 öğün),TL/gün,27900,
+Aylik toplam (26 gün yevmiye+1 öğün),TL,725400,
+Aylik toplam (26 gün yevmiye+2 öğün),TL,748800,
+
+Gun senaryosu,30 iş günü,,,
+Yevmiye toplam (6×4500×30),TL,810000,
+Yemek 1 öğün/gün (6×150×30),TL,27000,
+Yemek 2 öğün/gün (6×150×30×2),TL,54000,
+Aylik toplam (30 gün yevmiye+1 öğün),TL,837000,
+Aylik toplam (30 gün yevmiye+2 öğün),TL,864000,
+
+Kisi basi (26 gün 1 öğün),Yevmiye+ yemek,TL/ay,120900,4500×26 + 150×26
+Kisi basi (26 gün 2 öğün),Yevmiye+ yemek,TL/ay,124800,4500×26 + 300×26
+
+Kalip malzeme,Film kaplı plywood (18 mm),m²,322,2145 × 0.15 (proje katsayısı)
+Kalip malzeme,Çam kereste II. sınıf,m³,26,2145 × 0.0123 (ÇŞB 15.180.1002)
+Kalip malzeme,Çivi,kg,215,2145 × 0.1
+Kalip malzeme,Kalıp ayırıcı yağ,kg,215,2145 × 0.1
+Kalip malzeme,Bağ teli (ince),kg,86,≈2145 × 0.04 (saha tamamlayıcı)
+Kalip malzeme,Plastik distan (çeşitli),adet,2145,≈1 adet/m² kalıp (projeye göre)
+Kalip malzeme,Ahşap dikme/ payanda (kereste içi / ilave),m³,12,≈%10 ilave kereste payı
+Kalip malzeme,Hurda/fire payı (plywood+kereste),%,8,Siparişte ilave
