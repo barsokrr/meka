@@ -1,4 +1,4 @@
-# Gündoğdu KM — 6 kişi ekip; düz ölçü sözleşme metrajı 2.145 m² (demir+kalıp cetveli)
+# Gündoğdu KM — 6 usta, 40 iş günü; düz ölçü sözleşme metrajı 2.145 m²
 # ÇŞB 15.180.1002 malzeme katsayıları + proje plywood 0,15 m³/m² kalıp
 
 Kategori,Kalem,Birim,Miktar,Aciklama
@@ -7,9 +7,19 @@ Metraj,Sadece kalıp yüzeyi (malzeme listesi için),m²,2145,Aynı cetvel — k
 Metraj,IS-KA Beamform teklif satırları (proje),m²,~371,9 kolon + 232 m² perde — STEC-261736
 Metraj,Ahşap kalıp (cetvel − Beamform yüzeyleri),m²,~1774,Çift sayım yapılmadan planlanmalı
 
-Ekip,Calisan sayisi,kişi,6,
+Ekip,Calisan sayisi (usta),kişi,6,
+Ekip,Planlanan sure,is gunu,40,
 Ekip,Günlük yevmiye (kişi başı),TL/gün,4500,
 Ekip,Öğün ücreti (kişi başı),TL/öğün,150,
+
+Gun senaryosu,40 iş günü (plan),,,
+Yevmiye toplam (6×4500×40),TL,1080000,
+Yemek 1 öğün/gün (6×150×40),TL,36000,
+Yemek 2 öğün/gün (6×150×40×2),TL,72000,
+Ekip günlük toplam (yevmiye+yemek 1 öğün),TL/gün,27900,
+Aylik toplam (40 gün yevmiye+1 öğün),TL,1116000,
+Aylik toplam (40 gün yevmiye+2 öğün),TL,1152000,
+Kisi basi (40 gün 1 öğün),Yevmiye+ yemek,TL,186000,4500×40 + 150×40
 
 Gun senaryosu,22 iş günü,,,
 Yevmiye toplam (6×4500×22),TL,594000,

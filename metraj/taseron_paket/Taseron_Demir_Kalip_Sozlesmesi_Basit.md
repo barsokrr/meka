@@ -33,6 +33,7 @@ Birim fiyat: **1.700,00 TL/m² (KDV hariç)**.
 Ölçü: düz ölçü; sözleşme metrajı **2.145 m²** (imzalı cetvel). Hakediş tutanağı ile teyit edilir.
 
 **4. Süre**  
+Planlanan süre: **40 iş günü** (6 usta).  
 Başlangıç: ____ / ____ / 20____  
 Bitiş: ____ / ____ / 20____
 
