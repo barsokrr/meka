@@ -50,6 +50,18 @@ export const INTERIOR_DESIGN_PROJECTS: InteriorDesignProject[] = [
       "/images/interior-design/ev-tasarimi-3/05.jpg",
     ],
   },
+  {
+    slug: "ev-tasarimi-4",
+    title: "Ev Tasarımı 4",
+    desc: "Salon, yemek ve yatak odası — ahşap panel, entegre depolama ve sıcak LED vurgular.",
+    images: [
+      "/images/interior-design/ev-tasarimi-4/01.jpg",
+      "/images/interior-design/ev-tasarimi-4/02.jpg",
+      "/images/interior-design/ev-tasarimi-4/03.jpg",
+      "/images/interior-design/ev-tasarimi-4/04.jpg",
+      "/images/interior-design/ev-tasarimi-4/05.jpg",
+    ],
+  },
 ];
 
 export const INTERIOR_DESIGN_SECTION = {
