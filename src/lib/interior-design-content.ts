@@ -22,6 +22,31 @@ export const INTERIOR_DESIGN_PROJECTS: InteriorDesignProject[] = [
       "/images/interior-design/ev-tasarimi-1/08.jpg",
     ],
   },
+  {
+    slug: "ev-tasarimi-2",
+    title: "Ev Tasarımı 2",
+    desc: "Mermer adalı mutfak, yemek alanı ve banyo — flüt detay, ahşap ve pirinç aksanlar.",
+    images: [
+      "/images/interior-design/ev-tasarimi-2/01.jpg",
+      "/images/interior-design/ev-tasarimi-2/02.jpg",
+      "/images/interior-design/ev-tasarimi-2/03.jpg",
+      "/images/interior-design/ev-tasarimi-2/04.jpg",
+      "/images/interior-design/ev-tasarimi-2/05.jpg",
+      "/images/interior-design/ev-tasarimi-2/06.jpg",
+      "/images/interior-design/ev-tasarimi-2/07.jpg",
+      "/images/interior-design/ev-tasarimi-2/08.jpg",
+      "/images/interior-design/ev-tasarimi-2/09.jpg",
+    ],
+  },
+  {
+    slug: "ev-tasarimi-3",
+    title: "Ev Tasarımı 3",
+    desc: "Açık ahşap mutfak — mermer tezgâh, entegre aydınlatma ve sade malzeme dili.",
+    images: [
+      "/images/interior-design/ev-tasarimi-3/01.jpg",
+      "/images/interior-design/ev-tasarimi-3/02.jpg",
+    ],
+  },
 ];
 
 export const INTERIOR_DESIGN_SECTION = {
