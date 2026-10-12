@@ -1,5 +1,19 @@
 # Meka — yayın adresleri
 
+## Site açılmıyorsa (sık nedenler)
+
+| Denenen adres | Durum |
+|---------------|--------|
+| `https://meka-production.up.railway.app` | **404** — Railway servisi durmuş veya silinmiş |
+| `https://barsokrr.github.io/meka/` | **404 veya sadece kalıp** — GitHub Pages tam Next.js sitesini yayınlamaz; repo’da Pages açılmamış olabilir |
+| `http://localhost:3000` | Sadece kendi bilgisayarınızda `npm run dev` çalışırken |
+
+**Ana sayfa (iç mimarlık galerisi dahil)** tam Next.js uygulamasıdır; **Railway (veya benzeri) ile yeniden deploy** gerekir. Adımlar: `GECICI-YAYIN.md` → **B) Railway**.
+
+İç mimarlık görselleri `main`’e merge edilmeden canlıda görünmez — [PR #14](https://github.com/barsokrr/meka/pull/14) merge + Railway deploy.
+
+---
+
 ## Eski adres (çalışmıyor)
 
 `https://meka-production.up.railway.app` → **404** (Railway servisi kaldırılmış veya durmuş).
