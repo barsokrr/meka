@@ -41,10 +41,13 @@ export const INTERIOR_DESIGN_PROJECTS: InteriorDesignProject[] = [
   {
     slug: "ev-tasarimi-3",
     title: "Ev Tasarımı 3",
-    desc: "Açık ahşap mutfak — mermer tezgâh, entegre aydınlatma ve sade malzeme dili.",
+    desc: "Modern mutfak — ahşap ve gri-beyaz mermer yüzeyler, ray aydınlatma ve entegre depolama.",
     images: [
       "/images/interior-design/ev-tasarimi-3/01.jpg",
       "/images/interior-design/ev-tasarimi-3/02.jpg",
+      "/images/interior-design/ev-tasarimi-3/03.jpg",
+      "/images/interior-design/ev-tasarimi-3/04.jpg",
+      "/images/interior-design/ev-tasarimi-3/05.jpg",
     ],
   },
 ];
