@@ -6,12 +6,12 @@ import { ProductCard } from "@/components/products/ProductCard";
 import { DesignApproachPreview } from "@/components/design-approach/DesignApproachPreview";
 import { ProcessTimeline } from "@/components/home/ProcessTimeline";
 import { InteriorArchitectureSection } from "@/components/home/InteriorArchitectureSection";
+import { InteriorDesignGallery } from "@/components/home/InteriorDesignGallery";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import {
   HERO,
   BRAND_QUOTE,
   EXPERTISE,
-  ROOM_INSPIRATION,
   STATS,
 } from "@/lib/home-content";
 import { BRAND } from "@/types";
@@ -144,34 +144,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="container-site py-16 md:py-24">
-        <div className="mb-12 text-center">
-          <p className="section-label">İlham</p>
-          <h2 className="section-title mt-3">Mekânına göre keşfet</h2>
-        </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {ROOM_INSPIRATION.map((room) => (
-            <Link
-              key={room.title}
-              href={`/urunler?kategori=${room.category}`}
-              className="group relative aspect-[3/4] overflow-hidden"
-            >
-              <Image
-                src={room.image}
-                alt={room.title}
-                fill
-                className="object-cover transition duration-700 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 25vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <h3 className="font-serif text-xl">{room.title}</h3>
-                <p className="mt-2 text-sm text-white/75">{room.desc}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
+      <InteriorDesignGallery />
 
       <section className="border-y border-border bg-surface/60 py-16 md:py-24">
         <div className="container-site">
