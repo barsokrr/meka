@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TEKLİF FORMU — İç Mimari Proje ve Şantiye Takibi</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    line-height: 1.45;
+    color: #111;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1.25rem 1rem 2rem;
+    background: #fff;
+  }
+  h1 {
+    text-align: center;
+    font-size: 1.35rem;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    margin: 0 0 1.25rem;
+  }
+  .meta { margin-bottom: 1rem; }
+  .meta p { margin: 0.35rem 0; }
+  hr { border: none; border-top: 1px solid #222; margin: 1rem 0; }
+  hr.thick { border-top-width: 2px; }
+  h2 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+  }
+  .block { margin-bottom: 1rem; }
+  .desc { margin: 0 0 0.5rem; text-align: justify; }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0.25rem 0;
+  }
+  .row.total { font-weight: 700; margin-top: 0.5rem; }
+  .grand {
+    text-align: right;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 0.75rem 0;
+  }
+  ol.terms { padding-left: 1.2rem; margin: 0.5rem 0; }
+  ol.terms li { margin-bottom: 0.45rem; }
+  .sign {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+  .sign p { margin: 0.2rem 0; }
+  .sign .line { margin-top: 2.5rem; border-top: 1px solid #333; padding-top: 0.35rem; }
+  @media print { body { padding: 0; } }
+</style>
+</head>
+<body>
+
+<h1>TEKLİF FORMU</h1>
+
+<div class="meta">
+  <p><strong>Tarih:</strong> __.__.2026</p>
+  <p><strong>İşveren:</strong> _________________________________________________</p>
+  <p><strong>Proje:</strong> _________________________________________________</p>
+  <p><strong>Yüklenici:</strong> Abdurrahman Barış ÖKER — İç Mimar · VKN 6530560679 · İMO Sicil No: __________</p>
+</div>
+
+<hr/>
+
+<div class="block">
+  <h2>1. İÇ MİMARİ PROJE ÇİZİMİ</h2>
+  <p class="desc">Keşif ve alan analizi; konsept sunumu; uygulama projeleri (zemin döşeme, tavan/aydınlatma, duvar/kaplama planları); mobilya yerleşim ve ölçülendirme; kesit ve görünüşler; mutfak, banyo ve özel detay çizimleri; malzeme-renk-kaplama seçim listesi. Teslim: PDF + DWG (veya kararlaştırılan format).</p>
+  <div class="row"><span>Proje alanı (brüt):</span><span>________ m²</span></div>
+  <div class="row total"><span>TOPLAM (KDV hariç):</span><span>________________ TL</span></div>
+</div>
+
+<hr/>
+
+<div class="block">
+  <h2>2. ŞANTİYE TAKİBİ (UYGULAMA KONTROLLÜĞÜ)</h2>
+  <p class="desc">Onaylı projelere ve onaylı malzeme seçimlerine uygunluk kontrolü; uygulama sırasında _____ adet şantiye ziyareti (ziyaret başına yaklaşık _____ saat); her ziyaret sonrası yazılı şantiye tutanağı. İnşaat işçiliği ve taşeron yönetimi kapsam dışıdır.</p>
+  <div class="row total"><span>TOPLAM (KDV hariç):</span><span>________________ TL</span></div>
+</div>
+
+<hr class="thick"/>
+
+<p class="grand">GENEL TOPLAM (KDV DAHİL): ________________________ TL</p>
+
+<hr/>
+
+<h2>ÖDEME VE ŞARTLAR</h2>
+<ol class="terms">
+  <li>Ödeme: Sözleşme imzasında %____ avans; konsept onayında %____; uygulama projesi tesliminde %____; şantiye takibi/kapanışta kalan %____. Ödeme süresi: fatura tarihinden itibaren _____ gün (havale/EFT).</li>
+  <li>Her tasarım aşamasında _____ tur makul revizyon dahildir; plan değişikliği ve ek şantiye ziyareti ayrı teklif ile ücretlendirilir.</li>
+  <li>Kapsam dışı: inşaat/tadilat işçiliği; statik, elektrik, mekanik proje ve ruhsat/iskan işlemleri; tezgâh, vitrifiye, ayna, LED aydınlatma ve tedarik (aksi yazılı kararlaştırılmadıkça).</li>
+  <li>İşbu teklif _____ gün geçerlidir. Onay sonrası imzalı sözleşme ve ekler yürürlüğe girer.</li>
+</ol>
+
+<div class="sign">
+  <div>
+    <p><strong>TEKLİF EDEN</strong></p>
+    <p>Abdurrahman Barış ÖKER</p>
+    <p>İç Mimar</p>
+    <p class="line">İmza / Kaşe</p>
+  </div>
+  <div>
+    <p><strong>MÜŞTERİ ONAYI</strong></p>
+    <p>_________________________________</p>
+    <p>&nbsp;</p>
+    <p class="line">İmza / Kaşe</p>
+  </div>
+</div>
+
+</body>
+</html>
