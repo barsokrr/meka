@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { prisma } from "@/lib/db";
+import { INTERIOR_DESIGN_PROJECTS } from "@/lib/interior-design-content";
 
 export const dynamic = "force-dynamic";
 
@@ -14,6 +15,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages = [
     "",
     "/urunler",
+    "/projeler",
     "/tasarim-yaklasimi",
     "/hizmetler",
     "/hakkimizda",
@@ -37,6 +39,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: p.updatedAt,
       changeFrequency: "weekly" as const,
       priority: 0.9,
+    })),
+    ...INTERIOR_DESIGN_PROJECTS.map((p) => ({
+      url: `${baseUrl}/projeler/${p.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
     })),
   ];
 }

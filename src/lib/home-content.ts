@@ -1,10 +1,12 @@
-import { ProductCategory } from "@prisma/client";
+import { HERO_INTERIOR_IMAGE, getInteriorGalleryStats } from "@/lib/interior-design-content";
+
+const galleryStats = getInteriorGalleryStats();
 
 export const HERO = {
   headline: "Mekânınıza karakter katan iç mimarlık",
   subtitle:
     "Konut ve ticari projelerde keşiften teslimata; ölçülü tasarım, şeffaf süreç ve seçilmiş parçalar.",
-  image: "/images/products/anita-emperador-masa-lambasi/01.webp",
+  image: HERO_INTERIOR_IMAGE,
 };
 
 export const BRAND_QUOTE = {
@@ -13,6 +15,11 @@ export const BRAND_QUOTE = {
 };
 
 export const EXPERTISE = [
+  {
+    title: "Proje galerisi",
+    desc: "Konut projelerinden mutfak, salon, yatak odası ve banyo görselleri — tüm portfolyo tek yerde.",
+    href: "/projeler",
+  },
   {
     title: "İç mimarlık projesi",
     desc: "Brief, konsept, uygulama ve sahada takip. Konut ve ticari mekânlar için uçtan uca süreç.",
@@ -30,39 +37,17 @@ export const EXPERTISE = [
   },
 ];
 
-export const ROOM_INSPIRATION: {
-  title: string;
-  desc: string;
-  image: string;
-  category: ProductCategory;
-}[] = [
-  {
-    title: "Oturma Odası",
-    desc: "Konfor ve zarafeti dengeleyen seçkin parçalar.",
-    image: "/images/products/ginevra-daybed/01.webp",
-    category: "MOBILYA",
-  },
-  {
-    title: "Aydınlatma",
-    desc: "Mekâna derinlik katan abajur ve lambalar.",
-    image: "/images/products/pluma-alabaster-masa-lambasi/01.webp",
-    category: "AYDINLATMA",
-  },
-  {
-    title: "Tekstil & Dokunuş",
-    desc: "Kırlent ve kadife detaylarla katmanlı mekânlar.",
-    image: "/images/products/viburno-desenli-kirlent/01.webp",
-    category: "TEKSTIL",
-  },
-  {
-    title: "Obje & Detay",
-    desc: "Vazo, kase ve dekoratif parçalarla tamamlanan köşeler.",
-    image: "/images/products/ballarina-murano-cam-kase/01.webp",
-    category: "OBJE",
-  },
-];
-
 export const STATS = [
+  {
+    value: String(galleryStats.imageCount),
+    label: "Proje görseli",
+    sub: "Portfolyoda tüm mekân kareleri",
+  },
+  {
+    value: String(galleryStats.projectCount),
+    label: "Konut projesi",
+    sub: "Ev tasarımı serisi",
+  },
   { value: "Uçtan uca", label: "Proje süreci", sub: "Keşiften teslimata şeffaf adımlar" },
   { value: "TMMOB", label: "Asgari bedel", sub: "Hesaplama aracıyla ön tahmin" },
   { value: "24s", label: "İlk dönüş", sub: "Danışmanlık taleplerinde hedef süre" },

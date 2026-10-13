@@ -34,16 +34,16 @@ export const DESIGN_PILLARS: DesignPillar[] = [
   {
     title: "Konut",
     desc: "Daire, villa ve yazlıklarda günlük yaşam ritmine uygun, sakin ve kişisel mekânlar.",
-    image: "/images/products/ginevra-daybed/01.webp",
+    image: "/images/interior-design/ev-tasarimi-1/03.jpg",
   },
   {
     title: "Ticari",
     desc: "Otel, restoran ve mağazalarda misafir deneyimini güçlendiren sıcak ve seçkin atmosferler.",
-    image: "/images/products/louis-xv-daybed/01.webp",
+    image: "/images/interior-design/ev-tasarimi-1/01.jpg",
   },
   {
     title: "Detay & Styling",
     desc: "Aydınlatma, tekstil ve objelerle mekâna derinlik katan son dokunuşlar.",
-    image: "/images/products/pluma-alabaster-masa-lambasi/01.webp",
+    image: "/images/interior-design/ev-tasarimi-1/06.jpg",
   },
 ];

@@ -6,12 +6,12 @@ import { ProductCard } from "@/components/products/ProductCard";
 import { DesignApproachPreview } from "@/components/design-approach/DesignApproachPreview";
 import { ProcessTimeline } from "@/components/home/ProcessTimeline";
 import { InteriorArchitectureSection } from "@/components/home/InteriorArchitectureSection";
+import { InteriorDesignGallery } from "@/components/home/InteriorDesignGallery";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import {
   HERO,
   BRAND_QUOTE,
   EXPERTISE,
-  ROOM_INSPIRATION,
   STATS,
 } from "@/lib/home-content";
 import { BRAND } from "@/types";
@@ -50,16 +50,16 @@ export default async function HomePage() {
           </p>
           <div className="animate-hero-reveal mt-10 flex flex-col gap-3 sm:flex-row [animation-delay:240ms]">
             <Link
-              href="/iletisim"
+              href="/projeler"
               className="btn-primary min-w-[200px] bg-white text-charcoal hover:bg-white/90"
             >
-              Danışmanlık Talebi
+              Proje Galerisi
             </Link>
             <Link
-              href="/tasarim-yaklasimi"
+              href="/iletisim"
               className="btn-secondary min-w-[200px] border-white text-white hover:bg-white hover:text-charcoal"
             >
-              Tasarım Yaklaşımı
+              Danışmanlık Talebi
             </Link>
           </div>
         </div>
@@ -76,6 +76,8 @@ export default async function HomePage() {
           </Link>
         </div>
       </section>
+
+      <InteriorDesignGallery />
 
       <InteriorArchitectureSection compact />
 
@@ -107,7 +109,7 @@ export default async function HomePage() {
           <p className="section-label">Uzmanlık</p>
           <h2 className="section-title mt-3">Nasıl yardımcı oluruz?</h2>
         </div>
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {EXPERTISE.map((item) => (
             <Link
               key={item.title}
@@ -137,39 +139,10 @@ export default async function HomePage() {
             </Link>
           </div>
           <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-            {(featured.length > 0 ? featured : allProducts).slice(0, 8).map((product) => (
+            {(featured.length > 0 ? featured : allProducts).slice(0, 4).map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="container-site py-16 md:py-24">
-        <div className="mb-12 text-center">
-          <p className="section-label">İlham</p>
-          <h2 className="section-title mt-3">Mekânına göre keşfet</h2>
-        </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {ROOM_INSPIRATION.map((room) => (
-            <Link
-              key={room.title}
-              href={`/urunler?kategori=${room.category}`}
-              className="group relative aspect-[3/4] overflow-hidden"
-            >
-              <Image
-                src={room.image}
-                alt={room.title}
-                fill
-                className="object-cover transition duration-700 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 25vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <h3 className="font-serif text-xl">{room.title}</h3>
-                <p className="mt-2 text-sm text-white/75">{room.desc}</p>
-              </div>
-            </Link>
-          ))}
         </div>
       </section>
 
