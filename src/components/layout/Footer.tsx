@@ -61,6 +61,11 @@ export function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm text-white/70">
               <li>
+                <Link href="/projeler" className="hover:text-white">
+                  Proje Galerisi
+                </Link>
+              </li>
+              <li>
                 <Link href="/tasarim-yaklasimi" className="hover:text-white">
                   Tasarım Yaklaşımı
                 </Link>

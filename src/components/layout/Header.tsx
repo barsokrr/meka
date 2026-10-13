@@ -8,6 +8,7 @@ import { useCartStore } from "@/store/cart";
 import { BRAND, CATEGORY_LABELS } from "@/types";
 
 const mainNav = [
+  { href: "/projeler", label: "Projeler" },
   { href: "/tasarim-yaklasimi", label: "Tasarım Yaklaşımı" },
   { href: "/hizmetler", label: "Hizmetler" },
   { href: "/urunler", label: "Koleksiyon" },

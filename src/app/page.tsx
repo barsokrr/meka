@@ -50,16 +50,16 @@ export default async function HomePage() {
           </p>
           <div className="animate-hero-reveal mt-10 flex flex-col gap-3 sm:flex-row [animation-delay:240ms]">
             <Link
-              href="/iletisim"
+              href="/projeler"
               className="btn-primary min-w-[200px] bg-white text-charcoal hover:bg-white/90"
             >
-              Danışmanlık Talebi
+              Proje Galerisi
             </Link>
             <Link
-              href="/tasarim-yaklasimi"
+              href="/iletisim"
               className="btn-secondary min-w-[200px] border-white text-white hover:bg-white hover:text-charcoal"
             >
-              Tasarım Yaklaşımı
+              Danışmanlık Talebi
             </Link>
           </div>
         </div>
@@ -76,6 +76,8 @@ export default async function HomePage() {
           </Link>
         </div>
       </section>
+
+      <InteriorDesignGallery />
 
       <InteriorArchitectureSection compact />
 
@@ -107,7 +109,7 @@ export default async function HomePage() {
           <p className="section-label">Uzmanlık</p>
           <h2 className="section-title mt-3">Nasıl yardımcı oluruz?</h2>
         </div>
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {EXPERTISE.map((item) => (
             <Link
               key={item.title}
@@ -137,14 +139,12 @@ export default async function HomePage() {
             </Link>
           </div>
           <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-            {(featured.length > 0 ? featured : allProducts).slice(0, 8).map((product) => (
+            {(featured.length > 0 ? featured : allProducts).slice(0, 4).map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
         </div>
       </section>
-
-      <InteriorDesignGallery />
 
       <section className="border-y border-border bg-surface/60 py-16 md:py-24">
         <div className="container-site">

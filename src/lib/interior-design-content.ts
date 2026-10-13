@@ -5,6 +5,44 @@ export type InteriorDesignProject = {
   images: string[];
 };
 
+export type InteriorGalleryImage = {
+  src: string;
+  alt: string;
+  projectSlug: string;
+  projectTitle: string;
+  indexInProject: number;
+};
+
+export function flattenInteriorGallery(): InteriorGalleryImage[] {
+  return INTERIOR_DESIGN_PROJECTS.flatMap((project) =>
+    project.images.map((src, indexInProject) => ({
+      src,
+      alt: `${project.title} — görünüm ${indexInProject + 1}`,
+      projectSlug: project.slug,
+      projectTitle: project.title,
+      indexInProject,
+    }))
+  );
+}
+
+export function getInteriorGalleryStats() {
+  const images = flattenInteriorGallery();
+  return {
+    projectCount: INTERIOR_DESIGN_PROJECTS.length,
+    imageCount: images.length,
+  };
+}
+
+export function getProjectBySlug(slug: string): InteriorDesignProject | undefined {
+  return INTERIOR_DESIGN_PROJECTS.find((p) => p.slug === slug);
+}
+
+export const INTERIOR_DESIGN_PAGE = {
+  title: "Proje Galerisi",
+  intro:
+    "Konut iç mimarlık projelerinden tüm mekân görselleri — mutfak, salon, yatak odası ve banyo.",
+};
+
 /** İç mimarlık proje görselleri — ev tasarımları sırayla eklenir. */
 export const INTERIOR_DESIGN_PROJECTS: InteriorDesignProject[] = [
   {

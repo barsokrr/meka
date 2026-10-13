@@ -1,4 +1,6 @@
-import { HERO_INTERIOR_IMAGE } from "@/lib/interior-design-content";
+import { HERO_INTERIOR_IMAGE, getInteriorGalleryStats } from "@/lib/interior-design-content";
+
+const galleryStats = getInteriorGalleryStats();
 
 export const HERO = {
   headline: "Mekânınıza karakter katan iç mimarlık",
@@ -13,6 +15,11 @@ export const BRAND_QUOTE = {
 };
 
 export const EXPERTISE = [
+  {
+    title: "Proje galerisi",
+    desc: "Konut projelerinden mutfak, salon, yatak odası ve banyo görselleri — tüm portfolyo tek yerde.",
+    href: "/projeler",
+  },
   {
     title: "İç mimarlık projesi",
     desc: "Brief, konsept, uygulama ve sahada takip. Konut ve ticari mekânlar için uçtan uca süreç.",
@@ -31,6 +38,8 @@ export const EXPERTISE = [
 ];
 
 export const STATS = [
+  { value: "27+", label: "Proje görseli", sub: "Portfolyoda tüm mekân kareleri" },
+  { value: "4", label: "Konut projesi", sub: "Ev tasarımı serisi" },
   { value: "Uçtan uca", label: "Proje süreci", sub: "Keşiften teslimata şeffaf adımlar" },
   { value: "TMMOB", label: "Asgari bedel", sub: "Hesaplama aracıyla ön tahmin" },
   { value: "24s", label: "İlk dönüş", sub: "Danışmanlık taleplerinde hedef süre" },
