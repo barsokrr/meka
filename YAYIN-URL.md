@@ -10,7 +10,17 @@
 
 **Ana sayfa (iç mimarlık galerisi dahil)** tam Next.js uygulamasıdır; **Railway (veya benzeri) ile yeniden deploy** gerekir. Adımlar: `GECICI-YAYIN.md` → **B) Railway**.
 
-İç mimarlık görselleri `main`’e merge edilmeden canlıda görünmez — [PR #14](https://github.com/barsokrr/meka/pull/14) merge + Railway deploy.
+## Telefon — proje galerisi (statik, tünel gerekmez)
+
+`gh-pages` dalında 27 görselin tamamı:
+
+**https://raw.githack.com/barsokrr/meka/gh-pages/galeri/index.html**
+
+Kalıcı adres (bir kez ayar): GitHub → repo **meka** → **Settings → Pages** → Source: **Deploy from a branch** → **gh-pages** / **/** → Save. Sonra:
+
+**https://barsokrr.github.io/meka/galeri/**
+
+(Tam Next.js sitesi için Railway deploy — `GECICI-YAYIN.md`.)
 
 ---
 
