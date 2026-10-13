@@ -1,0 +1,28 @@
+# Render Blueprint — tam Next.js sitesi (Docker)
+# Kurulum: https://dashboard.render.com/ → New → Blueprint → barsokrr/meka
+# veya: https://render.com/deploy?repo=https://github.com/barsokrr/meka
+
+services:
+  - type: web
+    name: meka
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        value: file:/data/prod.db
+      - key: AUTH_SECRET
+        generateValue: true
+      - key: NEXT_PUBLIC_SITE_URL
+        value: https://meka.onrender.com
+      - key: ADMIN_EMAIL
+        value: barsokrr@gmail.com
+      - key: NEXT_PUBLIC_EMAIL
+        value: barsokrr@gmail.com
+      - key: NEXT_PUBLIC_WHATSAPP
+        value: "905065847351"
+      - key: NEXT_PUBLIC_HESAP_KEY
+        value: benimhesap2026
