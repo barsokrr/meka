@@ -6,6 +6,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 const designRoot = path.join(root, "public/images/interior-design");
 
+/** Telefonda güvenilir yükleme — jsDelivr (gh-pages dalı) */
+const CDN_BASE =
+  process.env.STATIC_CDN_BASE ||
+  "https://cdn.jsdelivr.net/gh/barsokrr/meka@gh-pages";
+
 const titles = {
   "ev-tasarimi-1": "Ev Tasarımı 1",
   "ev-tasarimi-2": "Ev Tasarımı 2",
@@ -25,7 +30,7 @@ const projects = fs
       .filter((f) => /\.(jpe?g|webp|png)$/i.test(f))
       .sort()
       .map((file) => ({
-        src: `../images/interior-design/${slug}/${file}`,
+        src: `${CDN_BASE}/images/interior-design/${slug}/${file}`,
         alt: `${titles[slug] ?? slug} — ${file}`,
       }));
     return { slug, title: titles[slug] ?? slug, images };
