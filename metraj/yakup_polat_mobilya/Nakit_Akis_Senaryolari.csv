@@ -1,0 +1,10 @@
+Senaryo,Açıklama,Girdi (TL),Çıktı / tahsil (TL),Net sonuç (TL)
+A,Barter daire Resa'ya devredilir,Resa'ya 6856180 ödenir,11170225 likit tahsil,4314045 likit kâr
+B,Barter daire şirkette kalır,3685955 özkaynak/iç borç + Resa 14856180,8000000 daire + 11170225 likit,Ekonomik brüt ~4314045 daire 8M ise
+
+Akış adımı,Tutar (TL),Taraf
+Tahsil barter,8000000,Yakup Polat → Yüklenici
+Tahsil nakit,5585112.5,Yakup Polat → Yüklenici
+Tahsil çek,5585112.5,Yakup Polat → Yüklenici
+Ödeme Resa (tam),14856180,Yüklenici → Resa
+Ödeme Resa (A barter devri),6856180,Yüklenici → Resa
