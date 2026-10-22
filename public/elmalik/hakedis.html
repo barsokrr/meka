@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="theme-color" content="#1f4e79"/>
+<title>İmalat Listesi — Elmalık Villa</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<a class="back" href="index.html" style="padding:1rem 1rem 0;display:block;max-width:560px;margin:0 auto">← Portal</a>
+<header>
+  <span class="pill">SÖZLEŞME CETVELİ</span>
+  <h1>İmalat kalemleri</h1>
+  <p id="proje-sub"></p>
+</header>
+<main>
+  <div class="card scroll-x">
+    <h2>15 kalem + götürü</h2>
+    <table id="tbl-kalem">
+      <tr>
+        <th>Poz</th>
+        <th>Kalem</th>
+        <th>Miktar</th>
+        <th>BF</th>
+        <th>Tutar</th>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>İcmal</h2>
+    <table id="tbl-icmal"></table>
+  </div>
+
+  <a class="btn accent" href="donem.html">Bu dönem hakedişi hesapla →</a>
+</main>
+<footer class="note">Sarı satırlar: tutar teklifte götürü payında</footer>
+<script src="data.js"></script>
+<script>
+(function () {
+  var D = window.ELMALIK_HAKEDIS;
+  document.getElementById("proje-sub").textContent = D.proje + " · " + D.teklifRef;
+  var tb = document.getElementById("tbl-kalem");
+  var detay = 0;
+  D.kalem.forEach(function (k) {
+    var tr = document.createElement("tr");
+    if (k.tutar == null) tr.className = "row-goturu";
+    else detay += k.tutar;
+    tr.innerHTML =
+      "<td>" + k.poz + "</td>" +
+      "<td>" + k.ad + "<br><span class=\"tag" + (k.tutar == null ? " warn" : "") + "\">" + (k.aciklama || "") + "</span></td>" +
+      "<td>" + (k.miktar != null ? k.miktar + " " + k.birim : k.birim) + "</td>" +
+      "<td>" + (k.bf != null ? window.elmalikFormatTL(k.bf).replace(" TL", "") : "—") + "</td>" +
+      "<td>" + (k.tutar != null ? window.elmalikFormatTL(k.tutar) : "Götürü") + "</td>";
+    tb.appendChild(tr);
+  });
+  var trG = document.createElement("tr");
+  trG.className = "row-goturu";
+  trG.innerHTML = "<td>T-GOT</td><td colspan=\"2\">Götürü kalemler toplamı</td><td>—</td><td>" + window.elmalikFormatTL(D.goturuToplam) + "</td>";
+  tb.appendChild(trG);
+  var trT = document.createElement("tr");
+  trT.innerHTML = "<th colspan=\"4\">Sözleşme matrahı</th><th>" + window.elmalikFormatTL(D.matrah) + "</th>";
+  tb.appendChild(trT);
+
+  var kar = D.matrah * D.karOrani;
+  var genel = D.matrah + kar;
+  var icmal = [
+    ["Detaylı kalem toplamı", detay],
+    ["Götürü payı", D.goturuToplam],
+    ["Sözleşme matrahı", D.matrah],
+    ["Kâr / GG (%20)", kar],
+    ["Teklif genel toplam", genel],
+    ["KDV %20 (faturada, opsiyonel)", genel * 0.2],
+  ];
+  var ti = document.getElementById("tbl-icmal");
+  icmal.forEach(function (row, i) {
+    var tr = document.createElement("tr");
+    tr.innerHTML = "<th>" + row[0] + "</th><td" + (i === 4 ? " class=\"big\"" : "") + ">" + window.elmalikFormatTL(row[1]) + "</td>";
+    ti.appendChild(tr);
+  });
+})();
+</script>
+</body>
+</html>
