@@ -211,19 +211,21 @@ def build_kapak(wb: Workbook) -> None:
     ws["A1"].font = Font(bold=True, size=14, color="1F4E79")
 
     kar = money(SOZLESME_MATRAH * KAR_ORANI)
-    kdv = money((SOZLESME_MATRAH + kar) * KDV_ORANI)
-    genel = money(SOZLESME_MATRAH + kar + kdv)
+    teklif_genel = money(SOZLESME_MATRAH + kar)
+    kdv_opsiyonel = money(teklif_genel * KDV_ORANI)
 
     rows = [
         ("Proje", PROJE_ADI),
         ("Teklif referansı", TEKLIF_REF),
         ("Hazırlık tarihi", date.today().strftime("%d.%m.%Y")),
         ("", ""),
-        ("Sözleşme matrahı (KDV hariç)", f"{SOZLESME_MATRAH:,.2f} TL"),
+        ("Sözleşme matrahı (imalat)", f"{SOZLESME_MATRAH:,.2f} TL"),
         ("Yüklenici kâr / genel gider (%20)", f"{kar:,.2f} TL"),
-        ("KDV matrahı", f"{SOZLESME_MATRAH + kar:,.2f} TL"),
-        ("KDV (%20)", f"{kdv:,.2f} TL"),
-        ("Genel toplam (KDV dahil)", f"{genel:,.2f} TL"),
+        ("Teklif genel toplam (Teklif_1_2328)", f"{teklif_genel:,.2f} TL"),
+        (
+            "KDV (%20 — teklifte ayrılmamış, faturada)",
+            f"{kdv_opsiyonel:,.2f} TL (matrah {teklif_genel:,.2f} TL üzerinden)",
+        ),
         ("", ""),
         ("Detaylı fiyatlı kalem toplamı", f"{detayli_toplam():,.2f} TL"),
         (
@@ -524,9 +526,8 @@ def build_icmal(wb: Workbook) -> None:
     set_col_widths(ws, {"A": 32, "B": 18})
 
     kar = money(SOZLESME_MATRAH * KAR_ORANI)
-    kdv_matrah = money(SOZLESME_MATRAH + kar)
-    kdv = money(kdv_matrah * KDV_ORANI)
-    genel = money(kdv_matrah + kdv)
+    teklif_genel = money(SOZLESME_MATRAH + kar)
+    kdv_opsiyonel = money(teklif_genel * KDV_ORANI)
 
     ws["A1"] = "HAKEDİŞ / FATURA İCMALİ"
     ws["A1"].font = Font(bold=True, size=12)
@@ -536,11 +537,11 @@ def build_icmal(wb: Workbook) -> None:
         ("Teklif referansı", TEKLIF_REF),
         ("Detaylı kalem matrahı", detayli_toplam()),
         ("Götürü kalemler payı", money(SOZLESME_MATRAH - detayli_toplam())),
-        ("Sözleşme matrahı (KDV hariç)", SOZLESME_MATRAH),
+        ("Sözleşme matrahı (imalat)", SOZLESME_MATRAH),
         ("Yüklenici kâr / GG (%20)", kar),
-        ("KDV matrahı", kdv_matrah),
-        ("Hesaplanan KDV (%20)", kdv),
-        ("GENEL TOPLAM (KDV dahil)", genel),
+        ("TEKLİF GENEL TOPLAM", teklif_genel),
+        ("KDV %20 (fatura — teklifte yok)", kdv_opsiyonel),
+        ("Tahsil (teklif + KDV)", money(teklif_genel + kdv_opsiyonel)),
     ]
     r = 3
     ws.cell(row=r, column=1, value="Kalem").font = Font(bold=True)
@@ -552,7 +553,7 @@ def build_icmal(wb: Workbook) -> None:
         ws.cell(row=r, column=2, value=val)
         if isinstance(val, float):
             ws.cell(row=r, column=2).number_format = '#,##0.00 "TL"'
-        if label.startswith("GENEL"):
+        if label.startswith("TEKLİF") or label.startswith("Tahsil"):
             for c in (1, 2):
                 ws.cell(row=r, column=c).fill = TOTAL_FILL
                 ws.cell(row=r, column=c).font = Font(bold=True)
