@@ -19,7 +19,9 @@
     <h2>Paylaşım linki</h2>
     <p style="margin:0 0 0.5rem;font-size:0.88rem">Telefonda açmak için (GitHub Pages):</p>
     <p style="margin:0;font-size:0.95rem;word-break:break-all"><b id="share-url">https://barsokrr.github.io/meka/elmalik/</b></p>
-    <p style="margin:0.65rem 0 0;font-size:0.8rem;color:var(--muted)">Sayfa 404 verirse: GitHub → repo <b>meka</b> → Settings → Pages → Source: branch <b>gh-pages</b> / <b>/ (root)</b> → Save (bir kez).</p>
+    <p style="margin:0.65rem 0 0;font-size:0.8rem;color:var(--muted)">Kalıcı adres 404 verirse aşağıdaki <b>hemen aç</b> linkini kullanın (Pages ayarı gerekmez).</p>
+    <a class="btn secondary" id="preview-link" href="#" style="margin-top:0.65rem">Hemen aç (önizleme)</a>
+    <p style="margin:0.5rem 0 0;font-size:0.75rem;color:var(--muted)">Kalıcı link için bir kez: GitHub → <b>meka</b> → Settings → Pages → branch <b>gh-pages</b> / root.</p>
     <div class="share-row">
       <button type="button" class="share" id="btn-copy">Linki kopyala</button>
       <button type="button" class="share secondary" id="btn-share">Paylaş</button>
@@ -55,6 +57,9 @@
     ? location.href.replace(/index\.html?$/, "").replace(/\/?$/, "/")
     : canonical;
   document.getElementById("share-url").textContent = url;
+  var preview =
+    "https://htmlpreview.github.io/?https://raw.githubusercontent.com/barsokrr/meka/gh-pages/elmalik/index.html";
+  document.getElementById("preview-link").href = preview;
   document.getElementById("btn-copy").onclick = function () {
     var t = url;
     if (navigator.clipboard && navigator.clipboard.writeText) {
