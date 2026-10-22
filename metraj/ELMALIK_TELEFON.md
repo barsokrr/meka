@@ -1,33 +1,38 @@
 # Elmalık Villa Hakediş — Telefondan Erişim
 
-Excel telefonda düzgün açılmaz. Aşağıdaki **mobil link** veya **tek HTML dosyası** kullanın.
+Excel telefonda düzgün açılmaz. **Mobil web** kullanın.
 
-## Link (canlı site)
-
-Site yayında ise telefonda açın ve **yer imine ekleyin**:
+## Çalışan link (GitHub Pages)
 
 ```
-https://meka.onrender.com/elmalik/
-```
-
-Alternatif (Next sayfası):
-
-```
-https://meka.onrender.com/elmalik
+https://barsokrr.github.io/meka/elmalik/
 ```
 
 Alt sayfalar:
 
-- `/elmalik/donem.html` — bu dönem % girişi (otomatik kayıt)
-- `/elmalik/hakedis.html` — imalat listesi ve icmal
-- `/elmalik/tek-dosya.html` — internetsiz tek sayfa
+- `.../elmalik/donem.html` — bu dönem % girişi
+- `.../elmalik/hakedis.html` — imalat listesi
+- `.../elmalik/tek-dosya.html` — internetsiz tek sayfa
 
-**Paylaşım:** Portal ana sayfasında **Linki kopyala** / **Paylaş** (WhatsApp).
+### Link 404 ise (bir kez)
 
-## Tek dosya (internetsiz)
+1. https://github.com/barsokrr/meka/settings/pages  
+2. **Build and deployment → Source:** Deploy from a branch  
+3. **Branch:** `gh-pages` · **Folder:** `/ (root)` → **Save**  
+4. 1–2 dakika sonra tekrar deneyin.
 
-Repo: `public/elmalik/tek-dosya.html`  
-Telefona indirip dosya yöneticisinden açın (Chrome / Safari).
+## Eski / çalışmayan adresler
+
+| Adres | Durum |
+|--------|--------|
+| `https://meka.onrender.com/elmalik/` | **Çalışmıyor** — Render adresi artık bu projeye ait değil |
+| `https://meka-production.up.railway.app` | **404** — Railway servisi kapalı |
+
+Tam Next.js sitesi için yeniden Railway/Render deploy gerekir (`GECICI-YAYIN.md`).
+
+## İnternetsiz
+
+Telefona indirin: `public/elmalik/tek-dosya.html` (WhatsApp ile kendinize gönderip açın).
 
 ## Masaüstü Excel
 

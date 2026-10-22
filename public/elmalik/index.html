@@ -17,8 +17,9 @@
 <main>
   <div class="card ok">
     <h2>Paylaşım linki</h2>
-    <p style="margin:0 0 0.5rem;font-size:0.88rem">Bu adresi WhatsApp / SMS ile gönderin veya tarayıcıda yer imine ekleyin:</p>
-    <p style="margin:0;font-size:0.95rem;word-break:break-all"><b id="share-url">…</b></p>
+    <p style="margin:0 0 0.5rem;font-size:0.88rem">Telefonda açmak için (GitHub Pages):</p>
+    <p style="margin:0;font-size:0.95rem;word-break:break-all"><b id="share-url">https://barsokrr.github.io/meka/elmalik/</b></p>
+    <p style="margin:0.65rem 0 0;font-size:0.8rem;color:var(--muted)">Sayfa 404 verirse: GitHub → repo <b>meka</b> → Settings → Pages → Source: branch <b>gh-pages</b> / <b>/ (root)</b> → Save (bir kez).</p>
     <div class="share-row">
       <button type="button" class="share" id="btn-copy">Linki kopyala</button>
       <button type="button" class="share secondary" id="btn-share">Paylaş</button>
@@ -49,7 +50,10 @@
 <footer class="note">Elmalık Villa tadilat · Mobil hakediş · Güncelleme: 2026</footer>
 <script>
 (function () {
-  var url = location.href.replace(/index\.html?$/, "").replace(/\/?$/, "/");
+  var canonical = "https://barsokrr.github.io/meka/elmalik/";
+  var url = location.hostname.indexOf("github.io") >= 0
+    ? location.href.replace(/index\.html?$/, "").replace(/\/?$/, "/")
+    : canonical;
   document.getElementById("share-url").textContent = url;
   document.getElementById("btn-copy").onclick = function () {
     var t = url;
