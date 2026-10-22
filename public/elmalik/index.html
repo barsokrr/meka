@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="theme-color" content="#1f4e79"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<title>Elmalık Villa — Hakediş (Mobil)</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header>
+  <span class="pill">TEKLİF · Teklif_1_2328</span>
+  <h1>Elmalık Villa<br/>Hakediş Portalı</h1>
+  <p>Telefonda Excel açmadan imalat listesi ve dönemsel hakediş.</p>
+</header>
+<main>
+  <div class="card ok">
+    <h2>Paylaşım linki</h2>
+    <p style="margin:0 0 0.5rem;font-size:0.88rem">Bu adresi WhatsApp / SMS ile gönderin veya tarayıcıda yer imine ekleyin:</p>
+    <p style="margin:0;font-size:0.95rem;word-break:break-all"><b id="share-url">…</b></p>
+    <div class="share-row">
+      <button type="button" class="share" id="btn-copy">Linki kopyala</button>
+      <button type="button" class="share secondary" id="btn-share">Paylaş</button>
+    </div>
+    <p id="copy-msg" style="margin:0.5rem 0 0;font-size:0.8rem;color:var(--ok);display:none">Kopyalandı.</p>
+  </div>
+
+  <a class="btn accent" href="donem.html">📋 Dönemsel hakediş (%) gir</a>
+  <a class="btn" href="hakedis.html">📑 İmalat listesi &amp; tutarlar</a>
+  <a class="btn secondary" href="tek-dosya.html">📄 Tek sayfa (internetsiz)</a>
+
+  <div class="card">
+    <h2>Ana rakamlar</h2>
+    <table>
+      <tr><th>Sözleşme matrahı</th><td>576.023,00 TL</td></tr>
+      <tr><th>Kâr / GG (%20)</th><td>115.204,60 TL</td></tr>
+      <tr><th>Teklif genel toplam</th><td class="big">691.227,60 TL</td></tr>
+      <tr><th>Detaylı kalemler</th><td>389.261,50 TL</td></tr>
+      <tr><th>Götürü payı</th><td>186.761,50 TL</td></tr>
+    </table>
+  </div>
+
+  <div class="card warn">
+    <h2>Excel dosyası</h2>
+    <p style="margin:0;font-size:0.88rem">Masaüstü için: <code>metraj/Elmalik_Villa_Hakedis_Paketi.xlsx</code>. Telefonda yukarıdaki HTML sayfaları kullanın.</p>
+  </div>
+</main>
+<footer class="note">Elmalık Villa tadilat · Mobil hakediş · Güncelleme: 2026</footer>
+<script>
+(function () {
+  var url = location.href.replace(/index\.html?$/, "").replace(/\/?$/, "/");
+  document.getElementById("share-url").textContent = url;
+  document.getElementById("btn-copy").onclick = function () {
+    var t = url;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(t).then(function () {
+        var m = document.getElementById("copy-msg");
+        m.style.display = "block";
+        setTimeout(function () { m.style.display = "none"; }, 2500);
+      });
+    } else {
+      prompt("Linki kopyalayın:", t);
+    }
+  };
+  document.getElementById("btn-share").onclick = function () {
+    if (navigator.share) {
+      navigator.share({ title: "Elmalık Villa Hakediş", text: "Villa tadilat hakediş — mobil", url: url });
+    } else {
+      document.getElementById("btn-copy").click();
+    }
+  };
+})();
+</script>
+</body>
+</html>
