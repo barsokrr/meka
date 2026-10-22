@@ -1,0 +1,13 @@
+Faz,Tarih_Hedef,Olay,Muteahhit_Odeme_Siz,Resa_Odeme,Net_Nakit_Not,Risk
+0,2026-10,Sozlesme imza,Kapora 0-15 likit iste,0,Arti kapora,Zamanlama yazilmadan imalat yok
+1,2026-11-2027-01,Kaba insaat devam,Minimal veya 0,0,Nakit koru,Irtifak gecikmesi
+2,2027-01-03,Kat irtifaki tescil,Hedef milestone,Bankadan kredi acilisi,,
+2,2027-02,Kredi + 1 hakedis,Barter protokol + likit 30 pct,Resa avans 30 pct,~denge,Kredi kullandirim sarti
+3,2027-03-04,Resa imalat,Barter + likit 20,Resa 40,,
+3,2027-05,Mayis kademe 1 montaj pilot,Likit 20,Resa 20,Pilot 10-15 daire,40 daire mayista bitmez
+4,2027-06-08,Kademeli montaj,Son hakedis 10-15,Resa kapanis 10,Brut kar 4314045 hedef,
+
+Senaryo,Aciklama,Nakit_Ihtiyaci_Max_TL
+Barter Resa + milestone,En dusuk risk,0-500000 kapora
+Barter sende + erken Resa tam,Yuksek risk,3685955
+Cek tahsil edilmez A,Resa 6856180 vadesi,1271068 acik
