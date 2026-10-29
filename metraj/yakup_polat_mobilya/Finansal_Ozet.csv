@@ -1,0 +1,22 @@
+Alan,Değer,Not
+Proje,Yakup Polat 40 Daire Elmalık,
+İşveren,Yakup Polat ve Ortakları,
+Yüklenici,Abdurrahman Barış ÖKER — İç Mimar,
+Alt tedarikçi,Resa Mutfak,
+,, 
+Resa teklifi KDV dahil (TL),14856180,Girdi maliyeti — belge 30.09.2026
+Imalat paketi müteahhit (TL),18570225,Mobilya + kapı + montaj koordinasyonu
+Mimari danışmanlık (TL),600000,40 x 15000 · NACE 71.11.01
+Müteahhit genel toplam KDV dahil (TL),19170225,
+,, 
+Ödeme barter daire (TL),8000000,1 adet
+Kalan tutar (TL),11170225,
+Kalan nakit %50 (TL),5585112.5,
+Kalan çek %50 (TL),5585112.5,
+,, 
+Tahsil likit toplam (TL),11170225,Nakit + çek
+Resa borcu (TL),14856180,
+Nakit açık (TL),3685955,Likit - Resa
+,, 
+Senaryo A Resa ödemesi barter sonrası (TL),6856180,14856180 - 8000000
+Senaryo A net likit kâr (TL),4314045,11170225 - 6856180 (imalat marj + danışmanlık)
