@@ -32,7 +32,8 @@ console.log(`<!DOCTYPE html>
     </div>
   </div>
   <nav>
-    <a class="primary" href="galeri/index.html">Proje galerisi (27 görsel)</a>
+    <a class="primary" href="proje-bedeli/index.html?k=benimhesap2026">Proje bedeli hesaplama</a>
+    <a href="galeri/index.html">Galeri (27 görsel)</a>
     <a href="https://wa.me/905065847351?text=${encodeURIComponent("Merhaba, iç mimarlık danışmanlığı hakkında bilgi almak istiyorum.")}">WhatsApp</a>
     <a href="mailto:barsokrr@gmail.com">E-posta</a>
     <a href="https://instagram.com/barisoker.studio">Instagram</a>

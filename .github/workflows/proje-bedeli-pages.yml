@@ -26,6 +26,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin gh-pages
           git worktree add /tmp/gh-pages origin/gh-pages
+          node scripts/build-proje-bedeli-tek-dosya.mjs
           rm -rf /tmp/gh-pages/proje-bedeli
           mkdir -p /tmp/gh-pages/proje-bedeli
           cp -a public/proje-bedeli/. /tmp/gh-pages/proje-bedeli/

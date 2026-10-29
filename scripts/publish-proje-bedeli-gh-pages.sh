@@ -11,6 +11,7 @@ git clone --depth 1 --branch gh-pages "$(
   git -C "$ROOT" remote get-url origin
 )" "$WORK/site"
 
+node "$ROOT/scripts/build-proje-bedeli-tek-dosya.mjs"
 rm -rf "$WORK/site/proje-bedeli"
 mkdir -p "$WORK/site/proje-bedeli"
 cp -a "$ROOT/public/proje-bedeli/." "$WORK/site/proje-bedeli/"

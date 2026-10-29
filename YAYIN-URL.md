@@ -14,9 +14,14 @@
 
 TMMOB 2026 formülü — form, kırılım tablosu, KDV; Next.js iframe’siz **tek sayfa**:
 
-**https://cdn.jsdelivr.net/gh/barsokrr/meka@gh-pages/proje-bedeli/index.html?k=benimhesap2026**
+**https://raw.githack.com/barsokrr/meka/gh-pages/proje-bedeli/index.html?k=benimhesap2026**
 
-Kalıcı (GitHub Pages açıksa): **https://barsokrr.github.io/meka/proje-bedeli/?k=benimhesap2026**
+(İlk açılışta raw.githack “Open the page” — bir kez dokunun; sayfa tam açılır. `cdn.jsdelivr.net` HTML’i düz metin verdiği için **kullanmayın**.)
+
+Tek dosya (internetsiz yedek):  
+**https://raw.githack.com/barsokrr/meka/gh-pages/proje-bedeli/tek-dosya.html?k=benimhesap2026**
+
+Kalıcı, ek tıklama yok (GitHub Pages bir kez açılınca): **https://barsokrr.github.io/meka/proje-bedeli/?k=benimhesap2026**
 
 Anahtarı yer imine kaydedin; bir kez açınca oturumda kilit kalkar.
 
