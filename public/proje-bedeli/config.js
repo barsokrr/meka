@@ -7,5 +7,5 @@ window.APP_CONFIG = {
   ACCESS_KEY: "benimhesap2026",
   SESSION_KEY: "icmimar_unlock_v1",
   /** Opsiyonel: 905xxxxxxxxx — boşsa WhatsApp CTA gizlenir */
-  WHATSAPP: "",
+  WHATSAPP: "905065847351",
 };
