@@ -10,6 +10,18 @@
 
 **Ana sayfa (iç mimarlık galerisi dahil)** tam Next.js uygulamasıdır; **Railway (veya benzeri) ile yeniden deploy** gerekir. Adımlar: `GECICI-YAYIN.md` → **B) Railway**.
 
+## İç mimarlık proje bedeli (tam sayfa algoritma)
+
+TMMOB 2026 formülü — form, kırılım tablosu, KDV; Next.js iframe’siz **tek sayfa**:
+
+**https://cdn.jsdelivr.net/gh/barsokrr/meka@gh-pages/proje-bedeli/index.html?k=benimhesap2026**
+
+Kalıcı (GitHub Pages açıksa): **https://barsokrr.github.io/meka/proje-bedeli/?k=benimhesap2026**
+
+Anahtarı yer imine kaydedin; bir kez açınca oturumda kilit kalkar.
+
+---
+
 ## Telefon — proje galerisi (statik, tünel gerekmez)
 
 `gh-pages` dalında 27 görselin tamamı:
