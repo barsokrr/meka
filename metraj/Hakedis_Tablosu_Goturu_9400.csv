@@ -1,0 +1,17 @@
+Proje,Karşıyaka Ortaokulu — Kalıp işçiliği (götürü taşeron)
+Metraj yontemi,Düz ölçü
+Toplam metraj m2,9400
+Birim fiyat TL/m2 KDV haric,500
+Götürü matrah TL,4700000
+KDV orani,%20
+Tevkifat,4/10
+SGK,Ana firma tarafından
+Odeme vadesi,Fatura + onaylı tutanaktan itibaren 15 gün
+
+Donem,Aciklama,Tamamlanan_m2,Kumulatif_m2,Birim_Fiyat,Matrah_KDV_haric,KDV_20,Tevkifat_4_10,Tahsil_matrah+6_10_KDV,Kumulatif_matrah,Kumulatif_tahsil
+1,Bodrum + temel,1800,1800,500,900000,180000,72000,1008000,900000,1008000
+2,Zemin + 1. kat,2400,4200,500,1200000,240000,96000,1344000,2100000,2352000
+3,2. + 3. kat,2800,7000,500,1400000,280000,112000,1568000,3500000,3920000
+4,Çatı + söküm,2400,9400,500,1200000,240000,96000,1344000,4700000,5264000
+
+ICMAL,,9400,,,4700000,940000,376000,5264000,,
