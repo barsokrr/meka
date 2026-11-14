@@ -1,0 +1,42 @@
+# Tam site (Next.js + SQLite) — kendi VPS / sunucunuzda
+# Kurulum: cp .env.example .env → düzenleyin → docker compose up -d --build
+
+services:
+  meka:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: meka-web
+    restart: unless-stopped
+    ports:
+      - "${MEKA_HTTP_PORT:-3000}:3000"
+    environment:
+      NODE_ENV: production
+      HOSTNAME: 0.0.0.0
+      PORT: "3000"
+      DATABASE_URL: file:/data/prod.db
+      AUTH_SECRET: ${AUTH_SECRET:?AUTH_SECRET gerekli}
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:?NEXT_PUBLIC_SITE_URL gerekli}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-barsokrr@gmail.com}
+      FROM_EMAIL: ${FROM_EMAIL:-noreply@barisoker.com}
+      NEXT_PUBLIC_EMAIL: ${NEXT_PUBLIC_EMAIL:-barsokrr@gmail.com}
+      NEXT_PUBLIC_WHATSAPP: ${NEXT_PUBLIC_WHATSAPP:-905065847351}
+      NEXT_PUBLIC_PHONE: ${NEXT_PUBLIC_PHONE:-+90 506 584 73 51}
+      NEXT_PUBLIC_INSTAGRAM: ${NEXT_PUBLIC_INSTAGRAM:-barisoker.studio}
+      NEXT_PUBLIC_HESAP_KEY: ${NEXT_PUBLIC_HESAP_KEY:-benimhesap2026}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+    volumes:
+      - meka_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:3000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 90s
+
+volumes:
+  meka_data:
+    name: meka_sqlite_data
