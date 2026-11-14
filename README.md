@@ -75,10 +75,19 @@ src/
 prisma/          → Schema + seed
 ```
 
+## Production deploy (yeni host)
+
+Tam site (SQLite + admin): **`YENI-HOST.md`** — Docker Compose (VPS), Render veya Railway.
+
+```bash
+cp .env.example .env   # AUTH_SECRET + NEXT_PUBLIC_SITE_URL
+docker compose up -d --build
+```
+
 ## Sonraki Adımlar
 
 1. Gerçek ürün fotoğrafları
-2. Domain ve deploy (Vercel önerilir)
+2. Domain ve deploy (`YENI-HOST.md`; Vercel SQLite için uygun değil)
 3. Online ödeme (iyzico / PayTR)
 4. SMTP e-posta yapılandırması
 5. Admin şifresini değiştirme

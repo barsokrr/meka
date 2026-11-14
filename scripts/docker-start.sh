@@ -23,9 +23,11 @@ echo "PORT=$PORT"
 echo "DATABASE_URL=$DATABASE_URL"
 echo "NODE_ENV=$NODE_ENV"
 
-if [ -z "$VOLUME_DIR" ]; then
-  echo "UYARI: Railway kalici disk bagli degil. $DB_DIR container icinde tutuluyor;"
-  echo "UYARI: her yeni deploy siparis ve mesajlari siler. Railway > Volumes ile /data baglayin."
+if [ -z "$VOLUME_DIR" ] && [ "$DB_DIR" != "/data" ]; then
+  echo "UYARI: Kalici volume yok. $DB_DIR container icinde; image yenilenince veri silinebilir."
+  echo "UYARI: Railway Volume /data veya docker compose volume ile DATABASE_URL=file:/data/prod.db kullanin."
+elif [ -z "$VOLUME_DIR" ] && [ "$DB_DIR" = "/data" ]; then
+  echo "OK: /data kullaniliyor (volume mount kontrol edin)."
 fi
 
 # Schema first, then seed only when the catalog is empty (e.g. fresh volume)
