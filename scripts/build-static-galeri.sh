@@ -5,6 +5,10 @@ OUT="$ROOT/.static-galeri-site"
 rm -rf "$OUT"
 mkdir -p "$OUT/galeri" "$OUT/images"
 cp -r "$ROOT/public/images/interior-design" "$OUT/images/"
+cp -r "$ROOT/public/proje-bedeli" "$OUT/proje-bedeli"
+if [ -d "$ROOT/public/kalip" ]; then
+  cp -r "$ROOT/public/kalip" "$OUT/kalip"
+fi
 node "$ROOT/scripts/render-static-galeri.mjs" > "$OUT/galeri/index.html"
 node "$ROOT/scripts/render-static-landing.mjs" > "$OUT/index.html"
 echo "Built: $OUT"

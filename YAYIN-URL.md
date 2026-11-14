@@ -1,64 +1,50 @@
-# Meka — yayın adresleri
+# Meka — çalışan site adresleri
 
-## Site açılmıyorsa (sık nedenler)
+## Hemen açılır (GitHub Pages ayarı gerekmez)
 
-| Denenen adres | Durum |
-|---------------|--------|
-| `https://meka-production.up.railway.app` | **404** — Railway servisi durmuş veya silinmiş |
-| `https://barsokrr.github.io/meka/` | **404 veya sadece kalıp** — GitHub Pages tam Next.js sitesini yayınlamaz; repo’da Pages açılmamış olabilir |
-| `http://localhost:3000` | Sadece kendi bilgisayarınızda `npm run dev` çalışırken |
+Telefon ve bilgisayarda **şimdi** kullanın — jsDelivr üzerinden `gh-pages` dalı:
 
-**Ana sayfa (iç mimarlık galerisi dahil)** tam Next.js uygulamasıdır; **Railway (veya benzeri) ile yeniden deploy** gerekir. Adımlar: `GECICI-YAYIN.md` → **B) Railway**.
+| Sayfa | Link |
+|--------|------|
+| **Ana portal** | https://cdn.jsdelivr.net/gh/barsokrr/meka@gh-pages/index.html |
+| **Proje galerisi** | https://cdn.jsdelivr.net/gh/barsokrr/meka@gh-pages/galeri/index.html |
+| **Proje bedeli 2026** | https://cdn.jsdelivr.net/gh/barsokrr/meka@gh-pages/proje-bedeli/index.html?k=benimhesap2026 |
+| **Şantiye / metraj (kalıp)** | https://cdn.jsdelivr.net/gh/barsokrr/meka@gh-pages/kalip/index.html |
 
-## İç mimarlık proje bedeli (tam sayfa algoritma)
-
-TMMOB 2026 formülü — form, kırılım tablosu, KDV; Next.js iframe’siz **tek sayfa**:
-
-**https://cdn.jsdelivr.net/gh/barsokrr/meka@gh-pages/proje-bedeli/index.html?k=benimhesap2026**
-
-Kalıcı (GitHub Pages açıksa): **https://barsokrr.github.io/meka/proje-bedeli/?k=benimhesap2026**
-
-Anahtarı yer imine kaydedin; bir kez açınca oturumda kilit kalkar.
+Bu linkleri **yer imine** kaydedin. `barsokrr.github.io` adresi açılmıyorsa normal — aşağıdaki GitHub Pages adımı yapılmamış olabilir.
 
 ---
 
-## Telefon — proje galerisi (statik, tünel gerekmez)
+## Neden `github.io` açılmıyor?
 
-`gh-pages` dalında 27 görselin tamamı:
+| Adres | Durum |
+|--------|--------|
+| `https://barsokrr.github.io/meka/` | **404** — Repo’da GitHub Pages **açık değil** veya kaynak dal ayarlı değil |
+| `https://meka-production.up.railway.app` | **404** — Eski Railway servisi kapalı |
+| Tam Next.js (ürünler, sepet, admin) | Railway / Render deploy gerekir → `YENI-HOST.md` |
 
-**https://raw.githack.com/barsokrr/meka/gh-pages/galeri/index.html**
+### GitHub Pages’i bir kez açın (kalıcı `github.io` için)
 
-Kalıcı adres (bir kez ayar): GitHub → repo **meka** → **Settings → Pages** → Source: **Deploy from a branch** → **gh-pages** / **/** → Save. Sonra:
+1. https://github.com/barsokrr/meka/settings/pages  
+2. **Build and deployment → Source:** **Deploy from a branch**  
+3. **Branch:** `gh-pages` · **Folder:** `/ (root)` → **Save**  
+4. 2–5 dakika sonra: **https://barsokrr.github.io/meka/**
 
-**https://barsokrr.github.io/meka/galeri/**
-
-(Tam Next.js sitesi için Railway deploy — `GECICI-YAYIN.md`.)
+`main` branch’e push olunca workflow **`Publish Mobil Site (gh-pages branch)`** `gh-pages` dalını günceller.
 
 ---
 
-## Eski adres (çalışmıyor)
+## Tam e-ticaret sitesi (koleksiyon, sepet, admin)
 
-`https://meka-production.up.railway.app` → **404** (Railway servisi kaldırılmış veya durmuş).
+Sunucu gerekir:
 
-## Kalıcı tam site (önerilen)
+- Render: https://render.com/deploy?repo=https://github.com/barsokrr/meka  
+- Detay: `YENI-HOST.md`, `GECICI-YAYIN.md`
 
-1. https://railway.app → GitHub ile giriş  
-2. **New Project** → **Deploy from GitHub** → `barsokrr/meka`  
-3. **Volume** mount: `/data` → `DATABASE_URL=file:/data/prod.db`  
-4. Deploy sonrası Railway’in verdiği adres: `https://XXXX.up.railway.app`  
-5. Variables: `.env.example` + `NEXT_PUBLIC_SITE_URL` = yeni Railway URL  
-6. Bir kez: `npm run deploy:setup` (Railway shell)
+Admin (canlıda): `/admin/login` — `README.md`
 
-Detay: `GECICI-YAYIN.md`
+---
 
-## Kalıp mobil portal (GitHub Pages)
+## Geçici (PC açıkken)
 
-Repo **main** branch’e push sonrası (Settings → Pages → GitHub Actions):
-
-**https://barsokrr.github.io/meka/**
-
-(Sadece `/kalip` statik sayfaları; ürün/sepet/admin yok.)
-
-## Yerel demo (PC açıkken)
-
-`baslat.bat` veya `npm run dev` + `cloudflared tunnel --url http://localhost:3000`
+`baslat.bat` veya `npm run dev` + Cloudflare tünel — PC kapanınca link ölür.

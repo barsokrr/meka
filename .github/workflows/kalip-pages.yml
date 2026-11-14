@@ -1,11 +1,8 @@
 name: Deploy Kalip Mobile (GitHub Pages)
 
+# Devre dışı: yalnızca kalip yüklemek tüm GitHub Pages sitesini bozar.
+# Mobil portal: publish-mobil-gh-pages.yml
 on:
-  push:
-    branches: [main]
-    paths:
-      - "public/kalip/**"
-      - ".github/workflows/kalip-pages.yml"
   workflow_dispatch:
 
 permissions:

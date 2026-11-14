@@ -1,0 +1,42 @@
+# Tam mobil portal → gh-pages dalı (GitHub Pages: branch gh-pages, / root)
+# Açılış: https://barsokrr.github.io/meka/  (Pages bir kez açılmalı)
+# Pages kapalıysa: https://cdn.jsdelivr.net/gh/barsokrr/meka@gh-pages/index.html
+
+name: Publish Mobil Site (gh-pages branch)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "public/images/interior-design/**"
+      - "public/proje-bedeli/**"
+      - "public/kalip/**"
+      - "scripts/build-static-galeri.sh"
+      - "scripts/render-static-*.mjs"
+      - ".github/workflows/publish-mobil-gh-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-mobil-gh-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build mobil static site
+        run: chmod +x scripts/build-static-galeri.sh && ./scripts/build-static-galeri.sh
+
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./.static-galeri-site
+          force_orphan: false
+          commit_message: "ci: mobil site publish"
