@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="theme-color" content="#1f4e79"/>
+<title>Kalıp &amp; Donatı — Eğitim Modülü</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.mod { margin-bottom: 0.5rem; }
+.mod summary {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  background: var(--card);
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  list-style: none;
+}
+.mod summary::-webkit-details-marker { display: none; }
+.mod[open] summary { border-radius: 10px 10px 0 0; background: var(--brand); color: #fff; }
+.mod .body {
+  padding: 0.85rem 1rem 1rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  font-size: 0.92rem;
+}
+.mod .body ul { margin: 0.4rem 0; padding-left: 1.2rem; }
+.mod .body table { width: 100%; font-size: 0.85rem; border-collapse: collapse; }
+.mod .body th, .mod .body td { border-bottom: 1px solid var(--line); padding: 0.35rem 0.25rem; text-align: left; }
+.tag { display: inline-block; background: #e0f2fe; color: #0369a1; font-size: 0.75rem; padding: 0.15rem 0.5rem; border-radius: 99px; margin-bottom: 0.5rem; }
+</style>
+</head>
+<body>
+<header>
+  <span class="pill">7 modül · ~4–6 saat</span>
+  <h1>Betonarme Kalıp<br/>&amp; Donatı Sistemleri</h1>
+  <p>Taşeron ekip eğitimi — Karşıyaka okul projesi referanslı.</p>
+</header>
+<main>
+
+<details class="mod" open>
+  <summary>0 — Giriş</summary>
+  <div class="body">
+    <span class="tag">15 dk</span>
+    <p><b>Amaç:</b> Donatı + kalıp sistemlerini ve taşeron sorumluluk sınırlarını öğretmek.</p>
+    <ul>
+      <li><b>Dahil:</b> Kalıp kur/sök, işçilik, saha İSG</li>
+      <li><b>Hariç:</b> Demir, beton, malzeme, iskele, vinç</li>
+      <li><b>NACE kalıp:</b> 43.99.05 · <b>Demir:</b> 43.99.13</li>
+    </ul>
+  </div>
+</details>
+
+<details class="mod">
+  <summary>1 — Betonarme sistem</summary>
+  <div class="body">
+    <span class="tag">30 dk</span>
+    <p>Beton basınçta, çelik çekmede güçlüdür. Elemanlar: temel, perde, kolon, kiriş, döşeme.</p>
+    <table>
+      <tr><th>Eleman</th><th>Görev</th></tr>
+      <tr><td>Perde</td><td>Deprem / yatay yük</td></tr>
+      <tr><td>Kolon</td><td>Düşey yük</td></tr>
+      <tr><td>Döşeme-kiriş</td><td>Yatay taşıyıcı</td></tr>
+    </table>
+  </div>
+</details>
+
+<details class="mod">
+  <summary>2 — Donatı sistemleri</summary>
+  <div class="body">
+    <span class="tag">45 dk</span>
+    <ul>
+      <li><b>Nervürlü donatı:</b> Kolon, kiriş, perde boyuna demir</li>
+      <li><b>Etriye / çiroz:</b> Kesme donatısı</li>
+      <li><b>Örtü (cover):</b> Demir–beton yüzey mesafesi</li>
+      <li><b>Bindirme:</b> Kat üstü demir devamı</li>
+    </ul>
+    <p><b>Kalıp ekibi:</b> Donatıyı bağlamaz; yerleşimi kontrol eder, boşluk bırakır.</p>
+  </div>
+</details>
+
+<details class="mod">
+  <summary>3 — Kalıp sistemleri</summary>
+  <div class="body">
+    <span class="tag">45 dk</span>
+    <table>
+      <tr><th>Sistem</th><th>ÇŞB poz</th></tr>
+      <tr><td>Ahşap düz yüzey</td><td>15.180.1002</td></tr>
+      <tr><td>Plywood panel</td><td>15.180.1003</td></tr>
+      <tr><td>Tünel kalıp</td><td>15.180.1005</td></tr>
+    </table>
+    <p><b>Metraj:</b> Kırık a×b×c · Düz net yüzey · Perde ×2 yüz</p>
+    <p><b>MYB:</b> Ahşap Kalıpçı 11UY0011-3 · <b>İskele ayrı poz</b></p>
+  </div>
+</details>
+
+<details class="mod">
+  <summary>4 — Saha akışı</summary>
+  <div class="body">
+    <span class="tag">40 dk</span>
+    <p><b>Sıra:</b> Demir → kalıp kur → kontrol → beton → kür → söküm</p>
+    <p><b>Kontrol:</b> Kot, örtü, bindirme, yağlama, sızdırmazlık</p>
+    <p><b>Erken söküm riski:</b> Çatlak, göçme</p>
+  </div>
+</details>
+
+<details class="mod">
+  <summary>5 — Metraj &amp; hakediş</summary>
+  <div class="body">
+    <span class="tag">35 dk</span>
+    <table>
+      <tr><th>Ölçü</th><th>m²</th></tr>
+      <tr><td>Kırık (proje)</td><td>11.773</td></tr>
+      <tr><td>Düz</td><td>~11.296</td></tr>
+      <tr><td>Götürü teklif</td><td>9.400</td></tr>
+    </table>
+    <p>BF 500 TL/m² · KDV tevkifat 4/10 · Tutana → fatura → IBAN</p>
+  </div>
+</details>
+
+<details class="mod">
+  <summary>6 — Karşıyaka proje örneği</summary>
+  <div class="body">
+    <span class="tag">30 dk</span>
+    <p>MEBİZ.73-10-25-01-SU-001-R0 · B+Z+3 · İKN 2026/557143</p>
+    <p>Kot: −5,10 temel → +16,00 çatı · Ekip 12 kişi · ~4 ay</p>
+  </div>
+</details>
+
+<details class="mod">
+  <summary>7 — Sınav &amp; checklist</summary>
+  <div class="body">
+    <span class="tag">30 dk</span>
+    <p><b>Örnek soru:</b> Perde kalıbı neden çift yüz? → İki taraf kalıp görür.</p>
+    <p><b>Checklist:</b> Eksen/kot · örtü · yağ · iskele · MYB/KKD · tutanak</p>
+    <p>Detay: <code>metraj/bilgi_deposu/egitim/07_sinav_kontrol.md</code></p>
+  </div>
+</details>
+
+<a class="btn secondary" href="index.html">← Kalıp portal</a>
+</main>
+</body>
+</html>
