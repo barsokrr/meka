@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="theme-color" content="#1f4e79"/>
+<title>Nakit Akış — Yakup Polat</title>
+<link rel="stylesheet" href="../kalip/styles.css"/>
+</head>
+<body>
+<a class="back" href="index.html" style="padding:1rem 1rem 0;display:block;max-width:560px;margin:0 auto">← Portal</a>
+<header>
+  <span class="pill">NAKİT AKIŞ</span>
+  <h1>Finansal Model<br/>Senaryo A / B</h1>
+  <p>%25 marj · barter + nakit/çek</p>
+</header>
+<main>
+  <div class="card">
+    <h2>Tahsilat (müteahhit)</h2>
+    <table>
+      <tr><th>Barter daire</th><td>8.000.000 TL</td></tr>
+      <tr><th>Nakit (%50 kalan)</th><td>5.285.112,50 TL</td></tr>
+      <tr><th>Çek (%50 kalan)</th><td>5.285.112,50 TL</td></tr>
+      <tr><th>Likit toplam</th><td>11.170.225 TL</td></tr>
+      <tr><th>Müteahhit toplam (KDV dahil)</th><td class="big">19.170.225 TL</td></tr>
+    </table>
+  </div>
+
+  <div class="card warn">
+    <h2>Resa ödemesi &amp; açık</h2>
+    <table>
+      <tr><th>Resa borcu</th><td>14.856.180 TL</td></tr>
+      <tr><th>Likit − Resa</th><td class="big">−3.685.955 TL</td></tr>
+    </table>
+    <p style="margin:0.75rem 0 0;font-size:0.85rem">Açık, barter dairenin nakit karşılığı veya iç finansman ile kapatılır.</p>
+  </div>
+
+  <div class="card ok">
+    <h2>Senaryo A — Barter Resa’ya</h2>
+    <p style="margin:0;font-size:0.88rem">8 M daire Resa’ya → kalan Resa borcu <b>6.856.180 TL</b>. Likit tahsilat bunu ödedikten sonra <b>~3.714.045 TL</b> net kâr (marj ile uyumlu).</p>
+  </div>
+
+  <div class="card">
+    <h2>Senaryo B — Daire şirkette</h2>
+    <p style="margin:0;font-size:0.88rem">Resa tam ödenir; <b>4.285.955 TL</b> özkaynak/iç borç. Net varlık: <b>1 daire</b> (üzerinde ~4,28 M TL nakit yükümlülüğü).</p>
+  </div>
+</main>
+<footer class="note">CSV: Finansal_Ozet.csv · Nakit_Akis_Senaryolari.csv</footer>
+</body>
+</html>

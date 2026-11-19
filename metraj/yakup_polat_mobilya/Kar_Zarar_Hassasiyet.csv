@@ -1,0 +1,8 @@
+Senaryo,Resa_Maliyet_TL,Barter_Deger_TL,Senaryo_Tipi,Brut_Kar_TL,Aciklama
+Baz,14856180,8000000,A veya B ekonomik,4314045,Mevcut teklif
+Resa +5%,15599589,8000000,A,3570636,ÜFE / fiyat artışı
+Resa +10%,16341798,8000000,A,2827227,Kötümser maliyet
+Barter 7M,14856180,7000000,A,3314045,Barter 1M düşük değerlenirse
+Barter 7M daire B,14856180,7000000,B,3314045 ekonomik,Daire satış 7M varsayımı
+Cek tahsil edilmez Senaryo A,14856180,8000000,A,-1271068,Sadece nakit 5585112; Resa 6856180 ödenemez tam
+Cek + Resa tam Senaryo B,14856180,8000000,B,-3685955,Likit 11170225 yetersiz Resa 14856180
